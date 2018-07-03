@@ -1,0 +1,25 @@
+TensorRT 是由 Nvidia 推出的圖形最佳化執行環境，可以在模型執行推理 (預測結果) 時，加速其運算速度。不能在訓練時加速訓練過程。
+
+可使用的圖形處理器包含支援 CUDA 8.0 (compute capability 6.0) 以上的裝置，Nvidia 官方建議使用 Tesla V100, P100, P4, and P40 圖形處理器。
+
+![TensorRT 如何優化已訓練的網路](img/TensorRT.png)
+
+上圖為 TensorRT 最佳化模型網路的流程，取自 Nvidia Developer Blog。
+
+TensorRT 使用以下幾種方式，減低運算量：
+
+1. 減少資料精度，將 FP32 轉為 FP16 或 Int8，以降低運算量。
+2. 將多個神經網路層包成一層神經網路層，減少神經網路的計算量和記憶體消耗。
+3. 自動微調 Kernel，套用 Nvidia 針對特定裝置調校完成的 Kernel 參數，使得它在特定裝置上運行更快。
+4. 動態使用 Tensor Memory，只有在 Tensor 將被使用時才配置，避免記憶體的過度使用。
+5. 平行計算預測過程。
+
+可以在以下的網址取得進一步的資訊：
+
+[TensorRT Developer Guide](https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html)
+
+[NVIDIA TensorRT](https://developer.nvidia.com/tensorrt)
+
+[CUDA GPUs](https://developer.nvidia.com/cuda-gpus)
+
+[TensorRT 3: Faster TensorFlow Inference and Volta Support](https://devblogs.nvidia.com/tensorrt-3-faster-tensorflow-inference/)

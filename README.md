@@ -8,7 +8,7 @@
 
 [Blogger](https://fiftycheng.blogspot.tw/) : 18/04 以前的文章
 
-[LinkedIn](www.linkedin.com/in/guan-lun-cheng-4b3705153)
+[LinkedIn](https://www.linkedin.com/in/guan-lun-cheng-4b3705153/)
 
 ## 其它
 
