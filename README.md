@@ -2,6 +2,12 @@
 
 ## 文章
 
+18/07/03 [從 Continuous-Multioutput Label 建立 Confusion Matrix](Confusion_Matrix.md)
+
+18/07/03 [動態參考與反射](Reference_Reflection.md)
+
+18/07/03 [TensorRT 介紹](TensorRT.md)
+
 18/04/19 [DLL、LIB 與執行緒](DLL_LIB_Thread.md)
 
 ## 關於我
