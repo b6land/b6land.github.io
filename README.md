@@ -2,6 +2,8 @@
 
 ## 文章
 
+18/08/26 [Early Stopping 和 Cross Validation](Early_Stopping_and_Cross_Validation.md)
+
 18/08/17 [Event 的使用](Event.md)
 
 18/07/03 [從 Continuous-Multioutput Label 建立 Confusion Matrix](Confusion_Matrix.md)
@@ -13,8 +15,6 @@
 18/04/19 [DLL、LIB 與執行緒](DLL_LIB_Thread.md)
 
 ## 關於我
-
-[Blogger](https://fiftycheng.blogspot.tw/) : 18/04 以前的文章
 
 [LinkedIn](https://www.linkedin.com/in/guan-lun-cheng-4b3705153/)
 
