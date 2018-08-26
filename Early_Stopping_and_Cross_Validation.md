@@ -32,9 +32,12 @@ return number (total wrong) / (wrong + correct)
 
 ### 如何取資料
 
-![K-Fold 如何處理資料](img/KFold.jpg)
+![K-Fold 如何處理資料](img/kFold.jpg)
+
 K = 0 時，取出 5 ~ 14 作為訓練資料，0 ~ 4 作為測試資料。
+
 K = 1 時，取出 0 ~ 4, 10 ~ 14 作為訓練資料，5 ~ 9 作為測試資料。
+
 K = 2 時，取出 0 ~ 9 作為訓練資料，10 ~ 14 作為測試資料。
 
 

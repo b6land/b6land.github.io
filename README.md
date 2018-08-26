@@ -2,6 +2,8 @@
 
 ## 文章
 
+18/08/26 [C# 定時器 (Timer)](Timer.md)
+
 18/08/26 [Early Stopping 和 Cross Validation](Early_Stopping_and_Cross_Validation.md)
 
 18/08/17 [Event 的使用](Event.md)
