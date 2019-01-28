@@ -2,6 +2,10 @@
 
 ## 文章
 
+19/01/28 [DataGridView 的使用](DataGridView.md)
+
+19/01/28 [修改 PATH 環境變數](SetPathBat.md)
+
 18/08/26 [C# 定時器 (Timer)](Timer.md)
 
 18/08/26 [Early Stopping 和 Cross Validation](Early_Stopping_and_Cross_Validation.md)
