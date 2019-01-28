@@ -47,11 +47,11 @@ GridView1.DataBind();//綁定
 conn.Close(); //連線關閉       
 ```
 
-ref: [C# 自行撰寫sql連線及綁定Gridview | chi's coding life - 點部落](https://dotblogs.com.tw/chichiblog/2017/10/16/163211)
+ref: [C# 自行撰寫sql連線及綁定Gridview - chi's coding life - 點部落](https://dotblogs.com.tw/chichiblog/2017/10/16/163211)
 
 ### DataGridView 的事件列表
 
-ref : [C# DataGridView 事件 | 自我LV1 - 點部落](https://dotblogs.com.tw/jain/2010/05/13/15206)
+ref : [C# DataGridView 事件 - 自我LV1 - 點部落](https://dotblogs.com.tw/jain/2010/05/13/15206)
 
 ### 改變 DataGridView 裡每列的背景色
 
