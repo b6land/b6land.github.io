@@ -2,6 +2,10 @@
 
 ## 文章
 
+19/02/09 [C# 資料結構的使用](Data_Structure_C_Sharp.md)
+
+19/02/09 [Windows Defender Offline 防毒隨身碟](Windows_Defender_Offline.md)
+
 19/01/28 [DataGridView 的使用](DataGridView.md)
 
 19/01/28 [修改 PATH 環境變數](SetPathBat.md)
