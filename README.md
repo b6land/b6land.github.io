@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/03/17 [使用 Inno Setup Studio 製作獨立安裝檔的技巧](Use_Inno_Setup_Studio.md)
+
 19/02/09 [C# 資料結構的使用](Data_Structure_C_Sharp.md)
 
 19/02/09 [Windows Defender Offline 防毒隨身碟](Windows_Defender_Offline.md)
@@ -30,4 +32,4 @@
 
 ## 其它
 
-[如何用 Github 快速建立你的個人網頁](https://www.openfoundry.org/tw/foss-programs/9307-github-pages) : 這個網頁的建立方式。
+[如何用 Github 快速建立你的個人網頁](https://www.openfoundry.org/tw/foss-programs/9307-github-pages) : 這個網頁的建立方式 (已失效)。
