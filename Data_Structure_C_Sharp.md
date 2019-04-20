@@ -64,9 +64,9 @@ Coords coords2 = new Coords(10, 10);
 
 參考資料：
 
-[使用結構 - C# 程式設計手冊 | Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/using-structs)
+[使用結構 - C# 程式設計手冊 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/using-structs)
 
-[結構 - C# 程式設計手冊 | Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/structs)
+[結構 - C# 程式設計手冊 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/structs)
 
 ### 如何複製 List
 

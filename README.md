@@ -2,6 +2,10 @@
 
 ## 文章
 
+19/04/20 [Hyper Parameter Search](Hyper_Parameter_Search.md)
+
+19/04/20 [MQTT 參考資料與 Broker 安裝](MQTT.md)
+
 19/03/17 [使用 Inno Setup Studio 製作獨立安裝檔的技巧](Use_Inno_Setup_Studio.md)
 
 19/02/09 [C# 資料結構的使用](Data_Structure_C_Sharp.md)

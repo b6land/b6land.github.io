@@ -1,0 +1,38 @@
+## 安裝 MQTT broker - Mosquitto
+
+1. 從 [Mosquitto.org](Mosquitto.org) 下載 Mosquitto 的安裝檔，選擇自己適合的平台，這裡個人下載的是 windows-x64 版本。
+2. 安裝時，會提示要下載 [pThreads](ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/) 和 [Win32 OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)，分別連上網站下載。
+3. 安裝完以後，將 `pthreadVC2.dll` 和 `OpenSSL-Win32` 裡面的所有 DLL 檔到 Mosquitto 的安裝目錄底下。
+4. 執行 `Mosquitto.exe` 即可。可以用 `netstat -an` 檢查**預設**的 Port 1883 是否有開啟。
+5. 若要將 Mosquitto 設為 Service，要使用系統管理員身分開啟命令提示字元，再照著 Mosquitto 的 Readme 去執行指令。之後再從 Windows 的 Service 去調整。
+
+### 參考連結
+
+1. [MQTT 學習心得 -- I'm just a coder - 點部落](https://dotblogs.com.tw/justacoder/2016/06/01/mqttfirstmeet)
+2. [Step by step installing and configuring Mosquitto with Windows 7 – Sharing of tech stuff](https://sivatechworld.wordpress.com/2015/06/11/step-by-step-installing-and-configuring-mosquitto-with-windows-7/)
+
+## .Net Framework 中可使用的 MQTT Client 
+
+使用過的 MQTT Client 有兩個：MQTTnet 和 M2Mqtt。
+
+雖然 MQTTnet 有持續在更新 (截至 2018 年)，不過由於在 2.x 版以後有大幅度的更新。因此你在網路上找得到的大部分教學「不適用」於目前版本。
+
+因此最後採用的是 M2Mqtt，雖然已有一段時間沒更新，不過教學齊全，不會再花很多心力處理新舊版的差異問題。而且使用上也表現良好，沒有不穩定的情形。
+
+### 參考連結 
+
+1. [NuGet Gallery - MQTTnet](https://www.nuget.org/packages/MQTTnet/)
+2. [使用 MQTTnet 快速实现 MQTT 通信 - li2008kui的专栏 - CSDN博客](https://blog.csdn.net/li2008kui/article/details/78339309)
+3. [MQTT Client Library Encyclopedia – M2Mqtt](https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-m2mqtt/)
+4. [Using MqttClient - M2Mqtt & GnatMQ](https://m2mqtt.wordpress.com/using-mqttclient/)
+
+## MQTT 概念
+
+網路上關於 MQTT 概念的文件眾多且齊全，可直接參考下方的參考連結。
+
+### 參考連結 
+
+1. [Usc2017nsp by yazelin：實踐大學聯網感測實作](https://yazelin.github.io/usc2017nsp/)
+2. [MQTT教學（五）：「保留」發布訊息以及QoS品質設定 - 網昱多媒體](https://swf.com.tw/?p=1015)
+3. [MQTT qos 機制，發佈者如何確認訂閱者收到訊息？ - 石頭閒語](http://rocksaying.tw/archives/2016/MQTT-qos_and_published.html)
+4. [峻彬、麗如與紘瑋 - MQTT資料的抓取](http://misccp3.cnu.edu.tw/myblog/blogMessage.aspx?blog_id=297)

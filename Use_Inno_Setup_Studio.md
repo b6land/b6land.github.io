@@ -15,6 +15,6 @@
 
 [iInfo 資訊交流: Inno Setup 操作(2) --- 使用 InnoIDE 建立安裝包](http://white5168.blogspot.com/2018/03/inno-setup-2-innoide.html?m=1)
 
-[Registry Value Types - Windows applications | Microsoft Docs](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry-value-types)
+[Registry Value Types - Windows applications - Microsoft Docs](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry-value-types)
 
 [How do I modify the PATH environment variable when running an Inno Setup Installer?](https://stackoverflow.com/questions/3304463/how-do-i-modify-the-path-environment-variable-when-running-an-inno-setup-install)
