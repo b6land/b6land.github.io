@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/07/04 [查詢 SQL 容量錯誤並備份資料庫](SQL_Exception_Backup.md)
+
 19/04/20 [Hyper Parameter Search](Hyper_Parameter_Search.md)
 
 19/04/20 [MQTT 參考資料與 Broker 安裝](MQTT.md)
