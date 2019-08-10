@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/08/10 [Scrum：用一半的時間做兩倍的事](SCRUM_The_Art_of_Doing_Twice_the_Work_in_Half_the_Time.md)
+
 19/07/04 [查詢 SQL 容量錯誤並備份資料庫](SQL_Exception_Backup.md)
 
 19/04/20 [Hyper Parameter Search](Hyper_Parameter_Search.md)
