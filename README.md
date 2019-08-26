@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/08/26 [使用 YOLO 訓練自定義資料](Use_YOLO_with_My_Training_Data.md)
+
 19/08/10 [Scrum：用一半的時間做兩倍的事](SCRUM_The_Art_of_Doing_Twice_the_Work_in_Half_the_Time.md)
 
 19/07/04 [查詢 SQL 容量錯誤並備份資料庫](SQL_Exception_Backup.md)
