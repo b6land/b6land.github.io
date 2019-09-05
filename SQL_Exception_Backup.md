@@ -27,10 +27,10 @@ GO
 
 ### 參考資料
 
-[SqlException Class (System.Data.SqlClient) | Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/api/system.data.sqlclient.sqlexception?view=netframework-4.8)
+[SqlException Class (System.Data.SqlClient) - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/api/system.data.sqlclient.sqlexception?view=netframework-4.8)
 
-[Database Engine Errors - SQL Server | Microsoft Docs](https://docs.microsoft.com/zh-tw/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-2017)
+[Database Engine Errors - SQL Server - Microsoft Docs](https://docs.microsoft.com/zh-tw/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-2017)
 
-[[SQL Server]使用T-SQL來備份與還原資料庫 | F6 Team - 點部落](https://dotblogs.com.tw/puma/2009/10/14/sqlserver-tsql-backup-resotre-db)
+[[SQL Server]使用T-SQL來備份與還原資料庫 - F6 Team - 點部落](https://dotblogs.com.tw/puma/2009/10/14/sqlserver-tsql-backup-resotre-db)
 
-[建立合適的索引，來降低Select Top Order By帶來的效能問題 | Rock的SQL筆記本 - 點部落](https://dotblogs.com.tw/rockchang/2016/10/02/111338)
+[建立合適的索引，來降低Select Top Order By帶來的效能問題 - Rock的SQL筆記本 - 點部落](https://dotblogs.com.tw/rockchang/2016/10/02/111338)
