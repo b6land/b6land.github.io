@@ -1,9 +1,11 @@
 ## C# 定時器 (Timer)
 
+### Timer 的類別
 `System.Windows.Form.Timer`：
 
 - 要定期更新 UI 元件時，建立 `System.Windows.Form.Timer` 物件，將 EventHandler 指向要更新元件的程式碼即可。
-- 單一執行緒，建立多個執行緒會出錯。
+- 和 UI Thread 相同的單一 Thread (執行緒)。
+> 建立多個 UI Thread 會出錯。
 -可參考 [How to: Run Procedures at Set Intervals with the Windows Forms Timer Component](https://docs.microsoft.com/zh-tw/dotnet/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component)
 
 `System.Timer.Timer` : 

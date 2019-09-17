@@ -2,7 +2,7 @@
 
 DataGridView 可以使用 SQL Command 直接讀取和綁定資料，不過若要修改其中的資料 (如將原本的整數欄位改成英文名稱 )，自行從 SQL 讀取並自訂資料結構的作法較佳。
 
-1. 建立 Class。
+1. 建立 Class。要注意**須提供 get 和 set 存取子**。
 
 ```
 public class TableData
@@ -15,6 +15,7 @@ public class TableData
 
 2. 建立該 Class 的 List 或 Array。
 3. 指定該 List 或 Array 至 Data Source。
+4. 預設的 Header 即為自訂類別的屬性名稱。
 
 ```
 TableData td = new TableData();
@@ -79,3 +80,12 @@ dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
 ```
 
 ref: [c# - How do you automatically resize columns in a DataGridView control AND allow the user to resize the columns on that same grid? - Stack Overflow](https://stackoverflow.com/questions/1025670/how-do-you-automatically-resize-columns-in-a-datagridview-control-and-allow-the)
+
+### 調整欄位寬度
+
+```
+//設定DataGridView中欄位的寬度
+dgvEntityHardware.Columns[0].Width = 110;
+```
+
+ref: [[C#]-DataGridView 小技巧 - 程式設計筆記byChris - 點部落](https://dotblogs.com.tw/chris0920/2010/12/27/20418)
