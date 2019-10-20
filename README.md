@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/10/20 [C# 中常見的 Memory Leak](C_Sharp_Memory_Leak.md)
+
 19/09/17 [C# 關鍵字](C_Sharp_Keywords.md)
 
 19/09/05 [解決「緩衝集區裡沒有足夠的可用記憶體」錯誤](SQL_Cache_Exception.md)
