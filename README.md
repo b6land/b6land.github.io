@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/11/10 [C# COM 程式設計的疑難雜症](C_Sharp_COM_Programming.md)
+
 19/10/20 [C# 中常見的 Memory Leak](C_Sharp_Memory_Leak.md)
 
 19/09/17 [C# 關鍵字](C_Sharp_Keywords.md)
