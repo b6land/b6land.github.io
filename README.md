@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/11/17 [使用 Window Handle 撰寫自動化程式](Window_Handle.md)
+
 19/11/10 [C# COM 程式設計的疑難雜症](C_Sharp_COM_Programming.md)
 
 19/10/20 [C# 中常見的 Memory Leak](C_Sharp_Memory_Leak.md)
