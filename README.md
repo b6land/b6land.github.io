@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/12/15 [解決 C# 專案整合第三方函式庫 DLL 錯誤](Solve_DLL_Exception.md)
+
 19/11/17 [使用 Window Handle 撰寫自動化程式](Window_Handle.md)
 
 19/11/10 [C# COM 程式設計的疑難雜症](C_Sharp_COM_Programming.md)
