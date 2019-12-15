@@ -2,6 +2,8 @@
 
 ## 文章
 
+19/12/15 [C# 關鍵字 2 (out var, readonly)](C_Sharp_Keywords_2.md)
+
 19/12/15 [解決 C# 專案整合第三方函式庫 DLL 錯誤](Solve_DLL_Exception.md)
 
 19/11/17 [使用 Window Handle 撰寫自動化程式](Window_Handle.md)
@@ -10,7 +12,7 @@
 
 19/10/20 [C# 中常見的 Memory Leak](C_Sharp_Memory_Leak.md)
 
-19/09/17 [C# 關鍵字](C_Sharp_Keywords.md)
+19/09/17 [C# 關鍵字 (params, lock)](C_Sharp_Keywords.md)
 
 19/09/05 [解決「緩衝集區裡沒有足夠的可用記憶體」錯誤](SQL_Cache_Exception.md)
 
