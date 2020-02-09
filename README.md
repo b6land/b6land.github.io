@@ -2,6 +2,10 @@
 
 ## 文章
 
+20/02/09 [如何使用 DLLImport 呼叫 C++ 程式碼](DLLImport.md)
+
+20/02/09 [Singleton 簡介](Singleton_Pattern.md)
+
 20/01/25 [在 C# 中使用 Task](C_Sharp_Task.md)
 
 19/12/15 [C# 關鍵字 2 (out var, readonly)](C_Sharp_Keywords_2.md)

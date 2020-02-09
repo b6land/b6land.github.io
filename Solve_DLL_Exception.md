@@ -2,7 +2,7 @@
 
 ### 前情提要
 
-在開發 C# 的專案時，若要整合第三方函式庫的 DLL，如果未正確設定引用的 DLL ，執行時會出現 Type Initialization Exception 錯誤。這個錯誤有可能是未找到對應的 DLL 而導致。
+在開發 C# 的專案時，若要整合第三方函式庫 (Third-Party Library) 的 DLL，如果未正確設定引用的 DLL ，執行時會出現 Type Initialization Exception 錯誤。這個錯誤有可能是未找到對應的 DLL 而導致。
 
 ### 疑難排解
 
