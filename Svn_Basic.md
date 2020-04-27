@@ -1,0 +1,42 @@
+## SVN 基礎操作
+
+以下皆使用 TortoiseSVN v1.12 進行操作。
+
+### 如何建立新 Branch
+
+- 移動到**程式專案的主目錄**，從右鍵選擇 TortoiseSVN 內的 branch 功能。接著輸入想要的 branch 路徑，並確認選擇的資料夾名稱是否正確。建立的 branch 會複製所選擇的整個資料夾，即底下會包含**程式專案的主目錄**。
+- 因此在專案的根目錄底下建立 branch 時會把整個根目錄都加進去！若不小心建立不合適的 branch，可使用 Repo-Browser 檢查、刪除並 Commit。
+
+### Merge 至 Trunk
+
+- 在合併的結果目錄 (如 trunk) 上點右鍵，選擇 Merge，再選擇需要合併的 branch。這個順序適用於 branch 的新功能都已開發完成，要合併回 trunk 的狀況。
+- 可選擇要合併所有的版本 (Revision) 或是特定範圍的 Revision，並在此時確認修改的檔案 (或程式碼)。
+- 可按下 Test Merge 測試 Merge 將遇到的結果。
+- 在實際 Merge 遇到衝突時，可選擇保留 Incoming (如 branch)、保留 Local (如 trunk)，或是直接編輯文件並解決 (Resolved) 衝突。
+> 在 TortoiseSVN v1.12 上編輯衝突的文件時，可以先在編輯器按下存檔並關閉，再按下 Resolved。
+- 在合併完成後，先 Commit，以利後續修改目錄時的追蹤。 (ex. 未來發現錯誤時，可尋找是哪一次的合併發生問題)
+- 如何記憶：
+```
+主線的異動合併至分支，所以在分支發動
+分支的異動合併至主線，所以在主線發動
+```
+
+[版本控管 - TortoiseSVN 使用，如何合併分支至主線 - demo小鋪](https://demo.tc/post/%5B版本控管%5D%20tortoisesvn%20使用，如何合併分支至主線)
+[SVN Merge 教學 - 已經用了版本控制系統，你還在手動合併程式碼嗎？ - Soul & Shell Blog](https://blog.toright.com/posts/3846/已經用了版本控制系統，你還在手動合併程式碼嗎.html)
+[4.20. Merging - TortoiseSVN Documentation](https://documentation.help/TortoiseSVN/tsvn-dug-merge.html)
+[講解 Subversion 分支與合併：以 TortoiseSVN 為例 - The Will Will Web](https://blog.miniasp.com/post/2010/01/28/Subversion-Branches-and-Merging-using-TortoiseSVN)
+
+### 在 SVN 中忽略 (Ignore) 特定檔案
+
+- 忽略掉那些不必被加入版控的檔案，如暫存檔、二進位執行檔。因此可將重點放在修改的程式碼上，也減少 Commit 時紀錄的檔案。
+- 建立一個 .svnignore 檔案，並在裡面加入要忽略的檔案或資料夾。接著使用以下的指令遞迴套用至每個資料夾：`svn propset svn:ignore -R -F .svnignore .`
+- 要連受版控的目錄一起刪掉，新的目錄才會被忽略。
+
+[SVN 歷險記 - Xcode + SVN 之 ignore - 熊屋 - 技術小記](http://blog.kumaya.co/2014/09/26/using-svn-ignore-with-xcode/)
+
+### C# 專案中出現 .mine 錯誤
+
+- 將專案下的 obj 資料夾刪除，即可解決。
+- 或者將 obj 資料夾加入 SVN 忽略掉的清單。
+
+[Error in VS Build: Files has invalid value "<<<<<<< .mine". Illegal characters in path](https://social.msdn.microsoft.com/Forums/vstudio/en-US/8d761321-304b-41d0-8cb5-eac9a21efd01/error-in-vs-build-files-has-invalid-value-quotltltltltltltlt-minequot-illegal?forum=msbuild)
