@@ -48,4 +48,5 @@ private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
 
 ### 參考資料
 [DataGridViewComboBoxEditingControl 類別 (System.Windows.Forms) - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/api/system.windows.forms.datagridviewcomboboxeditingcontrol?view=netframework-4.8)
+
 (另一種解決方式) [Is there a DataGridView event when a combobox ... [SOLVED] - DaniWeb](https://www.daniweb.com/programming/software-development/threads/452140/is-there-a-datagridview-event-when-a-combobox-value-changes)

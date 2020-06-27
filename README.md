@@ -2,6 +2,8 @@
 
 ## 文章
 
+20/06/28 [C# Interface, Abstact, Virtual 類別與關鍵字](C_Sharp_Interface_Abstract_Virtual.md)
+
 20/04/28 [SVN 基礎操作](Svn_Basic.md)
 
 20/03/10 [在 DataGridView 內加入 ComboBox](DataGridView_ComboBox.md)

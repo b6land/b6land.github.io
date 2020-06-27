@@ -22,8 +22,11 @@
 ```
 
 [版本控管 - TortoiseSVN 使用，如何合併分支至主線 - demo小鋪](https://demo.tc/post/%5B版本控管%5D%20tortoisesvn%20使用，如何合併分支至主線)
+
 [SVN Merge 教學 - 已經用了版本控制系統，你還在手動合併程式碼嗎？ - Soul & Shell Blog](https://blog.toright.com/posts/3846/已經用了版本控制系統，你還在手動合併程式碼嗎.html)
+
 [4.20. Merging - TortoiseSVN Documentation](https://documentation.help/TortoiseSVN/tsvn-dug-merge.html)
+
 [講解 Subversion 分支與合併：以 TortoiseSVN 為例 - The Will Will Web](https://blog.miniasp.com/post/2010/01/28/Subversion-Branches-and-Merging-using-TortoiseSVN)
 
 ### 在 SVN 中忽略 (Ignore) 特定檔案
