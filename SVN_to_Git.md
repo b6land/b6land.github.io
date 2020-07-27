@@ -1,0 +1,41 @@
+## 將 SVN 專案轉換為 Git Repository
+
+這篇文章是使用 SubGit 這一套工具來做 SVN 專案至 Git Repository 的轉換。選用這一套是因為參考的網站表示轉移的前置作業較少，較容易成功。除此之外，也可以嘗試用 TortoiseGit 裡面的 SVN to Git 轉移工具。
+
+### 使用 SubGit 的步驟並取得 Git Repository
+
+1. 下載 SubGit，目前的版本仍然可以免費的作一次性將 SVN 專案轉換至 Git Repository，其他功能則有不同的試用 / 收費標準。
+
+2. 安裝 SubGit。2020 年使用的安裝程式，不必再手動設定 Path 和 JRE 的路徑。
+
+3. 在 SVN 的專案目錄下，對 SVN 專案已有的上傳者，建立 `author.txt`，作為名稱與 E-Mail 的對照，內容範例如下：
+```
+AAA = AAA <AAA@mail.com>
+BBB = BBB <BBB@mail.com>
+CCC = CCC <CCC@mail.com>
+```
+4. 開啟命令提示字元，切換到要放置 Git 專案的目錄下。
+5. 輸入以下指令，替換掉 SVN 專案的位置與 Git 專案名聲，並耐心的等待轉換完成。 如果會發生卡住的情形，則需要加入 `--minimal-revision XXX` ，從 revision XXX 進行轉換，減少轉換失敗的可能性。
+```
+subgit import --non-interactive --authors-file author.txt --svn-url svn://svn_url/svn_project project.git
+```
+6. 移動至 project.git 所在的目錄，輸入 `git clone -l project.git`。`-l` 表示從本機端複製一個 Git Bare Repository (沒有工作目錄的純 Repository) 並轉換成一般的 Git Repository。
+
+7. 使用 `git push` 指令上傳至遠端，加入 `--mirror` 的參數將整個專案 clone 至遠端伺服器。*(可以在 push 時加入 `--dry-run` 測試傳上去的結果。)*
+
+```
+git remote add origin http://git_url/project.git
+git push -u --mirror origin
+```
+
+### 參考連結
+
+- [TMate SubGit](https://subgit.com/)
+
+- [介紹好用工具：SubGit ( 輕鬆將 SVN 專案移轉到 Git 的工具 ) - The Will Will Web](https://blog.miniasp.com/post/2014/09/06/Useful-tools-SubGit-svn-to-git-migration)
+
+- [將 SVN Local Repository 轉換為 Git Local Repository (Windows) - 格物致知](https://amobiz.github.io/2014/09/07/convert-svn-local-repository-to-git-local-repository-windows/)
+
+- [使用 TortoiseGit 將 SVN 轉移到 Git 的紀錄 – Heresy's Space](https://kheresy.wordpress.com/2013/07/18/convert-svn-to-git-with-tortoisegit/)
+
+- [30 天精通 Git 版本控管 (03)：建立儲存庫 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10132804)
