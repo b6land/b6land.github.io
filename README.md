@@ -2,6 +2,8 @@
 
 ## 文章
 
+20/12/13 [Entity Framework 和 LINQ](EntityFramework_LINQ.md)
+
 20/09/12 [為何不使用 Region 分隔程式](C_Sharp_Region.md)
 
 20/09/12 [ToolTip 氣泡提示與 TreeView 樹狀列表](ToolTip_and_TreeView.md)
