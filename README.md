@@ -2,7 +2,9 @@
 
 ## 文章
 
-20/12/13 [Entity Framework 和 LINQ](EntityFramework_LINQ.md)
+21/01/06 [LINQ to Entities 與 SQL 語法使用技巧](SQL_and_LINQ_to_Entities.md)
+
+20/12/13 [Entity Framework 和 LINQ 摘要](EntityFramework_LINQ.md)
 
 20/09/12 [為何不使用 Region 分隔程式](C_Sharp_Region.md)
 

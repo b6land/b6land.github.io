@@ -1,4 +1,4 @@
-## Entity Framework 和 LINQ
+## Entity Framework 和 LINQ 摘要
 
 練習 Entity Framework 和 LINQ 時的教學網站與筆記整理。
 
