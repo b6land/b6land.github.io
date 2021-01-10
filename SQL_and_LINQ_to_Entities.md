@@ -19,7 +19,7 @@
 
 ### SQL 語法的使用 (中文、CONCAT)
 
-- SQL下查詢中文字串無資料或寫入中文變成問號 ? 時，可透過加入 N 在查詢字串前面。
+- SQL下查詢中文字串無資料或寫入中文變成問號 ? 時，可透過加入 N 在查詢字串前面，告知 SQL 的查詢語法需轉換為 Unicode 的形式。
 - 可使用 CONCAT (MSSQL 語法為 + 號) 同時查詢多欄位的字串。
 - 上方範例查詢語法： `SELECT * FROM dbo.TestTable WHERE Name+Address LIKE N'%小明%'`。
 
@@ -43,6 +43,7 @@ WHERE
 
 - 參考資料: [SQL下查詢中文字串無資料或寫入中文 變成問號? @ SAP之鬼~~ :: 痞客邦 ::](https://saperp.pixnet.net/blog/post/4078081)
 - 參考資料: [SQL Concatenate 函数 - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sql-concatenate.html)
+- [個人筆記 - Character-Based型態的資料在SQL裡面儲存的Columns要選用什麼DataType？為何SQL在字串前面要加N？ - 己心亦凡 - 點部落](https://dotblogs.com.tw/eason/2011/05/25/26116)
 
 ### Entity Framework 與專案註記
 
