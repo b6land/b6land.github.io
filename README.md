@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/01/12 [SQL Server 2017 和 Azure Data Studio 介紹](SQL_Server_2017_and_Azure_Data_Studio.md)
+
 21/01/10 [建立 WebAPI 的筆記 (使用台鐵公開資料)](WebAPI_TRA.md)
 
 21/01/06 [LINQ to Entities 與 SQL 語法使用技巧](SQL_and_LINQ_to_Entities.md)
