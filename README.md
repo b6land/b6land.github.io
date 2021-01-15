@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/01/15 [C# 7.0 新特性：out var 與 is](C_Sharp_7_0_out_var_is.md)
+
 21/01/12 [SQL Server 2017 和 Azure Data Studio 介紹](SQL_Server_2017_and_Azure_Data_Studio.md)
 
 21/01/10 [建立 WebAPI 的筆記 (使用台鐵公開資料)](WebAPI_TRA.md)
@@ -70,7 +72,7 @@
 
 18/08/26 [Early Stopping 和 Cross Validation](Early_Stopping_and_Cross_Validation.md)
 
-18/08/17 [Event 的使用](Event.md)
+18/08/17 [Event 與 Event Handler 的介紹與使用](Event.md)
 
 18/07/03 [從 Continuous-Multioutput Label 建立 Confusion Matrix](Confusion_Matrix.md)
 
