@@ -16,7 +16,7 @@ Install-Package Microsoft.AspNet.WebApi.Core.zh-Hant
 Install-Package Microsoft.AspNet.WebApi.WebHost.zh-Hant
 ```
 
-3. 新增 /App_Start/WebApiConfig.cs 檔案，在類別內加入以下程式碼：
+3. 新增 /App_Start/WebApiConfig.cs 檔案，並加入以下程式碼：
 
 ```
 public static void Register(HttpConfiguration config)
@@ -36,11 +36,7 @@ public static void Register(HttpConfiguration config)
 
 (可能須引用 System.Web.Http 命名空間)
 
-4. 修改 Global.asax.cs 檔案，註冊 ASP.NET Web API 相關設定：在 Global.asax.cs 檔案最上方引用 System.Web.Http 命名空間
-
-`using System.Web.Http;`
-
-並在 Application_Start() 方法中的 AreaRegistration.RegisterAllAreas(); 這行下方加入以下程式碼
+4. 修改 Global.asax.cs 檔案，註冊 ASP.NET Web API 設定：在 Global.asax.cs 檔案最上方引用 `System.Web.Http` 命名空間，並在 `Application_Start()` 方法中的 `AreaRegistration.RegisterAllAreas();` 這行下方加入以下程式
 
 `GlobalConfiguration.Configure(WebApiConfig.Register);`
 
