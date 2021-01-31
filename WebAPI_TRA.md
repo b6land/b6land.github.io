@@ -56,6 +56,20 @@ public static void Register(HttpConfiguration config)
 - 在 Model 中加入 Input Model、Controller 中加入 Post 方法。當使用者按下按鈕後，送出 POST 訊息至 Controller，再回傳 Input Model 結果至 View。
 - 參考資料：[c# - ASP.NET MVC get textbox input value - Stack Overflow](https://stackoverflow.com/questions/18873098/asp-net-mvc-get-textbox-input-value)
 
+### 執行期間內儲存設定
+
+- 為了紀錄是否已下載今日資料 (避免重新下載相同資料)，使用 Web.Config 紀錄並儲存設定，範例如下：
+
+```
+<appSettings>
+    <add key="TraDate" value="2020/12/01" />
+</appSettings>
+```
+
+可以使用 `System.Web.Configuration.WebConfigurationManager.AppSettings["TraDate"];` 來存取。
+- 一旦停止執行，再重新啟動，先前的設定值就會清空。
+- 參考資料：[Best Way to store configuration setting inside my asp.net mvc application - Stack Overflow](https://stackoverflow.com/questions/18044712/best-way-to-store-configuration-setting-inside-my-asp-net-mvc-application)
+
 ### 以 JSON 格式輸出查詢結果
 
 - 如果要自訂輸出格式的話，可以透過 `HttpResponseMessage`，並透過在 `Get()` 語法或 _WebApiConfig.cs_ 內設定 `MediaTypeFormater` 自訂輸出格式。語法如下：

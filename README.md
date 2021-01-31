@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/01/31 [R 語言雜記](R_Language_Note.md)
+
 21/01/23 [C# 關鍵字 3 (`?`, `$`, ctor, var)](C_Sharp_Keywords_3.md)
 
 21/01/15 [C# 7.0 新特性：out var 與 is](C_Sharp_7_0_out_var_is.md)
