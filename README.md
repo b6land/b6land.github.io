@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/03/18 [觀察者模式簡介](Observer_Pattern.md)
+
 21/03/14 [SQL 語法 2](SQL_Command_2.md)
 
 21/03/11 [SQL 語法](SQL_Command.md)
