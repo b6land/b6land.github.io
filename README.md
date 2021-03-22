@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/03/22 [Heap、HashSet 和 Quick Sort](Heap_and_HashSet.md)
+
 21/03/18 [觀察者模式簡介](Observer_Pattern.md)
 
 21/03/14 [SQL 語法 2](SQL_Command_2.md)
