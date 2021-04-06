@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/04/06 [SQL 並行違規](SQL_DBConcurrency_Exception.md)
+
 21/03/26 [SQL ROW_NUMBER() 和 IS_NULL() 函數](SQL_ROW_NUMBER.md)
 
 21/03/22 [Heap、HashSet 和 Quick Sort](Heap_and_HashSet.md)
