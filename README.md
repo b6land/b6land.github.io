@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/05/30 [成為卓越程式設計師的38項必修法則 - 筆記](Note_of_Becoming_a_Better_Programmer.md)
+
 21/05/30 [Azure Data Studio 關閉未儲存的 SQL 查詢](Azure_Data_Studio_Unsaved_Queries.md)
 
 21/05/30 [SQL 資料過濾](SQL_Select_vs_RowFilter.md)
