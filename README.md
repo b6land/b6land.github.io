@@ -2,6 +2,10 @@
 
 ## 文章
 
+21/05/30 [Azure Data Studio 關閉未儲存的 SQL 查詢](Azure_Data_Studio_Unsaved_Queries.md)
+
+21/05/30 [SQL 資料過濾](SQL_Select_vs_RowFilter.md)
+
 21/04/06 [SQL 並行違規](SQL_DBConcurrency_Exception.md)
 
 21/03/26 [SQL ROW_NUMBER() 和 IS_NULL() 函數](SQL_ROW_NUMBER.md)
