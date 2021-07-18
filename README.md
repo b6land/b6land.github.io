@@ -2,6 +2,10 @@
 
 ## 文章
 
+21/07/18 [ASP.NET 的頁面生命週期與 PostBack](ASP_NET_Life_Cycle_PostBack.md)
+
+21/07/18 [SQL 筆記 (GROUP BY, DELETE FROM, Remoting Format)](SQL_GROUP_BY_DELETE_FROM_RemotingFromat.md)
+
 21/05/30 [成為卓越程式設計師的38項必修法則 - 筆記](Note_of_Becoming_a_Better_Programmer.md)
 
 21/05/30 [Azure Data Studio 關閉未儲存的 SQL 查詢](Azure_Data_Studio_Unsaved_Queries.md)
