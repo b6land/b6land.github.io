@@ -29,7 +29,7 @@
 
 > DELETE FROM [Table_1] <br>
 > WHERE RowID IN ( <br>
-> &nbsp;&nbsp;SELECT RowID FROM [Table_1] T1 <br>
+> &nbsp;&nbsp;SELECT RowID FROM [Table_1] <br>
 > &nbsp;&nbsp;WHERE RowID NOT EXISTS IN ( <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;SELECT ID FROM [Table_2] <br>
 > &nbsp;&nbsp;) <br>

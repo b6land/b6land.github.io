@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/07/18 [寫出好讀的 SQL](SQL_Readable.md)
+
 21/07/18 [ASP.NET 的頁面生命週期與 PostBack](ASP_NET_Life_Cycle_PostBack.md)
 
 21/07/18 [SQL 筆記 (GROUP BY, DELETE FROM, Remoting Format)](SQL_GROUP_BY_DELETE_FROM_RemotingFromat.md)
