@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/09/21 [SOLID 開發原則](SOLID_Principles.md)
+
 21/09/21 [SQL 數值處理與多重條件簡化](SQL_Numeric_Always_True.md)
 
 21/09/21 [使用 NancyFx 建立簡易 HttpServer](NancyFx.md)
