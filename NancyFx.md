@@ -1,0 +1,82 @@
+## 使用 NancyFx 建立簡易 HttpServer
+
+本文介紹如何使用 NancyFx 建立 HttpServer，並提供預設的回應。
+
+### NancyFx 簡介
+
+- 一個輕量、超簡易的 Web Framework，可用來處理各種 Web Request。
+- 根據官方文件說明，Nancy 是女兒的名字，Fx 則表示框架。
+- 最後版本為 2.0，部分寫法和 1.x 版有所不同。
+- 已經停止維護，有相同需求的話，可以用 ASP.Net Core 的元件達成。
+
+### 程式碼
+
+- 可以用以下的程式碼 (改寫自*黑暗執行緒*的網誌) 建立一個簡單的 HTTP Server，當 API 送出任何資料給 Server 時，預設會回傳 `HTTP 200 OK`: 
+
+```
+using System;
+using Nancy.Hosting.Self;
+using Nancy;
+using Nancy.Extensions;
+
+namespace WebServer
+{
+    class WebServer
+    {
+        public static void Main()
+        {
+            var hostConfigs = new HostConfiguration
+            {
+                UrlReservations = new UrlReservations() { CreateAutomatically = true }
+            };
+
+            Uri uri = new Uri("http://localhost:1234");
+            var host = new NancyHost(hostConfigs, uri);
+            host.Start();
+            Console.WriteLine("Press any key to stop...");
+            Console.Read();
+            host.Stop();
+        }
+
+    }
+
+    public class PostModule : NancyModule
+    {
+        public PostModule()
+        {
+            Post("/", _ =>
+            {
+                string str = Request.Body.AsString();
+                return "";
+            });
+        }
+    }
+```
+
+- 由原本 1.x 版本的
+
+```
+Get["/"] = (p) =>
+{
+    // Do work here
+};
+```
+
+*(取得 String Key 的 API 路徑，接著以 Lambda 表示式撰寫需要的動作)*
+
+改成 2.0 版的
+
+```
+Get("/", _ => {
+    // Do work here
+});
+```
+
+*(第一個 String 參數，表示要使用的 API 路徑，接下來的底線表示不使用任何參數的 Lambda 表示式，以撰寫需要的動作)*
+
+### 參考資料
+
+- [NancyFx 官網](http://nancyfx.org/)
+- 建立 Guid Server: [NancyFx－打造小型 WebAPI 與 Microservice 的輕巧利器-黑暗執行緒](https://blog.darkthread.net/blog/nancyfx/#3816c777-332d-4d21-b6ed-02214a8b949e)
+- 新版 NancyFx 取得資料: [c# - Cannot apply indexing with [] to an expression of type 'method group' SinglePageApp1. Get["/"] Nancy - Stack Overflow](https://stackoverflow.com/questions/39574057/cannot-apply-indexing-with-to-an-expression-of-type-method-groupsinglepage)
+- 如何取得 POST 資料: [How get json from post request (question) · Issue #2009 · NancyFx/Nancy · GitHub](https://github.com/NancyFx/Nancy/issues/2009)

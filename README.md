@@ -2,6 +2,10 @@
 
 ## 文章
 
+21/09/21 [SQL 數值處理與多重條件簡化](SQL_Numeric_Always_True.md)
+
+21/09/21 [使用 NancyFx 建立簡易 HttpServer](NancyFx.md)
+
 21/07/18 [寫出好讀的 SQL](SQL_Readable.md)
 
 21/07/18 [ASP.NET 的頁面生命週期與 PostBack](ASP_NET_Life_Cycle_PostBack.md)
