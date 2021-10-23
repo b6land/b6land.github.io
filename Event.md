@@ -9,7 +9,7 @@
 - 參考資料：[Unity 事件機制淺談 (C# events, unity events)](https://dev.twsiyuan.com/2017/03/c-sharp-event-in-unity.html)
 - 參考資料：[觀念 C# — EventHandler - 我，傑夫。開發人](https://jeffprogrammer.wordpress.com/2015/07/29/觀念-c-eventhandler/)
 
-### 實作 Event (不含特定 Event 資料)
+### 實作 Event
 
 1\. 宣告一個 public event handler。
 
@@ -30,6 +30,26 @@ protected virtual void OnCountdownCompleted(EventArgs e)
 `OnCountdownCompleted(new EventArgs());`
 
 - 參考資料：[How to: Implement Events in Your Class](https://msdn.microsoft.com/en-us/library/5z57dxz2(v=vs.85).aspx)
+
+4\. 使用者需要接收通知時，可以使用以下語法，當事件發生時，會呼叫 Method 方法。
+
+```
+Clock.Alarm += new EventHandler(Method);
+Clock.Countdown();
+```
+
+5\. 可以繼承 EventArgs 類別，夾帶不同類型的資料至 EventHandler 中。
+
+```
+public class CountdownArgs: EventArgs{
+    public int times;
+    public string tip;
+}
+```
+
+- 參考資料: [C# event 與 EventHandler - 小e的心得整理房 - 點部落](https://dotblogs.com.tw/enet/2017/01/23/013944)
+- 參考資料: [C# 事件(下) – 加上event關鍵字 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10228906)
+- 參考資料: [How to: Raise and Consume Events - Microsoft Docs](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-3.0/9aackb16(v=vs.85))
 
 ### 在 Static Class 實作 Event
 
