@@ -18,7 +18,7 @@
 2\. 宣告一個 event 發生的函式，函式名稱通常以 **On** 開頭。
 
 ```
-protected virtual void OnCountdownCompleted(EventArgs e)
+protected virtual void OnCountdownCompleted(object sender, EventArgs e)
 {
     if (CountdownCompleted != null)
         CountdownCompleted(this, e);
@@ -27,15 +27,22 @@ protected virtual void OnCountdownCompleted(EventArgs e)
 
 3\. 在需要發生事件的地方進行呼叫。
 
-`OnCountdownCompleted(new EventArgs());`
-
+```
+public void Countdown(){
+    OnCountdownCompleted(this, new EventArgs());
+}
+```
 - 參考資料：[How to: Implement Events in Your Class](https://msdn.microsoft.com/en-us/library/5z57dxz2(v=vs.85).aspx)
 
-4\. 使用者需要接收通知時，可以使用以下語法，當事件發生時，會呼叫 Method 方法。
+4\. 使用者需要接收通知時，可以使用以下語法，當事件發生時，會呼叫 Method 方法。Method 方法需要的參數為 object 和 EventArgs。
 
 ```
-Clock.Alarm += new EventHandler(Method);
+Clock.Alarm += Method;
 Clock.Countdown();
+
+public void (object sender , EventArgs eventArgs){
+    ...
+}
 ```
 
 5\. 可以繼承 EventArgs 類別，夾帶不同類型的資料至 EventHandler 中。
