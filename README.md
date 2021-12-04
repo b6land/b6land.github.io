@@ -2,6 +2,8 @@
 
 ## 文章
 
+21/12/04 [Visual Studio 偵錯模式技巧](Visual_Studio_Debug_Mode.md)
+
 21/09/21 [SOLID 開發原則](SOLID_Principles.md)
 
 21/09/21 [SQL 數值處理與多重條件簡化](SQL_Numeric_Always_True.md)
