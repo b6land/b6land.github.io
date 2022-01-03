@@ -2,6 +2,8 @@
 
 ## 文章
 
+22/01/03 [策略模式筆記](Strategy_Pattern_Note.md)
+
 21/12/04 [Visual Studio 偵錯模式技巧](Visual_Studio_Debug_Mode.md)
 
 21/09/21 [SOLID 開發原則](SOLID_Principles.md)
