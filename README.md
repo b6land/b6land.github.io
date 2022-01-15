@@ -2,6 +2,10 @@
 
 ## 文章
 
+22/01/15 [Visual Studio Code 快捷鍵](Visual_Studio_Code_Shortcuts.md)
+
+22/01/15 [Excel 試算表技巧](Excel.md)
+
 22/01/03 [策略模式筆記](Strategy_Pattern_Note.md)
 
 21/12/04 [Visual Studio 偵錯模式技巧](Visual_Studio_Debug_Mode.md)

@@ -21,4 +21,7 @@
 
 - 當使用彙總函數 (如 `SUM()`) 時，可能會遇到部分資料的欄位數值為空的狀況，此時可以用 `ISNULL()` 函數將 NULL 取代為特定的值。例如下面指令會將價格欄位加總，遇到沒有價格的資料時，以 0 代替。
 > SUM(ISNULL(Price, 0))
+- 加總時，若相加的欄位可能為 NULL 值，應以 `ISNULL(column, 0)` 代替，因為 NULL 加上任何數字都會為 NULL ，而導致計算錯誤。
+> SELECT ISNULL(NULL, 0) + 100 -- 結果為 100
+> SELECT NULL + 100 -- 結果為 NULL
 - 參考資料：[德瑞克：SQL Server 學習筆記: SQL Server：認識 ISNULL 函數](http://sharedderrick.blogspot.com/2012/06/t-sql-isnull.html)
