@@ -1,6 +1,6 @@
 ## SQL 數值處理與多重條件簡化
 
-本文介紹如何處理含小數的數值進退位、`DATEDIFF` 與 `DATEADD` 的應用，以及使用程式建立 SQL 語法時，如何簡化多重條件。
+本文介紹如何處理含小數的數值進退位、`DATEDIFF` 與 `DATEADD` 等數種日期函式的應用，以及使用程式建立 SQL 語法時，如何簡化多重條件。
 
 ### SQL 四捨五入與進退位
 
@@ -17,6 +17,16 @@
 - `DATEADD(datepart, number, date)`: 上方語法中的 m 為月份的縮寫，表示增加數量的單位，number 為增加的數量，date 為被計算的日期。將上方的 DATEDIFF 加入後，表示加入至今的所有月份至 0 上。結果即為當月的 1 日。
 
 - 官方語法說明: [DATEDIFF (Transact-SQL) - SQL Server - Microsoft Docs](https://docs.microsoft.com/zh-tw/sql/t-sql/functions/datediff-transact-sql)。
+
+### 取得當年的第 1 日
+
+- 以下的語法，可以取得當年度的第一天，並轉為 `NVARCHAR` 型態。
+
+- `SELECT CONVERT(NVARCHAR, YEAR(GETDATE())) + '/01/01' `
+
+- 使用 `GETDATE` 函數取得日期，接著以 `YEAR` 函數取得日期中的年份，並以 `CONVERT` 轉為 `NVARCHAR` 型態以後，再加上當年一月一日的字串。
+
+- 參考資料: [Add and Subtract Dates using DATEADD in SQL Server](https://www.mssqltips.com/sqlservertip/2509/add-and-subtract-dates-using-dateadd-in-sql-server/)
 
 ### SQL 的多重條件簡化
 

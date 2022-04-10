@@ -2,6 +2,8 @@
 
 ## 文章
 
+22/04/10 [LINQ 與 Lambda 筆記](C_Sharp_LINQ_Lambda_Note.md)
+
 22/02/20 [SQL 改善查詢效能](SQL_Query_Performance_Improve.md)
 
 22/01/15 [Visual Studio Code 快捷鍵](Visual_Studio_Code_Shortcuts.md)
