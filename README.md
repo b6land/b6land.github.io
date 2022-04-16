@@ -2,6 +2,10 @@
 
 ## 文章
 
+22/04/16 [SQL 除以 0](SQL_Divide_By_0.md)
+
+22/04/16 [TFS 標註功能: 查看特定行變更](TFS_Annotation.md)
+
 22/04/10 [LINQ 與 Lambda 筆記](C_Sharp_LINQ_Lambda_Note.md)
 
 22/02/20 [SQL 改善查詢效能](SQL_Query_Performance_Improve.md)

@@ -1,4 +1,4 @@
-### LINQ 與 Lambda 筆記
+## LINQ 與 Lambda 筆記
 
 在寫 C# 程式時，常常會看到結合 LINQ 和 Lambda 語法的程式碼，以下是簡單的介紹。
 
