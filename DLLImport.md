@@ -1,4 +1,11 @@
-## 如何使用 DLLImport 呼叫 C++ 程式碼
+---
+layout: post
+title: 如何使用 DLLImport 呼叫 C++ 程式碼
+date: 2020-02-09 12:00:00 +0800
+categories: C# DLL
+---
+
+本文介紹如何在 Visual Studio 專案和 C# 程式中，引用 C++ 編譯成的 DLL。
 
 ### DLL 專案的設定
 

@@ -1,6 +1,11 @@
-## SVN 基礎操作
+---
+layout: post
+title: SVN 基礎操作
+date: 2020-04-28 12:00:00 +0800
+categories: SVN 
+--- 
 
-以下皆使用 TortoiseSVN v1.12 進行操作。
+本文介紹如何以圖形化介面操作 SVN，以下皆使用 TortoiseSVN v1.12 進行。
 
 ### 如何建立新 Branch
 

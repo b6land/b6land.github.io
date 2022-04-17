@@ -1,4 +1,11 @@
-# Singleton 簡介
+---
+layout: post
+title: Singleton 簡介
+date: 2020-02-09 12:00:00 +0800
+categories: DesignPattern C#
+---
+
+Singleton 是一種軟體的設計模式。
 
 - 該類別在程式執行期間，只容許一個 Instance (實例) 存在。
 - 須包含檢查 Instance 是否存在的程式、產生 Instance 的程式，以及提供 `Public` 方法供外部程式存取 Instance。
