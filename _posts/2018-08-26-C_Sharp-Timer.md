@@ -1,4 +1,11 @@
-## C# 定時器 (Timer)
+---
+layout: post
+title: C# 定時器 (Timer)
+date: 2018-08-26 12:00:00 +0800
+categories: C#
+---
+
+本篇文章介紹 C# 中兩種不同的 Timer 使用情境、方式。
 
 ### Timer 的類別
 `System.Windows.Form.Timer`：

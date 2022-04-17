@@ -1,4 +1,13 @@
-**DLL 和 LIB 的差異性**
+---
+layout: post
+title: DLL、LIB 與執行緒
+date: 2018-04-19 12:00:00 +0800
+categories: DLL
+---
+
+這篇文章簡介 DLL 和 LIB 的差別，以及如何在 Visual Studio 中載入，最後介紹 Thread Safe。
+
+### DLL 和 LIB 的差異性
 
 呼叫他人所寫的函式時，編譯器會經由連結這個動作，找尋 Library 內所需要的程式碼。
 
@@ -11,7 +20,7 @@ Windows 的 Library 分為 2 類：
 
 [.lib 和 .dll 的不同處在哪裡呢？](http://www.programmer-club.com.tw/ShowSameTitleN/vc/6921.html)
 
-**在 Visual Studio 載入 LIB 的方式**
+### 在 Visual Studio 載入 LIB 的方式
 
 1. 利用 `#pragma comment(lib, "../../xxx.lib")`，優點是不用擔心忘記加入 Library 至 (不同的 Build) 專案設定內，缺點是有些情形下會難以除錯連結器 (Linker) 相關的問題。
 2. 使用 Visual Studio 的專案設定。
@@ -21,7 +30,7 @@ Windows 的 Library 分為 2 類：
 
 [Library importing: #pragma comment VS Visual studio project input](https://stackoverflow.com/questions/6287338/library-importing-pragma-comment-vs-visual-studio-project-input)
 
-**Thread Safe**
+### Thread Safe
 
 包在 DLL 內部的程式碼，如果變數會被多個執行緒存取，那麼它就不符合 Thread Safe 的性質。在 DLL 內部使用多執行緒，或在外部使用多執行緒呼叫 DLL 的程式碼，都可能會導致資料出錯。因此應該在使用前檢查 Library 的說明文件。
 

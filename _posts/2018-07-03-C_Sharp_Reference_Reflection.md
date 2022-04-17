@@ -1,3 +1,12 @@
+---
+layout: post
+title: C# 的動態參考與反射
+date: 2018-07-03 12:00:00 +0800
+categories: C# DLL
+---
+
+這篇文章介紹在專案中使用第三方 DLL 時，常用的動態參考與反射。
+
 ### 動態加入參考
 
 - 可以使用 `Assembly.LoadFrom("MyAssembly.dll")` 載入特定的 DLL 檔。

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Early Stopping 和 Cross Validation
+date: 2018-08-26 12:00:00 +0800
+categories: DeepLearning
+---
+
+本篇文章介紹 Early Stopping 和 Cross Validation 的概念與實作方式。
+
 ## Early Stopping
 
 為了使訓練的模型不要落入 Overfitting 的情形，可以套用 EarlyStopping 的機制，使訓練過程在達到指定條件時，提前結束。
@@ -32,7 +41,7 @@ return number (total wrong) / (wrong + correct)
 
 ### 如何取資料
 
-![K-Fold 如何處理資料](img/kFold.jpg)
+![K-Fold 如何處理資料](/assets/imgs/kFold.jpg)
 
 K = 0 時，取出 5 ~ 14 作為訓練資料，0 ~ 4 作為測試資料。
 

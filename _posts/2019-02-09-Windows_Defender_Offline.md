@@ -1,3 +1,12 @@
+---
+layout: post
+title: Windows Defender Offline 防毒隨身碟
+date: 2019-02-09 12:00:00 +0800
+categories: Windows
+---
+
+本文介紹 Windows Defender Offline 防毒隨身碟的特色。
+
 ### Windows Defender Offline 防毒隨身碟
 
 如果發現手邊的電腦中毒，要如何在電腦被隔離的狀況下將病毒清除：
