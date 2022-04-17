@@ -1,3 +1,14 @@
+---
+layout: post
+title: 查詢 SQL 容量錯誤並備份資料庫
+date: 2019-07-04 12:00:00 +0800
+categories: SQL
+---
+
+可以參考下文檢查 SQL 的錯誤，如果 SQL 會插入大量資料時，可使用 Script 備份資料庫並移除資料。
+
+此外也介紹 `Order By` 的效能影響。
+
 ### 查詢 SQL 容量錯誤並備份資料庫
 
 由於預期在 SQL Server Express 會遇到超過容量上限的問題，因此可以先找到對應的錯誤代碼，並從 C# 中檢查是否有該錯誤的存在。
@@ -10,7 +21,7 @@ C# 執行 SQL 語法查詢，如 **SqlCommand** 類別的的 `ExecuteNonQuery()`
 
 當 `SqlException.Number` 為 1105 時，表示 SQL Server Express 已超過容量限制，或是磁碟空間不足也可能造成這個問題。
 
-此時可以 Script 備份再將資料移除掉。
+此時可以用 Script 備份再將資料移除掉。
 
 ```
 BACKUP DATABASE test TO DISK = 'C:\test.bak'

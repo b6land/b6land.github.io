@@ -1,6 +1,11 @@
-## C# 關鍵字 (params, lock)
+---
+layout: post
+title: C# 關鍵字 - params, lock
+date: 2019-09-17 12:00:00 +0800
+categories: C#
+---
 
-本篇收錄了一些關鍵字的用法。
+本篇收錄 C# 關鍵字 params, lock的用法。
 
 ### params 
 

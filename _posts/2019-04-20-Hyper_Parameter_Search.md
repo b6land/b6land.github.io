@@ -1,3 +1,12 @@
+---
+layout: post
+title: Hyper Parameter Search
+date: 2019-04-20 12:00:00 +0800
+categories: DeepLearning
+---
+
+本文介紹 Hyper Parameter Search 的類型與使用方式，以增加類神經網路模型的預測準確率。
+
 ## Hyper Parameter Search
 
 Hyperparameter 最佳化的三個方式 (參考資料 1)：
