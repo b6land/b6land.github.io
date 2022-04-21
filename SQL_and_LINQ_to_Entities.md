@@ -1,8 +1,15 @@
-## LINQ to Entities 與 SQL 語法使用技巧
+---
+layout: post
+title: C# LINQ to Entities 與 SQL 語法使用技巧
+date: 2021-01-06 12:00:00 +0800
+categories: C# LINQ SQL
+--- 
+
+本文是撰寫 ASP.NET MVC 專案時，留下的一些筆記。
 
 ### 以 LINQ to Entities 或 SQL 語法查詢資料 
 
-- 撰寫 LINQ to Entities 的基礎 CRUD 語法時，除了 Read (`dbContext.Table.Find()`) 以外，基本上是以特定語法搭配 `dbContext.SaveChanges()` 儲存資料庫內容。
+- 撰寫 LINQ to Entities 的基礎 CRUD 語法時，除了 Read 方法 (`dbContext.Table.Find()`) 以外，基本上是以特定語法搭配 `dbContext.SaveChanges()` 儲存資料庫內容。
 - 需要輸入原始的 MS-SQL 語法查詢時，可使用 `dbContext.Table.SqlQuery("SQL Command")` ，這個方法會回傳 Table class 的實體物件集合：
 
 ```
