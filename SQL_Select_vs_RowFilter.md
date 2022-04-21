@@ -1,4 +1,9 @@
-## SQL 資料過濾
+---
+layout: post
+title: C# 資料過濾
+date: 2021-04-06 12:00:00 +0800
+categories: Database C#
+--- 
 
 本篇會介紹 DataView 的 RowFilter 和 DataTable 的 Select。
 
