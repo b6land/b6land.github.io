@@ -1,4 +1,9 @@
-## ASP.NET 的頁面生命週期與 PostBack
+---
+layout: post
+title: ASP.NET 的頁面生命週期與 PostBack
+date: 2021-07-18 12:00:00 +0800
+categories: AspNet
+--- 
 
 本篇文章介紹 ASP.NET 的頁面生命週期的各階段行為，以及 PostBack 的簡介、與 CallBack 的差異。
 

@@ -1,4 +1,9 @@
-## Visual Studio 偵錯模式技巧
+---
+layout: post
+title: Visual Studio 偵錯模式技巧
+date: 2021-12-04 12:00:00 +0800
+categories: VisualStudio
+--- 
 
 本篇介紹 Visual Studio 的偵錯技巧。
 

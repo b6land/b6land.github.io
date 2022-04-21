@@ -1,4 +1,9 @@
-## LINQ 與 Lambda 筆記
+---
+layout: post
+title: LINQ 與 Lambda 筆記
+date: 2022-04-10 12:00:00 +0800
+categories: C# LINQ Lambda
+---
 
 在寫 C# 程式時，常常會看到結合 LINQ 和 Lambda 語法的程式碼，以下是簡單的介紹。
 
