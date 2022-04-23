@@ -1,4 +1,12 @@
-## C# 中常見的 Memory Leak
+---
+layout: post
+title: C# 中常見的 Memory Leak
+date: 2019-10-20 12:00:00 +0800
+categories: C#
+---
+
+本文介紹 C# 中記憶體洩漏的來源，以及當來源是 Interop 時，要如何處理。
+另外也包含常見的避免洩漏的方式。
 
 ### Memory Leak 的來源
 
