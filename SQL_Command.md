@@ -1,10 +1,15 @@
-## SQL 語法
+---
+layout: post
+title: SQL 語法 - WITH (NOLOCK)、暫存資料表、Join
+date: 2021-03-11 12:00:00 +0800
+categories: SQL
+--- 
 
-在這一篇當中，會簡介 SQL 語法的 `With (NoLock)`、暫存資料表與 Select Into，以及 Join 的差異。 
+在這一篇當中，會簡介 SQL 語法的 `WITH (NOLOCK)`、暫存資料表與 Select Into，以及 Join 的差異。 
 
 ### With (NoLock)
 
-- 當只需要查詢時，可使用 `With (NoLock)` 增加查詢速度，因為不用讓之後的查詢等待本次查詢結束。但需要注意使用的情形：如果剛好有資料正在寫入、更新或刪除時，可能會導致資料出錯。
+- 當只需要查詢時，可使用 `WITH (NOLOCK)` 增加查詢速度，因為不用讓之後的查詢等待本次查詢結束。但需要注意使用的情形：如果剛好有資料正在寫入、更新或刪除時，可能會導致資料出錯。
 - 使用的範例：
 > Select * From Table_a With(NoLock)
 - 參考資料：[[SQL SERVER]小心使用With NoLock(續) - RiCo技術農場 - 點部落](https://dotblogs.com.tw/ricochen/2014/05/04/144966)

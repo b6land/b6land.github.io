@@ -1,8 +1,14 @@
-### C# 7.0 新特性：out var 與 is
+---
+layout: post
+title: C# 7.0 新特性：out var 與 is
+date: 2021-01-15 12:00:00 +0800
+categories: C#
+--- 
 
 以下介紹 C# 7.0 中新增的兩個關鍵字。
 
 ### out var
+
 在 C# 中，常使用以下的方式將變數試圖剖析為特定型別的變數：
 
 ```

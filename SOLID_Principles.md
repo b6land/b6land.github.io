@@ -1,4 +1,9 @@
-## SOLID 開發原則
+---
+layout: post
+title: SOLID 開發原則
+date: 2021-09-21 12:00:00 +0800
+categories: SOLID
+--- 
 
 本文介紹什麼是 SOLID 開發原則。盡可能地遵守這些原則，能寫出更容易維護與擴充的好程式。
 

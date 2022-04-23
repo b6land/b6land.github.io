@@ -1,4 +1,9 @@
-## 使用 Window Handle 撰寫自動化程式
+---
+layout: post
+title: 使用 Window Handle 撰寫自動化程式
+date: 2019-11-17 12:00:00 +0800
+categories: C#
+---
 
 在 Windows 系統上，可以透過操作視窗元件的 Handle ，自動的執行一系列的步驟，且不會像錄製滑鼠 / 鍵盤動作的方式，會受到當時畫面的干擾。
 

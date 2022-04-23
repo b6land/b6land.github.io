@@ -1,4 +1,9 @@
-## GitHub Flow
+---
+layout: post
+title: GitHub Flow
+date: 2020-07-27 12:00:00 +0800
+categories: Git
+--- 
 
 GitHub Flow 的概念，是在 `master` 上建立新分支，直接開發新的功能與驗證，並合併至 `master`。發行時直接建立新 Tag。整體來說和 SVN 的開發流程類似。
 
