@@ -25,7 +25,7 @@ categories: C# LINQ Lambda
 
 ### 範例程式碼
 
-```
+``` C#
 using System;
 using System.Linq;
 					

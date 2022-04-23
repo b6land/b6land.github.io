@@ -21,14 +21,16 @@ categories: SQL
 
 以下是包含規則 1, 2, 4, 6 的 SQL 查詢語法。
 
-> -- 使用 DELETE FROM 刪除表格 1 中不包含在表格 2 內的資料 <br>
-> DELETE FROM [Table_1] <br>
-> WHERE RowID IN ( <br>
-> &nbsp;&nbsp;SELECT RowID FROM [Table_1] <br>
-> &nbsp;&nbsp;WHERE RowID NOT EXISTS IN ( <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;SELECT ID FROM [Table_2] <br>
-> &nbsp;&nbsp;) <br>
-> ) <br>
+``` SQL
+ -- 使用 DELETE FROM 刪除表格 1 中不包含在表格 2 內的資料
+DELETE FROM [Table_1]
+WHERE RowID IN ( 
+    SELECT RowID FROM [Table_1]
+    WHERE RowID NOT EXISTS IN ( 
+        SELECT ID FROM [Table_2]
+    )
+)
+```
 
 ### 參考資料
 

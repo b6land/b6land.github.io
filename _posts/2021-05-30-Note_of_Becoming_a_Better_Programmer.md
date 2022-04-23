@@ -56,8 +56,8 @@ else
 
 ### 延伸閱讀
 
--[分類: Methodology - 璇之又璇的網路世界](https://shawnlin0201.github.io/categories/Methodology/)
--[設計原則五四三 - iThome](https://www.ithome.com.tw/voice/97462)
+- [分類: Methodology - 璇之又璇的網路世界](https://shawnlin0201.github.io/categories/Methodology/)
+- [設計原則五四三 - iThome](https://www.ithome.com.tw/voice/97462)
 
 ### 書籍資訊
 

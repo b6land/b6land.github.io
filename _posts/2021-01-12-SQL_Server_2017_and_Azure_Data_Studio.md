@@ -20,22 +20,23 @@ b. Red Hat : rpm
 
 Azure Data Studio 是微軟所推出的一套工具。具備連線到資料庫並對其進行管理和查詢的功能，其主要包含的特色如下：
 
-1. 具備 IntelliSense 功能的 T-SQL 編輯器
+1\. 具備 IntelliSense 功能的 T-SQL 編輯器
 
 > 支援關鍵字的自動完成功能、尋找某個資料庫物件的定義為何。
-> ![peek-definition](img/peek-definition.png)
+> ![peek-definition](/assets/imgs/peek-definition.png)
 
-2. 可以設定伺服器管理圖表的功能
+2\. 可以設定伺服器管理圖表的功能
 
 > 撰寫 JSON 文件，描述圖表工具的形式和顯示的項目，即可在資料庫儀表板上看到資料庫的相關狀態。
 > 下圖展示的圖表，是找出最慢的查詢項目。
-> ![insight-details-dialog](img/insight-details-dialog.png)
-3. 整合終端機
+> ![insight-details-dialog](/assets/imgs/insight-details-dialog.png)
+
+3\. 整合終端機
 
 > 不用再不斷的切換終端機和 SQL 管理工具視窗， SQL Operations Studio 內含整合型的終端機，可以直接操作系統指令。
-> ![terminal_run_selected](img/terminal_run_selected.png)
+> ![terminal_run_selected](/assets/imgs/terminal_run_selected.png)
 
-4. 提供暗色佈景主題，對時常撰寫 SQL 語法的開發者來說，眼睛更為舒適。
+4\. 提供暗色佈景主題，對時常撰寫 SQL 語法的開發者來說，眼睛更為舒適。
 
 (圖片取自 [What is Microsoft SQL Operations Studio](https://docs.microsoft.com/zh-tw/sql/sql-operations-studio/what-is?view=sql-server-2017) )
 
