@@ -3,6 +3,7 @@ layout: post
 title: Heap、HashSet 和 Quick Sort
 date: 2021-03-22 12:00:00 +0800
 categories: DataStructure
+tags: [Data Structure]
 --- 
 
 本篇介紹 Heap、HashSet 和 Quick Sort 的基本概念。

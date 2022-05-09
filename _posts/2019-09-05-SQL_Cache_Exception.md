@@ -2,7 +2,8 @@
 layout: post
 title: SQL 解決「緩衝集區裡沒有足夠的可用記憶體」錯誤
 date: 2019-09-05 12:00:00 +0800
-categories: SQL
+categories: Database
+tags: [Database, SQL Server]
 ---
 
 本文章介紹解決「緩衝集區裡沒有足夠的可用記憶體」問題的數種方法。

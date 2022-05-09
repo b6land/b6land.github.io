@@ -3,6 +3,7 @@ layout: post
 title: C# DataGridView 的使用
 date: 2019-01-28 12:00:00 +0800
 categories: C#
+tags: [C#]
 ---
 
 本篇文章包含 DataGridView 元件的綁定方式，以及各種不同的屬性修改方法。

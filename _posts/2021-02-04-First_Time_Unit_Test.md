@@ -3,6 +3,7 @@ layout: post
 title: 單元測試入門
 date: 2021-02-04 12:00:00 +0800
 categories: UnitTest
+tags: [Unit Test]
 --- 
 
 本文介紹單元測試的概念，以及如何在 Visual Studio 中加入單元測試。

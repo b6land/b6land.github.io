@@ -3,6 +3,7 @@ layout: post
 title: SQL 筆記 - GROUP BY, DELETE FROM, Remoting Format
 date: 2021-07-18 12:00:00 +0800
 categories: SQL
+tags: [SQL]
 --- 
 
 這篇文章會簡介 SQL 中 GROUP BY 中常忽略的欄位說明、刪除資料時要如何搭配篩選條件，以及 T-SQL 資料傳輸的格式。

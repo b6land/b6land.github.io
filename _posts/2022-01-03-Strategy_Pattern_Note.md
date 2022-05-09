@@ -3,6 +3,7 @@ layout: post
 title: 策略模式筆記
 date: 2022-01-03 12:00:00 +0800
 categories: DesignPattern
+tags: [Design Pattern]
 --- 
 
 本篇以條列式的方式，簡單描述策略模式的幾個重點。

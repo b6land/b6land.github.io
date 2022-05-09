@@ -3,6 +3,7 @@ layout: post
 title: 在 C# 中使用 Task
 date: 2020-01-25 12:00:00 +0800
 categories: C#
+tags: [C#]
 ---
 
 本文介紹 C# 的 Task，包含範例程式碼。

@@ -2,7 +2,8 @@
 layout: post
 title: C# LINQ to Entities 與 SQL 語法使用技巧
 date: 2021-01-06 12:00:00 +0800
-categories: C# LINQ SQL
+categories: C#
+tags: [C#, LINQ, SQL]
 --- 
 
 本文是撰寫 ASP.NET MVC 專案時，留下的一些筆記。

@@ -3,6 +3,7 @@ layout: post
 title: Scrum：用一半的時間做兩倍的事
 date: 2019-08-10 12:00:00 +0800
 categories: Book
+tags: [Book]
 ---
 
 本文是「Scrum：用一半的時間做兩倍的事」的閱讀心得。

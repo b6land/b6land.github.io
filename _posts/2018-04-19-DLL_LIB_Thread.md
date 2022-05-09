@@ -3,6 +3,7 @@ layout: post
 title: DLL、LIB 與執行緒
 date: 2018-04-19 12:00:00 +0800
 categories: DLL
+tags: [DLL]
 ---
 
 這篇文章簡介 DLL 和 LIB 的差別，以及如何在 Visual Studio 中載入，最後介紹 Thread Safe。

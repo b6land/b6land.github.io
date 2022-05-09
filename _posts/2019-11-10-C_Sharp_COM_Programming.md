@@ -3,6 +3,7 @@ layout: post
 title: C# COM 程式設計的疑難雜症
 date: 2019-11-10 12:00:00 +0800
 categories: C#
+tags: [C#]
 ---
 
 本篇介紹 C# COM 程式設計的疑難雜症，以記憶體的管理為主。
@@ -12,7 +13,7 @@ categories: C#
 - 800706F4 錯誤：使用 ATL Object 元件時，呼叫函式時可能出現的錯誤。這個錯誤表示傳了一個空的位址，例如傳入 NULL。
 參考資料：[关于800706F4错误的问题-CSDN论坛](https://bbs.csdn.net/topics/310177338)
 
-- C# 不會自動清除  C+++ 所配置的記憶體：假如使用 Marshal 的方式呼叫 COM object 內的函式，如下方語法：
+- C# 不會自動清除  C++ 所配置的記憶體：假如使用 Marshal 的方式呼叫 COM object 內的函式，如下方語法：
 
 ```
 void MemAlloc(ref double[] test, int membercount)

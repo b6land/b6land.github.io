@@ -2,7 +2,8 @@
 layout: post
 title: Visual Studio Code 快捷鍵與功能
 date: 2022-01-15 12:00:00 +0800
-categories: Software VSCode
+categories: Software
+tags: [Software, VSCode]
 --- 
 
 本篇介紹我覺得 Visual Studio Code (VSCode) 中，便於開發的快捷鍵與功能。

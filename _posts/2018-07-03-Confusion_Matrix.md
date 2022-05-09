@@ -3,6 +3,7 @@ layout: post
 title: 從 Continuous-Multioutput Label 建立 Confusion Matrix
 date: 2018-07-03 12:00:00 +0800
 categories: DeepLearning
+tags: [Deep Learning]
 ---
 
 這篇文章介紹 Keras 的 NN 模型，如何從連續的輸出值，轉為類別數字。

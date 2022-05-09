@@ -3,6 +3,7 @@ layout: post
 title: 解決 C# 專案整合第三方函式庫 DLL 錯誤
 date: 2019-12-15 12:00:00 +0800
 categories: C#
+tags: [C#, DLL]
 ---
 
 ### 前情提要

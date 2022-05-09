@@ -2,7 +2,8 @@
 layout: post
 title: Event 與 Event Handler 的介紹與使用
 date: 2018-08-17 12:00:00 +0800
-categories: C# Event
+categories: C#
+tags: [C#]
 ---
 
 本篇主要介紹 C# 中 Event 和 Event Handler 的特性與使用方式。

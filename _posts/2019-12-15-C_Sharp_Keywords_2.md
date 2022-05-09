@@ -3,6 +3,7 @@ layout: post
 title: C# 關鍵字 2 - out var, readonly
 date: 2019-12-15 12:00:00 +0800
 categories: C#
+tags: [C#]
 ---
 
 以下介紹 out var 的使用方式，和 readonly、const 的不同。 

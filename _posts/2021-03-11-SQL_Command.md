@@ -3,6 +3,7 @@ layout: post
 title: SQL 語法 - WITH (NOLOCK)、暫存資料表、Join
 date: 2021-03-11 12:00:00 +0800
 categories: SQL
+tags: [SQL]
 --- 
 
 在這一篇當中，會簡介 SQL 語法的 `WITH (NOLOCK)`、暫存資料表與 Select Into，以及 Join 的差異。 
