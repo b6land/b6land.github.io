@@ -42,7 +42,7 @@ tags: [Book]
 
 原本使用 if 指定變數數值的程式碼:
 
-```
+{% highlight c %}
 if(a > b)
 {
     c = 1;
@@ -51,9 +51,10 @@ else
 {
     c = 0;
 }
-```
+{% endhighlight %}
 
-可以簡化為 `c = (a > B) ? 1 : 0;`。
+可以簡化為以下描述：
+{% highlight c %} c = (a > B) ? 1 : 0; {% endhighlight %}
 
 ### 延伸閱讀
 
