@@ -19,46 +19,49 @@ tags: [C#]
 
 1\. 宣告一個 public event handler。
 
-`public event EventHandler CountdownCompleted;  `
+{% highlight csharp %}
+public event EventHandler CountdownCompleted;  
+{% endhighlight %}
 
 2\. 宣告一個 event 發生的函式，函式名稱通常以 **On** 開頭。
 
-```
+{% highlight csharp %}
 protected virtual void OnCountdownCompleted(object sender, EventArgs e)
 {
     if (CountdownCompleted != null)
         CountdownCompleted(this, e);
 }
-```
+{% endhighlight %}
 
 3\. 在需要發生事件的地方進行呼叫。
 
-```
+{% highlight csharp %}
 public void Countdown(){
     OnCountdownCompleted(this, new EventArgs());
 }
-```
+{% endhighlight %}
+
 - 參考資料：[How to: Implement Events in Your Class](https://msdn.microsoft.com/en-us/library/5z57dxz2(v=vs.85).aspx)
 
 4\. 使用者需要接收通知時，可以使用以下語法，當事件發生時，會呼叫 Method 方法。Method 方法需要的參數為 object 和 EventArgs。
 
-```
+{% highlight csharp %}
 Clock.Alarm += Method;
 Clock.Countdown();
 
 public void (object sender , EventArgs eventArgs){
     ...
 }
-```
+{% endhighlight %}
 
 5\. 可以繼承 EventArgs 類別，夾帶不同類型的資料至 EventHandler 中。
 
-```
+{% highlight csharp %}
 public class CountdownArgs: EventArgs{
     public int times;
     public string tip;
 }
-```
+{% endhighlight %}
 
 - 參考資料: [C# event 與 EventHandler - 小e的心得整理房 - 點部落](https://dotblogs.com.tw/enet/2017/01/23/013944)
 - 參考資料: [C# 事件(下) – 加上event關鍵字 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10228906)

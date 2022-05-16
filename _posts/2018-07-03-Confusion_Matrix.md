@@ -14,11 +14,11 @@ Keras 產生的類神經網路架構，以 `Dense(2, activation='softmax')` 輸�
 
 使用以下的程式碼，可以將預測結果以類別數字的型式 class-vector (integer) 輸出，並輸出 confusion matrix。輸出型式和 binary class vector (multiclass-indicator, one-hot-encoding) 不相同。
 
-```
+{% highlight python %}
 from sklearn.metrics import confusion_matrix
 prediction = model.predict_classes(X_test)
 confusion_matrix(y_true, y_pred)
-```
+{% endhighlight %}
 
 ### 參考
 

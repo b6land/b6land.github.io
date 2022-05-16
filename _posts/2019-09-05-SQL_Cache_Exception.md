@@ -12,18 +12,18 @@ tags: [Database, SQL Server]
 
 在包含大量資料的資料庫內執行以下查詢語法，可能會得到「Event 802: 緩衝集區裡沒有足夠的可用記憶體。」的錯誤：
 
-```
+{% highlight sql %}
 SELECT TOP 1000 *
 FROM [Massive_Database]
 ORDER BY Time DESC
-```
+{% endhighlight %}
 
 ### 解決方法
 
 以下為參考資料 3 提供的調整語法：
 
-```
-調整 instance 最高使用到6.4GB的記憶體。
+{% highlight sql %}
+-- 調整 instance 最高使用到6.4GB的記憶體。
 
 -- Turn on advanced options
 EXEC  sp_configure'Show Advanced Options',1;
@@ -36,7 +36,7 @@ EXEC  sp_configure'max server memory (MB)',6400;
 GO
 RECONFIGURE;
 GO
-```
+{% endhighlight %}
 
 執行上方調整語法後重新執行查詢，可在約 10 秒內取出 100K 的資料，而不會發生緩衝區不足的情形。
 
@@ -59,11 +59,11 @@ GO
 
 以下 DBCC 指令可用於清除快取，但未必能使設計不良的查詢語法順利執行：
 
-```
+{% highlight sql %}
 DBCC FREESYSTEMCACHE
 DBCC FREESESSIONCACHE
 DBCC FREEPROCCACHE
-```
+{% endhighlight %}
 
 ### 參考資料
 

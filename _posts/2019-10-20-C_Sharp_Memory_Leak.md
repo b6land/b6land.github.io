@@ -26,13 +26,13 @@ tags: [C#]
 ### 解決 Interop 的 Memory Leak
 
 - 使用 `Marshal.ReleaseComObject()`。需注意是否有確實釋放記憶體，且須留意是否會造成例外。
-```
+{% highlight csharp %}
 if (pSrvLocPnt_new != null)
 {
     while (Marshal.ReleaseComObject(pSrvLocPnt_new) > 0) { }
     pSrvLocPnt_new =null;
 }
-```
+{% endhighlight %}
 參考資料：
 
 [C# with COM Interop memory leak - Stack Overflow](https://stackoverflow.com/questions/24659012/c-sharp-with-com-interop-memory-leak)
@@ -42,7 +42,7 @@ if (pSrvLocPnt_new != null)
 - 傳入物件時，不使用 obj ，而是強制使用型別。須注意是否有確實避免記憶體洩漏問題。
 
 使用
-```
+{% highlight csharp %}
 object obj;
 
 switch(...)
@@ -53,13 +53,13 @@ switch(...)
   ...
 }
 myComObj.Read(..., ref obj);
-```
+{% endhighlight %}
 
 代替
-```
+{% highlight csharp %}
 object obj = new object();
 myComObj.Read(..., ref obj);
-```
+{% endhighlight %}
 
 參考資料：
 

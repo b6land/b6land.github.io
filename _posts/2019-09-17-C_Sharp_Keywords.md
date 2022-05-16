@@ -12,7 +12,7 @@ tags: [C#]
 
 使用 `params` 關鍵字，可以指定數量不固定的一維陣列引數作為方法參數。並且也可以直接在使用方法時用 , 分隔多個引數。使用方式可參考下方程式碼  (部分引用自 Microsoft Docs)
 
-```
+{% highlight csharp %}
     public static void UseParams(params int[] list)
     {
         for (int i = 0; i < list.Length; i++)
@@ -32,13 +32,13 @@ tags: [C#]
         // type matches the parameter type of the method being called.
         int[] myIntArray = { 5, 6, 7, 8, 9 };
         UseParams(myIntArray);
-```
+{% endhighlight %}
 
 ### lock
 
 `lock` 關鍵字的使用，可以避免不同執行緒同時存取同一個資源，導致資源同時被存取而引發的錯誤。
 
-```
+{% highlight csharp %}
 private object key = new object();
 
 private void work()
@@ -48,7 +48,7 @@ private void work()
         // 存取資源
     }
 }
-```
+{% endhighlight %}
 
 `key` 可使用任何型別的物件，它只會單純的當作一個鑰匙被看待。當不同執行緒在執行到 `lock` 時，會先檢查 `key` 是否被占用，若被占用，則等待到 `key` 被釋放後再繼續執行。
 
