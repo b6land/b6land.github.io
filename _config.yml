@@ -21,7 +21,7 @@
 title: b6land.github.io
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  關於 C#、SQL 和其它各種軟體技術的筆記網誌。
+  關於 C#、SQL 和其它軟體技術的網誌
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -53,5 +53,5 @@ plugins:
 #   - vendor/ruby/
 
 # Pagination
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"

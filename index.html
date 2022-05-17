@@ -6,10 +6,10 @@ layout: default
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <span class="date">{{ post.date | date_to_string }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.excerpt }}
   </div>
 {% endfor %}
 
@@ -17,17 +17,17 @@ layout: default
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
+      上一頁
     </a>
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="previous">上一頁</span>
   {% endif %}
   <span class="page_number ">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next">下一頁</a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next ">下一頁</span>
   {% endif %}
 </div>
