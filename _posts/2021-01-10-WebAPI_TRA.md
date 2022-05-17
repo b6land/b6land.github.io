@@ -24,7 +24,7 @@ Install-Package Microsoft.AspNet.WebApi.WebHost.zh-Hant
 
 3. 新增 /App_Start/WebApiConfig.cs 檔案，並加入以下程式碼：
 
-```
+{% highlight csharp %}
 public static void Register(HttpConfiguration config)
 {
     // Web API 設定和服務
@@ -38,7 +38,7 @@ public static void Register(HttpConfiguration config)
         defaults: new { id = RouteParameter.Optional }
     );
 }
-```
+{% endhighlight %}
 
 (可能須引用 System.Web.Http 命名空間)
 
@@ -80,10 +80,10 @@ public static void Register(HttpConfiguration config)
 
 - 如果要自訂輸出格式的話，可以透過 `HttpResponseMessage`，並透過在 `Get()` 語法或 _WebApiConfig.cs_ 內設定 `MediaTypeFormater` 自訂輸出格式。語法如下：
 
-```
+{% highlight csharp %}
 var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
     config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
-```
+{% endhighlight %}
 
 - 輸出時回傳 `Request.CreateResponse(HttpStatusCode.OK, result)` ，result 放入類別的物件或清單即可。
 

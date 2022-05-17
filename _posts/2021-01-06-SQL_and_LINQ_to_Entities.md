@@ -13,12 +13,12 @@ tags: [C#, LINQ, SQL]
 - 撰寫 LINQ to Entities 的基礎 CRUD 語法時，除了 Read 方法 (`dbContext.Table.Find()`) 以外，基本上是以特定語法搭配 `dbContext.SaveChanges()` 儲存資料庫內容。
 - 需要輸入原始的 MS-SQL 語法查詢時，可使用 `dbContext.Table.SqlQuery("SQL Command")` ，這個方法會回傳 Table class 的實體物件集合：
 
-```
+{% highlight csharp %}
  using (var context = new BloggingContext())
 {
     var blogs = context.Blogs.SqlQuery("SELECT * FROM dbo.Blogs").ToList();
 }
-```
+{% endhighlight %}
 
 - 查詢以外的寫入、更新資料庫等作業，可使用`Database.ExecuteSqlCommand()` 原生 SQL 語法執行資料庫的寫入指令。*(`Database.SqlQuery()` 可用原生 SQL 語法查詢 (SELECT) 資料)*
 - 參考 [認識Model - LINQ to Entities 與 導覽屬性 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10161589)，雖然是以 ASP.NET MVC 為範例，但 Winform 也適用該語法。
@@ -29,11 +29,14 @@ tags: [C#, LINQ, SQL]
 
 - SQL下查詢中文字串無資料或寫入中文變成問號 ? 時，可透過加入 N 在查詢字串前面，告知 SQL 的查詢語法需轉換為 Unicode 的形式。
 - 可使用 CONCAT (MSSQL 語法為 + 號) 同時查詢多欄位的字串。
-- 上方範例查詢語法： `SELECT * FROM dbo.TestTable WHERE Name+Address LIKE N'%小明%'`。
+- 上方範例查詢語法： 
+{% highlight sql %}
+SELECT * FROM dbo.TestTable WHERE Name+Address LIKE N'%小明%'
+{% endhighlight %}
 
 - 可以用以下方法查詢同一個欄位包含兩個不一樣值的紀錄 (Record)：
 
-```
+{% highlight sql %}
 SELECT
     a.transporter,
     b1.warehouseName as warehouse1,
@@ -46,7 +49,7 @@ WHERE
         a.warehouseId1 = b1.warehouseId
     AND
         a.warehouseId2 = b2.warehouseId
-```
+{% endhighlight %}
 
 
 - 參考資料: [SQL下查詢中文字串無資料或寫入中文 變成問號? @ SAP之鬼~~ :: 痞客邦 ::](https://saperp.pixnet.net/blog/post/4078081)
@@ -62,7 +65,10 @@ WHERE
 
 ### Entity Framework 的使用技巧
 
-- 欲查詢多欄位的資料，先根據查詢的資料建立符合的類別，再使用以下語法：`var res = dbContext.Database.SqlQuery<TestEntity>("Select * from dbo.MyView").ToList();`
+- 欲查詢多欄位的資料，先根據查詢的資料建立符合的類別，再使用以下語法：
+{% highlight csharp %}
+var res = dbContext.Database.SqlQuery<TestEntity>("Select * from dbo.MyView").ToList();
+{% endhighlight %}
 - 增加 Entity Framework 讀寫效率的方法：1. 關閉自動偵測追蹤 2. 使用 `AddRange()` 一次加入所有資料再 `SaveChange()` 代替 `Add()` 一筆一筆加入資料。 
 
 ### 其它

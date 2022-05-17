@@ -12,11 +12,11 @@ tags: [SQL]
 
 - `Union`: 將上下兩句 SQL 語法的查詢結果合併起來，使用 SQL SELECT 查詢的結果欄位需要完全相同。如下範例：
 
-> SELECT Name FROM Person
->
-> UNION
->
-> SELECT Name FROM Member
+{% highlight sql %}
+SELECT Name FROM Person
+UNION
+SELECT Name FROM Member
+{% endhighlight %}
 
 - `Union All`: 與 `Union` 的作用類似，上下兩句查詢結果合併在一起，差異在於 `Union All` 會列出包含重複資料的所有結果，而 Union 僅列出不重複的所有結果。
 - 參考資料：[SQL UNION ALL - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sqlunionall.html)
@@ -25,25 +25,23 @@ tags: [SQL]
 
 - 可以透過子查詢，將**不存在**於子查詢中的資料列出來。以下會列出在 Person 內，但不在 Member 資料表內的紀錄：
 
-> SELECT * FROM Person
->
-> WHERE NOT EXISTS (
->    
->   SELECT ID FROM Member WHERE Person.ID=Member.ID)
+{% highlight sql %}
+SELECT * FROM Person
+WHERE NOT EXISTS (
+   SELECT ID FROM Member WHERE Person.ID=Member.ID)
+{% endhighlight %}
 
 - 參考資料：[法蘭雞的學習筆記: SQL NOT EXISTS 怎麼用？](http://frankiestudy.blogspot.com/2012/01/sql-not-exists.html)
 
 - 類似程式語言中 `if` 的寫法：`CASE`，關鍵字包含 `WHEN`, `THEN`和 `ELSE`，語法範例如下：
 
-> SELECT Name, CASE
->
-> WHEN IsMember=0, THEN 'Not Member'
->
-> WHEN IsMember=1, THEN 'Member'
->
-> END AS IsMember
->
-> FROM Person
+{% highlight sql %}
+SELECT Name, CASE
+WHEN IsMember=0, THEN 'Not Member'
+WHEN IsMember=1, THEN 'Member'
+END AS IsMember
+FROM Person
+{% endhighlight %}
 
 - 參考資料：[SQL CASE - SQL 語法教學 Tutorial](https://www.fooish.com/sql/case.html)
 

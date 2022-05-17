@@ -26,7 +26,7 @@ tags: [Unit Test]
 4. 輸入要測試的參數，呼叫方法，並驗證結果是否與預期相同。
 5. 範例的單元測試程式碼如下：
 
-```
+{% highlight csharp %}
 [TestMethod()]
 public void CheckEducationValidTest_NotPass1()
 {
@@ -39,11 +39,11 @@ public void CheckEducationValidTest_NotPass1()
     Form1 form1 = new Form1();
     Assert.AreEqual(form1.CheckEducationValid(edu), false);
 }
-```
+{% endhighlight %}
 
 在上方的方法中，建立了一個 `Education` 物件，並設定其 `IsFinish` 為 `true`，`FinishYear`為 null。由於聲明已經畢業，卻沒有輸入畢業年份，預期為回傳 False。其呼叫的原始方法如下，會檢查 `School`, `Department` 屬性是否為空白，以及畢業年份是否有正確輸入：
 
-```
+{% highlight csharp %}
 public bool CheckEducationValid(Education edu)
 {
     if(edu.Department.Equals("") || edu.School.Equals(""))
@@ -57,7 +57,7 @@ public bool CheckEducationValid(Education edu)
 
     return true;
 }
-```
+{% endhighlight %}
 
 接著就可以在單元測試的程式碼上點選右鍵，選擇「執行測試」。測試的結果會放在「測試結果」視窗，可以檢查是否有通過測試，若沒有通過測試，可以再檢查是否原有程式邏輯有誤。
 
