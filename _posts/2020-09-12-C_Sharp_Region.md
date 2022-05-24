@@ -2,8 +2,7 @@
 layout: post
 title: C# 為何不使用 Region 分隔程式
 date: 2020-09-12 12:00:00 +0800
-categories: C#
-tags: [C#]
+categories:  [C#]
 --- 
 
 本篇文章介紹為何不使用 Region 分隔程式的理由，實務上應該也要一併考慮團隊的程式編寫風格。

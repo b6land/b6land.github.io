@@ -2,8 +2,7 @@
 layout: post
 title: C# 的動態參考與反射
 date: 2018-07-03 12:00:00 +0800
-categories: C#
-tags: [C#, DLL]
+categories:  [C#, DLL]
 ---
 
 這篇文章介紹在專案中使用第三方 DLL 時，常用的動態參考與反射。

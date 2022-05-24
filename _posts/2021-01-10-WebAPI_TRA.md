@@ -2,8 +2,7 @@
 layout: post
 title: 建立 WebAPI 的筆記 (使用台鐵公開資料)
 date: 2021-01-10 12:00:00 +0800
-categories: C#
-tags: [C#, ASP.NET MVC]
+categories:  [C#, ASP.NET MVC]
 --- 
 
 這篇文章描述在使用台鐵公開資料建立 Web API 時，所遇到的問題與解決方式。使用技術為 ASP.NET MVC、SQL 與 Entity Framework。

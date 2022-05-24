@@ -2,8 +2,7 @@
 layout: post
 title: C# 資料結構的使用
 date: 2019-02-09 12:00:00 +0800
-categories: C#
-tags: [C#]
+categories:  [C#]
 ---
 
 本文紀錄了 Dictionary、Struct 和 List 的一部分使用方式。

@@ -2,8 +2,7 @@
 layout: post
 title: 修改 PATH 環境變數
 date: 2019-01-28 12:00:00 +0800
-categories: Windows
-tags: [Windows]
+categories:  [Windows]
 ---
 
 這篇文章介紹，如果需要以指令 (如 BAT 檔) 設定 Windows 的 `PATH` 變數，而且長度超過 1024 時，如何處理。

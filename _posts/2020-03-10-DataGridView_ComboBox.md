@@ -2,8 +2,7 @@
 layout: post
 title: 在 DataGridView 中加入 ComboBox
 date: 2020-03-10 12:00:00 +0800
-categories: C# 
-tags: [C#]
+categories:  [C#]
 ---
 
 本文介紹 C# Winform 中的 DataGridView 如何增加 ComboBox 欄位。

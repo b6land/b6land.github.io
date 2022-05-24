@@ -2,8 +2,7 @@
 layout: post
 title: SQL ROW_NUMBER() 和 ISNULL() 函數
 date: 2021-03-26 12:00:00 +0800
-categories: SQL
-tags: [SQL]
+categories:  [SQL]
 --- 
 
 本篇包含 SQL 中的 `ROW_NUMBER()` 和 `ISNULL()` 的介紹。

@@ -2,8 +2,7 @@
 layout: post
 title: TFS 標註功能 - 查看特定行變更
 date: 2022-04-16 12:00:00 +0800
-categories: TFS
-tags: [TFS]
+categories:  [TFS]
 ---
 
 在微軟的 TFS 版本控制系統內，想要查詢是誰編輯了哪一行，除了逐一查詢檔案的變更紀錄以外，也可以查詢特定行的變更。

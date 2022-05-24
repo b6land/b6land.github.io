@@ -2,8 +2,7 @@
 layout: post
 title: Singleton 簡介
 date: 2020-02-09 12:00:00 +0800
-categories: DesignPattern
-tags: [C#]
+categories:  [C#, Design Pattern]
 ---
 
 Singleton 是一種軟體的設計模式。

@@ -2,8 +2,7 @@
 layout: post
 title: R 語言雜記
 date: 2021-01-31 12:00:00 +0800
-categories: R
-tags: [R Language]
+categories:  [R Language]
 --- 
 
 這篇文章記錄 C# 如何加入由 R 語言撰寫的資料分析程式，以及 R 語言部分語法的說明。

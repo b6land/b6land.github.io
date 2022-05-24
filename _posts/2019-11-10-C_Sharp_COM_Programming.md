@@ -2,8 +2,7 @@
 layout: post
 title: C# COM 程式設計的疑難雜症
 date: 2019-11-10 12:00:00 +0800
-categories: C#
-tags: [C#]
+categories:  [C#]
 ---
 
 本篇介紹 C# COM 程式設計的疑難雜症，以記憶體的管理為主。

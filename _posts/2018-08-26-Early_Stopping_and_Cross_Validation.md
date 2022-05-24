@@ -2,8 +2,7 @@
 layout: post
 title: Early Stopping 和 Cross Validation
 date: 2018-08-26 12:00:00 +0800
-categories: DeepLearning
-tags: [Deep Learning]
+categories:  [Deep Learning]
 ---
 
 本篇文章介紹 Early Stopping 和 Cross Validation 的概念與實作方式。

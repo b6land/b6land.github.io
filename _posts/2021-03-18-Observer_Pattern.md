@@ -2,8 +2,7 @@
 layout: post
 title: 觀察者模式簡介
 date: 2021-03-18 12:00:00 +0800
-categories: DesignPattern
-tags: [Design Pattern]
+categories:  [Design Pattern]
 --- 
 
 本篇文章將簡單介紹觀察者模式 (Observer Pattern) 的概念。

@@ -2,8 +2,7 @@
 layout: post
 title: SQL 改善查詢效能
 date: 2022-02-20 12:00:00 +0800
-categories: SQL
-tags: [SQL]
+categories:  [SQL]
 ---
 
 本篇記錄當遇到查詢速度過慢時，如何檢查效能瓶頸與改善。

@@ -2,8 +2,7 @@
 layout: post
 title: SQL 除以 0
 date: 2022-04-16 12:00:00 +0800
-categories: SQL
-tags: [SQL]
+categories:  [SQL]
 ---
 
 在 SQL 計算除法時，如果遇到除以 0 的狀況要如何處理。

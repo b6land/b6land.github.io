@@ -2,8 +2,7 @@
 layout: post
 title: C# ToolTip 氣泡提示與 TreeView 樹狀列表
 date: 2020-09-12 12:00:00 +0800
-categories: C#
-tags: [C#]
+categories:  [C#]
 --- 
 
 本文介紹 ToolTip 氣泡提示的彈出方式，與 TreeView 樹狀列表如何強制展開所有節點。

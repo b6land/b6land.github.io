@@ -2,8 +2,7 @@
 layout: post
 title: 使用 Inno Setup Studio 製作獨立安裝檔的技巧
 date: 2019-03-17 12:00:00 +0800
-categories: InnoSetup
-tags: [Inno Setup]
+categories:  [Inno Setup]
 ---
 
 想要將寫好的程式，製作成獨立安裝檔時，可以用 Inno Setup Studio 製作。

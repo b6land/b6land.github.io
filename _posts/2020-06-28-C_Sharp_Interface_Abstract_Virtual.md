@@ -2,8 +2,7 @@
 layout: post
 title: C# Interface, Abstact, Virtual 介紹
 date: 2020-06-28 12:00:00 +0800
-categories: C#
-tags: [C#]
+categories:  [C#]
 --- 
 
 本文介紹 Interface、Abstract、Virtual 的特性。

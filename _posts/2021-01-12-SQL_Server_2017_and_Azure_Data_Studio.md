@@ -2,8 +2,7 @@
 layout: post
 title: SQL Server 2017 和 Azure Data Studio 介紹
 date: 2021-01-12 12:00:00 +0800
-categories: Software
-tags: [Software, SQL Server, Azure Data Studio]
+categories:  [Software, SQL Server, Azure Data Studio]
 --- 
 
 本篇介紹 SQL Server 2017 推出時的新功能，以及 Azure Data Studio 的簡介。

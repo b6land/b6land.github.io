@@ -2,8 +2,7 @@
 layout: post
 title: Windows 10 以系統管理員開啟程式
 date: 2020-09-12 12:00:00 +0800
-categories: Windows
-tags: [Windows]
+categories:  [Windows]
 --- 
 
 本文介紹如何在 Windows 10 以系統管理員開啟程式，與 Windows 7 略有不同。
