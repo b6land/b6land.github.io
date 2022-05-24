@@ -12,9 +12,9 @@ tags: [SQL]
 
 遇到除法可能會除以 0 的情境時 (例如比較前後金額的花費比例)，SQL 會發出錯誤訊息並結束查詢。可以用 `ISNULL` 函式搭配 `NULLIF` 函式，除以 0 時以特定值代替。
 
-{% highlight sql %}
+``` sql
 ISNULL(Money1 / NULLIF(Money2, 0), 0)
-{% endhighlight %}
+```
 
 - `NULLIF(exp, exp)`: 當第一個運算式 (exp) 和第二個運算式相等的時候，回傳 NULL；否則回傳第一個運算式。
 - `ISNULL(exp, value)`: 當第一個運算式等於 NULL 時，以 value 取代；否則回傳第一個運算式。

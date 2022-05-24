@@ -14,24 +14,24 @@ tags: [C#, LINQ, Lambda]
 - 可直接對物件操作，查詢結果也為可操作的物件集合。
 - 常用的運算子： `FROM`, `SELECT`, `WHERE` 等，以下是一個基本的查詢語法。
 
-{% highlight csharp %}
+``` csharp
 var p = from a in emp
 where a.country.Equals("america")
 select a.name;
-{% endhighlight %}
+```
 
 
 ### Lambda 語法
 
 - 可用來建立匿名函式。透過委派的方式傳入需要的資料。以下是一個基本的語法，從中取得集合 a 裡國家為台灣的資料，並以匿名型別呈現：
 
-{% highlight csharp %}
+``` csharp
 var q = emp.Where(x => x.country.Equals("taiwan"));
-{% endhighlight %}
+```
 
 ### 範例程式碼
 
-{% highlight csharp %}
+``` csharp
 using System;
 using System.Linq;
 					
@@ -68,7 +68,7 @@ public class Program
 		}
 	}
 }
-{% endhighlight %}
+```
 
 ### 曾遇到的須注意部分
 

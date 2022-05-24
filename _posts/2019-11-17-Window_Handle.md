@@ -24,7 +24,7 @@ tags: [C#]
 
 4. 可使用 SendMessage() 輸入內容至編輯器內。如果要輸入按鍵訊號 (如鍵盤快捷鍵，Ctrl+C 等組合鍵) 的話，應使用 PostMessage()。
 
-{% highlight csharp %}
+``` csharp
 [DllImport("user32.dll", SetLastError = true)]
 static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
  
@@ -43,13 +43,13 @@ IntPtr ChildWnd = FindWindowEx(MainWnd, IntPtr.Zero, "Edit", "");
 StringBuilder InsStr = new StringBuilder();
 InsStr.Append("ABCDEFGHIJK565465465");
 SendMessage(ChildWnd, WM_SETTEXT, 0, InsStr);
-{% endhighlight %}
+```
 
 上方程式碼參考自：[C# Win32 API FindWindow/ FindWindowEx/SendMessage – Neil(After Work)](https://neilw.tw/2017/09/04/c-win32-api-findwindow-findwindowexsendmessage/)
 
 5. 要送出按鍵訊號，可透過 PostMessage()，按鍵代碼可參考 Microsoft Docs 提供的特殊按鍵列表 。
 
-{% highlight csharp %}
+``` csharp
 [DllImport("User32.Dll")]
 public static extern Int32 PostMessage(IntPtr hWnd, int msg, int wParam, int lParam);
 
@@ -57,7 +57,7 @@ const int WM_KEYDOWN = 0x0100;
 const int VK_TAB = 0x09;
 
 PostMessage(process.MainWindowHandle, WM_KEYDOWN, VK_TAB, 1);
-{% endhighlight %}
+```
 
 上方程式碼參考自：[handle - SendMessage Return Key and Text to WindowHandle in C# - Stack Overflow](https://stackoverflow.com/questions/23436339/sendmessage-return-key-and-text-to-windowhandle-in-c-sharp)
 
@@ -69,7 +69,7 @@ PostMessage(process.MainWindowHandle, WM_KEYDOWN, VK_TAB, 1);
 
 7. 同樣使用 PostMessage() 送出滑鼠按鈕的訊號，座標的位置使用位元運算設定：
 
-{% highlight csharp %}
+``` csharp
 int x=58;
 int y=32;
 
@@ -78,7 +78,7 @@ PostMessage(this.Handle, WM_LBUTTONUP, 0, (x & 0xFFFF) + (y & 0xFFFF) * 0x10000)
 
 PostMessage(this.Handle, WM_LBUTTONDOWN, 0, x + (y<<16));
 PostMessage(this.Handle, WM_LBUTTONUP, 0, x+(y<<16));
-{% endhighlight %}
+```
 
 程式碼參考自：[c# 调用win32模拟点击的两种方法 - li-peng - 博客园](https://www.cnblogs.com/li-peng/p/3583771.html)
 

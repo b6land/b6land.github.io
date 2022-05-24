@@ -16,10 +16,10 @@ Keras 提供 Early Stopping 機制的 Callback。可以在 keras/callbacks 下�
 
 以下是使用 Keras 實作 EarlyStopping 的範例：
 
-{% highlight python %}
+``` py
 early_stop = EarlyStopping(monitor='loss', min_delta=0, patience=5, verbose=0, mode='auto')
 model.fit(train_data, train_label, callbacks=[early_stop])
-{% endhighlight %}
+```
 
 ## Cross Validation
 
@@ -59,7 +59,7 @@ K = 2 時，取出 0 ~ 9 作為訓練資料，10 ~ 14 作為測試資料。
 
 然而使用 shuffle 參數僅改變抽取的資料索引，索引的順序不會被改變。因此還是需要在訓練時對資料再進行 shuffle ，以增加神經網路的收斂效果。可參考以下範例：
 
-{% highlight python %}
+``` py
 >>> from sklearn.model_selection import StratifiedKFold
 >>> import numpy as np
 >>> X = np.ones(10)
@@ -78,7 +78,7 @@ K = 2 時，取出 0 ~ 9 作為訓練資料，10 ~ 14 作為測試資料。
 [2 3 4 5 8 9] [0 1 6 7]
 [0 1 3 5 6 7 9] [2 4 8]
 [0 1 2 4 6 7 8] [3 5 9]
-{% endhighlight %}
+```
 
 ### 參考資料
 

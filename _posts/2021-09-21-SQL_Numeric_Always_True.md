@@ -18,9 +18,9 @@ tags: [SQL]
 
 語法: 
 
-{% highlight sql %}
+``` sql
 SELECT DATEADD(m, DATEDIFF(m, 0, '2020/10/15'), 0)
-{% endhighlight %}
+```
 
 - `DATEDIFF(datepart, startdate, enddate)`: 上方語法中的 m 為月份的縮寫，表示要取得月份的差距，起始時間為 0，結束時間為 2020/10/15，將取得至今為止所有的月份差距。可使用的縮寫請參考官方語法說明。
 
@@ -32,9 +32,9 @@ SELECT DATEADD(m, DATEDIFF(m, 0, '2020/10/15'), 0)
 
 - 以下的語法，可以取得當年度的第一天，並轉為 `NVARCHAR` 型態。
 
-{% highlight sql %}
+``` sql
 SELECT CONVERT(NVARCHAR, YEAR(GETDATE())) + '/01/01' 
-{% endhighlight %}
+```
 
 - 使用 `GETDATE` 函數取得日期，接著以 `YEAR` 函數取得日期中的年份，並以 `CONVERT` 轉為 `NVARCHAR` 型態以後，再加上當年一月一日的字串。
 
@@ -47,10 +47,10 @@ SELECT CONVERT(NVARCHAR, YEAR(GETDATE())) + '/01/01'
 - 若要選擇性的加入多個條件，需要寫出多個判斷式，以檢查是否要在前方加 `AND` 關鍵字。
 - 加入 `1=1` 條件後，條件一律可在前面加 `AND`，條件效果不受影響，且能簡化判斷式。
 
-{% highlight sql %}
+``` sql
 WHERE 1=1
 AND ID = 'A123'
 AND DATE = '2020/5/1'
-{% endhighlight %}
+```
 
 - 參考資料: [[SQL] WHERE 1=1 做什麼用的? - CHF's note - 點部落](https://dotblogs.com.tw/invercent914/2013/09/16/118728)

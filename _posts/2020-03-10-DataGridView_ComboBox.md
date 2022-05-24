@@ -17,7 +17,7 @@ tags: [C#]
 
 以下取自參考資料中的 Microsoft Docs。
 
-{% highlight csharp %}
+``` csharp
 private DataGridView dataGridView1 = new DataGridView();
 
 private void AddColorColumn()
@@ -54,7 +54,7 @@ private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
 {
     ((ComboBox)sender).BackColor = (Color)((ComboBox)sender).SelectedItem;
 }
-{% endhighlight %}
+```
 
 ### 參考資料
 [DataGridViewComboBoxEditingControl 類別 (System.Windows.Forms) - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/api/system.windows.forms.datagridviewcomboboxeditingcontrol?view=netframework-4.8)

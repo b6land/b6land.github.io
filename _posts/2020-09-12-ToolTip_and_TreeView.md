@@ -14,7 +14,7 @@ tags: [C#]
 
 以下的程式碼，可以建立氣泡提示，並設定各項參數，如標題和出現的時間等。最後一行則是設定要出現在哪個元件 (`control`) 上方，但只有元件為焦點時，如輸入中，才會彈出提示。
 
-{% highlight csharp %}
+``` csharp
 var toolTip1 = new System.Windows.Forms.ToolTip();
 toolTip1.AutoPopDelay = 5000;
 toolTip1.InitialDelay = 1000;
@@ -25,13 +25,13 @@ toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 toolTip1.ToolTipTitle = "Title:";
 
 toolTip1.SetToolTip(control, "My Info!");
-{% endhighlight %}
+```
 
 希望在元件不為焦點時也彈出提示的話，可使用 `show()` 的方法。
 
-{% highlight csharp %}
+``` csharp
 toolTip1.Show("Tooltip text goes here", (Button)sender);
-{% endhighlight %}
+```
 
 ### 參考資料
 **如何建立氣泡提示**: [c# - How can I show a Balloon Tip over a textbox? - Stack Overflow](https://stackoverflow.com/questions/7541767/how-can-i-show-a-balloon-tip-over-a-textbox)

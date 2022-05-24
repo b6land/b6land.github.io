@@ -22,7 +22,7 @@ tags: [SQL]
 
 以下是包含規則 1, 2, 4, 6 的 SQL 查詢語法。
 
-{% highlight sql %}
+``` sql
  -- 使用 DELETE FROM 刪除表格 1 中不包含在表格 2 內的資料
 DELETE FROM [Table_1]
 WHERE RowID IN ( 
@@ -31,7 +31,7 @@ WHERE RowID IN (
         SELECT ID FROM [Table_2]
     )
 )
-{% endhighlight %}
+```
 
 ### 參考資料
 

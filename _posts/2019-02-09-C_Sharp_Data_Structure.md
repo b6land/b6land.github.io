@@ -12,15 +12,15 @@ tags: [C#]
 
 可以使用 `ContainsKey(key)` ：
 
-{% highlight csharp %}
+``` csharp
 if (dict.ContainsKey(key)) { ... }
-{% endhighlight %}
+```
 
 或 `TryGetValue`：
 
-{% highlight csharp %}
+``` csharp
 dict.TryGetValue(key, out value);
-{% endhighlight %}
+```
 
 參考資料：[exchangewebservices - How can I detect if this dictionary key exists in C#? - Stack Overflow](https://stackoverflow.com/questions/2829873/how-can-i-detect-if-this-dictionary-key-exists-in-c)
 
@@ -28,7 +28,7 @@ dict.TryGetValue(key, out value);
 
 使用 `KeyValuePair` 即可分別取出 Key 和 Value。
 
-{% highlight csharp %}
+``` csharp
 _DicList = new Dictionary<string, string>();
 _DicList.Add("s1", "test1");
 _DicList.Add("s2", "test2");
@@ -37,7 +37,7 @@ _DicList.Add("s3", "test3");
 foreach (KeyValuePair<string, string> item in _DicList) {
     Console.WriteLine(item.Value);
 }
-{% endhighlight %}
+```
 
 參考資料：[[C#] Dictionary 如何使用 foreach (KeyValuePair)](https://dotblogs.com.tw/atowngit/2010/07/30/blogseo-to-beat-a-dead-horse)
 
@@ -51,7 +51,7 @@ foreach (KeyValuePair<string, string> item in _DicList) {
 
 建立方式如下：
 
-{% highlight csharp %}
+``` csharp
 public struct Coords
 {
     public int x, y;
@@ -62,15 +62,15 @@ public struct Coords
         y = p2;
     }
 }
-{% endhighlight %}
+```
 
 使用方式如下：
 
-{% highlight csharp %}
+``` csharp
 // Initialize:   
 Coords coords1 = new Coords();
 Coords coords2 = new Coords(10, 10);
-{% endhighlight %}
+```
 
 參考資料：
 
@@ -82,9 +82,9 @@ Coords coords2 = new Coords(10, 10);
 
 若 List<Type> 的元素是實值的話，直接作為參數傳入新 List 的建構式即可：
 
-{% highlight csharp %}
+``` csharp
 List<YourType> newList = new List<YourType>(oldList);
-{% endhighlight %}
+```
 
 若元素是參考的話，則可能需要逐一元素進行複製。
 

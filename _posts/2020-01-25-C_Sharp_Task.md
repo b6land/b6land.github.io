@@ -15,7 +15,7 @@ tags: [C#]
 
 ### 如何建立 Task 並等待至完成
 
-{% highlight csharp %}
+``` csharp
       // Create a task and supply a user delegate by using a lambda expression. 
       Task taskA = new Task( () => Console.WriteLine("Hello from taskA."));
       // Start the task.
@@ -29,14 +29,14 @@ tags: [C#]
       // The example displays output like the following:
       //       Hello from thread 'Main'.
       //       Hello from taskA.
-{% endhighlight %}
+```
 
 以上為 Microsoft Docs 裡的程式碼。
 這段程式碼透過 Lambda 運算式執行，以具名的方式呼叫要執行的方法。
 
 ### 取消 (中斷) Task 的執行
 
-{% highlight csharp %}
+``` csharp
     static async Task Main()
     {
         var tokenSource2 = new CancellationTokenSource();
@@ -79,11 +79,11 @@ tags: [C#]
 
         Console.ReadKey();
     }
-{% endhighlight %}
+```
 
 以上為拋出 `OperationCanceledException` ，然後結束 Task 的程式碼，來自 Microsoft Docs。
 
-{% highlight csharp %}
+``` csharp
 static void MyTask(CancellationToken token)
     {
         for (int i = 0; i < 1000; i++)
@@ -98,7 +98,7 @@ static void MyTask(CancellationToken token)
         }
         Console.WriteLine("MyTask 工作執行完畢。");
     }
-{% endhighlight %}
+```
 
 上面的第二組程式碼，則只要判斷 `CancellationToken` 內的 `IsCancellationRequested` 是否為 `True`，再適當的撰寫程式碼，結束 Task 即可，不透過拋出例外的方式取消 Task 的執行。
 

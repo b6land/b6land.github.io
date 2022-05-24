@@ -34,18 +34,18 @@ Whole Program Optimization:
 以下引用自參考資料中的 Dot Net Perls。
 首先為標頭的宣告。
 
-{% highlight cpp %}
+``` cpp
 // This code should be put in a header file for your C++ DLL. It declares
 // an extern C function that receives two parameters and is called SimulateGameDLL.
 // I suggest putting it at the top of a header file.
 extern "C" {
     __declspec(dllexport) void __cdecl SimulateGameDLL (int a, int b);
 }
-{% endhighlight %}
+```
 
 接著在程式本體撰寫與標頭宣告相同名稱與參數的程式碼。
 
-{% highlight cpp %}
+``` cpp
 // The keywords and parameter types must match
 // ... the above extern declaration.
 extern void __cdecl SimulateGameDLL (int num_games, int rand_in) {
@@ -54,14 +54,14 @@ extern void __cdecl SimulateGameDLL (int num_games, int rand_in) {
     // in the C++. The parameters can have any names we want to give
     // them and they don't need to match the extern declaration.
 }
-{% endhighlight %}
+```
 
 ### 使用 DLLImport
 
 把編譯好的 DLL 和 C# 的執行檔放置於同一目錄下。
 使用以下的程式碼呼叫 DLL 內的函式。引用自參考資料中的 Dot Net Perls。
 
-{% highlight csharp %}
+``` csharp
 /// <summary>
 /// A C-Sharp interface to the DLL, written in C++.
 /// </summary>
@@ -77,7 +77,7 @@ static class GameSharp
         public static extern void SimulateGameDLL(int a, int b);
     }
 }
-{% endhighlight %}
+```
 
 ### 注意事項
 

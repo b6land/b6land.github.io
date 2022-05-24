@@ -15,9 +15,9 @@ tags: [C#]
 
 - C# 不會自動清除  C++ 所配置的記憶體：假如使用 Marshal 的方式呼叫 COM object 內的函式，如下方語法：
 
-{% highlight csharp %}
+``` csharp
 void MemAlloc(ref double[] test, int membercount)
-{% endhighlight %}
+```
 
 應該使用 `CoTaskMemAlloc()` ，從 Managed Code 配置記憶體。CLR 會在記憶體不再被使用時，釋放記憶體。也可使用 `Marshal.FreeCoTaskMem()`  釋放已配置的記憶體。
 
@@ -31,7 +31,7 @@ void MemAlloc(ref double[] test, int membercount)
 
 C++ Code
 
-{% highlight cpp %}
+``` cpp
 extern "C" ABA_API void getArray(long* len, double **data)
 {
     *len = delArray.size();
@@ -39,11 +39,11 @@ extern "C" ABA_API void getArray(long* len, double **data)
     *data = static_cast<double*>(malloc(size));
     memcpy(*data, delArray.data(), size);
 }
-{% endhighlight %}
+```
 
 C# Code
 
-{% highlight csharp %}
+``` csharp
 [DllImport("AudioPluginSpecDelay")]
 private static extern void getArray(out int length, out IntPtr array);
 
@@ -56,7 +56,7 @@ Marshal.Copy(theArrayPtr, theArray, 0, theSize);
 Marshal.FreeCoTaskMem(theArrayPtr);
 
 // theArray is a valid managed object while the native array is already freed
-{% endhighlight %}
+```
 
 參考資料：[Array from C++ to C# - Stack Overflow](https://stackoverflow.com/questions/36224120/array-from-c-to-c-sharp)
 
