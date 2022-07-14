@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Git 的 Fast Forward 合併
+title: Git 的 Fast Forward 與合併多個 Commit
 date: 2022-06-06 12:00:00 +0800
 categories: [Git]
 ---
 
-本文介紹 Git 的 Fast Forward 合併是什麼意思。
+本文介紹 Git 的 Fast Forward 合併概念、Rebase 狀態下如何合併多個 Commit。
 
 ### 什麼是 Fast Forward 合併
 
@@ -17,3 +17,12 @@ categories: [Git]
 - 參考資料: [Git Fast-forward Merge – FunMing 基地](https://fmbase.tw/blog/2015/04/05/git-fast-forward-merge/)
 - 參考資料: [合併分支【分支】 - 連猴子都能懂的Git入門指南 - 貝格樂（Backlog）](https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html)
 
+### 用 `git rebase` 把多個 Commit 合併為一個 
+
+Git 除了 `merge` 可以合併分支以外，還有一個 `rebase` 指令也能合併分支。
+
+`rebase` 指令，會將分支接到另一個分支，以該分支重新做為基準。(也等於是更動了歷史紀錄)
+
+可以在 `git rebase` 的互動模式下，使用 `squash` 指令。這個模式會將好幾個 commit 「擠」成一個 commit，適合常常打一段落就 commit，但是又不希望 log 太繁瑣的情形。
+
+- 參考資料: [【狀況題】把多個 Commit 合併成一個 Commit - 為你自己學 Git - 高見龍](https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit)
