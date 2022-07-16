@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git 的 Fast Forward 與合併多個 Commit
-date: 2022-06-06 12:00:00 +0800
+date: 2022-06-30 12:00:00 +0800
 categories: [Git]
 ---
 
