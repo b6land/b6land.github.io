@@ -28,6 +28,8 @@ select a.name;
 var q = emp.Where(x => x.country.Equals("taiwan"));
 ```
 
+[Lambda 運算式 - C# 參考 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/lambda-expressions)
+
 ### 範例程式碼
 
 ``` csharp

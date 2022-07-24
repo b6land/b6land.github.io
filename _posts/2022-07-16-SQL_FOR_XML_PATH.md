@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 FOR XML PATH 將多筆資料合併成一筆
-date: 2022-07-14 12:00:00 +0800
+date: 2022-07-16 12:00:00 +0800
 categories: [SQL]
 ---
 
