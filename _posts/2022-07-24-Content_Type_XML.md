@@ -13,11 +13,11 @@ POST 將資料送出至伺服器，特點是每次發送至伺服器都會有新
 
 `Content-Type` 則是 POST 的表頭 (header) ，可表示傳送內容 (body) 的類型。
 
-如果是 `text/xml` ，表示這份 xml 文件傾向可被使用者閱讀，沒有支援 `text/xml` 的 agent，文件會被當成 text/plain 對待。
+這兩個屬性都可表示傳送內容是 XML 格式，不過仍有以下區別：
 
-如果使用 `application/xml`，則表示這份 xml 比較無法被使用者閱讀。
+- 如果是 `text/xml` ，表示這份 xml 文件傾向可被使用者閱讀，沒有支援 `text/xml` 的 agent，文件會被當成 text/plain 對待。
 
-但是都可以表示這份文件是 XML 格式。
+- 如果使用 `application/xml`，則表示這份 xml 比較無法被使用者閱讀。
 
 ### 參考資料
 

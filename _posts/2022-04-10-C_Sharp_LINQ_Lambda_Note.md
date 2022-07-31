@@ -28,8 +28,6 @@ select a.name;
 var q = emp.Where(x => x.country.Equals("taiwan"));
 ```
 
-[Lambda 運算式 - C# 參考 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/lambda-expressions)
-
 ### 範例程式碼
 
 ``` csharp
@@ -71,12 +69,33 @@ public class Program
 }
 ```
 
+### 其它 Lambda 語法說明
+
+- 如果需要傳入多個參數時，必須加上括號。
+
+``` csharp
+int a = 3, b = 5;
+Func<int, int, int> rect = (x, y) => x * y; // Func<T, T, TResult> 委派
+Console.WriteLine(rect(a, b));
+```
+
+- 如果需要指定明確型別時 (例如編譯器無法判斷輸入參數的類型)，也要使用括弧。
+
+``` csharp
+Func<int, string, bool> isEqualLength = (int x, string s) => s.Length == x; 
+Console.WriteLine(isEqualLength(3, "super"));
+```
+
+- 只有單行時不必用 `{}` 包住程式，稱為 Lambda Expression；有多行時需用 `{}` 包住，稱為 Lambda Statements。
+
 ### 曾遇到的須注意部分
 
 - 要從 LINQ 的查詢結果取得第一筆資料，使用 `.First()` 或 `.FirstOrDefault` 時，如果沒有資料會拋出例外。另外也要避免重複呼叫 `.First()` 或 `.Count()` 方法，避免重複進行查詢。
 
 ### 參考資料
 
+- [Lambda 運算式 - C# 參考 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/lambda-expressions)
+- [Lambda運算式介紹 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10193784)
 - [深入探索LINQ :: 2018 iT 邦幫忙鐵人賽](https://ithelp.ithome.com.tw/users/20107789/ironman/1574)
 > 可以更加瞭解 C# 的委派和 LINQ 的關係
 - [LINQ寫法：類SQL查詢語法 vs 方法串接-黑暗執行緒](https://blog.darkthread.net/blog/linq-sql-query-vs-methods/)
