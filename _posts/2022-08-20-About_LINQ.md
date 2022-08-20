@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LINQ 是不是一種 ORM ?
-date: 2022-04-10 12:00:00 +0800
+date: 2022-08-20 12:00:00 +0800
 categories:  [C#, LINQ]
 ---
 
