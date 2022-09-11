@@ -2,7 +2,7 @@
 layout: post
 title: POST 送出資料時，Content-Type 的 XML 分別  
 date: 2022-07-24 12:00:00 +0800
-categories: [SQL]
+categories: [API]
 ---
 
 有一次接下的工作，要用 POST 送資料給客戶的伺服器。使用 POST 送出資料時，調整 `Content-Type` 為 `text/xml` 或 `application/xml` 才能讓客戶的伺服器正確接受並回應，為什麼要這樣設定？
