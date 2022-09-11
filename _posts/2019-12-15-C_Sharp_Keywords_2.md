@@ -1,29 +1,11 @@
 ---
 layout: post
-title: C# 關鍵字 2 - out var, readonly
+title: C# 關鍵字 2 - readonly & const
 date: 2019-12-15 12:00:00 +0800
 categories:  [C#]
 ---
 
-以下介紹 out var 的使用方式，和 readonly、const 的不同。 
-
-### out var
-
-在 C# 中，常使用以下的方式將變數試圖剖析為特定型別的變數：
-
-```
-bool value;
-bool.TryParse(object input, out object value);
-```
-
-在 C# 7.0 中，可以使用以下的語法，減少程式碼的使用：
-
-```
-int.TryParse(input, out var value);
-```
-
-`out var` 會幫你宣告該 `value` 變數。
-效果沒有改變，是一種語法糖。
+以下介紹 readonly、const 的不同。 
 
 ### readonly vs. const
 

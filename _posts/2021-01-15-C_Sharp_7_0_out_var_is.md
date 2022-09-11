@@ -12,13 +12,15 @@ categories:  [C#]
 在 C# 中，常使用以下的方式將變數試圖剖析為特定型別的變數：
 
 ``` csharp
+object input;
 bool value;
-bool.TryParse(object input, out object value);
+bool.TryParse(input, out value);
 ```
 
 在 C# 7.0 中，可以使用以下的語法，減少程式碼的使用：
 
 ``` csharp
+object input;
 int.TryParse(input, out var value);
 ```
 
@@ -27,7 +29,7 @@ int.TryParse(input, out var value);
 ### is
 
 用於檢查某個變數是否相容於某個類別 (或型別)。
-在 C# 7.0 中，可以在檢查類別 (或型別) 時，建立區域變數。
+在 C# 7.0 中，可以在檢查類別 (或型別) 時，建立區域變數，稱之為 Declaration Pattern。
 
 ``` csharp
 int i = 23;
