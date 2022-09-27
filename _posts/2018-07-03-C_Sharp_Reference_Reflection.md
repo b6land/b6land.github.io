@@ -18,7 +18,7 @@ categories:  [C#, DLL]
 
 ### 使用反射 (Reflection)
 
-- 使用轉型，可以將 `Assembly.LoadFrom()` 載入的 Object 視為指定的型態。在 DaqAdapter 中，將如 ItriApplyZ2 的 DaqAdapter sub class 轉為 DaqAdapter class。
+- 使用轉型，可以將 `Assembly.LoadFrom()` 載入的 Object 視為指定的型態。
 - 僅接受沒有參數的建構子，參數要以額外函式傳入 class 內。
 - `Assembly.GetTypes(string name)` 使用的 name，是 namespace + class name (命名空間 + 類別名稱)。
 - **和 Abstract class 結合：**不能直接建立 Abstract class 的實例，但是可以建構繼承類別的實例，再當成該 Abstract class 來使用。
