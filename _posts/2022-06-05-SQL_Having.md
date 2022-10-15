@@ -34,7 +34,7 @@ HAVING SUM(ItemMoney) > 1500
 `WHERE` 可用在一般非聚合函數的條件查詢，例如：
 
 ``` sql
-SELECT EmployeeID, SUM(ItemMoney)
+SELECT EmployeeID, ItemMoney
 FROM ItemValue
 WHERE EmployeeID = '0001'
 ```

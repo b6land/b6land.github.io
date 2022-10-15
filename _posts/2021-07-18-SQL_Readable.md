@@ -34,5 +34,5 @@ WHERE RowID IN (
 
 ### 參考資料
 
-- [Creating readable SQL. · Vicki Boykis](http://veekaybee.github.io/2015/06/02/good-sql/)
+- [Creating readable SQL. · Vicki Boykis](https://vickiboykis.com/2015/06/02/creating-readable-sql./)
 
