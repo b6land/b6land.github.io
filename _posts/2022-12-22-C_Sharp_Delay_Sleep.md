@@ -2,7 +2,7 @@
 layout: post
 title: C# 的 Task.Delay 和 Thread.Sleep 有什麼不同
 date: 2022-12-22 12:00:00 +0800
-categories: [C#,SQL]
+categories: [C#]
 ---
 
 想要在執行緒內不斷的定時執行程式時，通常會想到要在迴圈內用 `Thread.Sleep()` 來暫停程式，其實還有 `Task.Delay()` 可以使用，且各自有不同的特性。  
