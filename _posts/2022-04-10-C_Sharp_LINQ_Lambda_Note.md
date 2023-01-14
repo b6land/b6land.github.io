@@ -2,7 +2,7 @@
 layout: post
 title: LINQ 與 Lambda 筆記
 date: 2022-04-10 12:00:00 +0800
-categories:  [C#, LINQ, Lambda]
+categories: [C#, LINQ, Lambda]
 ---
 
 在寫 C# 程式時，常常會看到結合 LINQ 和 Lambda 語法的程式碼，以下是簡單的介紹。
@@ -96,8 +96,7 @@ Console.WriteLine(isEqualLength(3, "super"));
 
 - [Lambda 運算式 - C# 參考 - Microsoft Docs](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/lambda-expressions)
 - [Lambda運算式介紹 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10193784)
-- [深入探索LINQ :: 2018 iT 邦幫忙鐵人賽](https://ithelp.ithome.com.tw/users/20107789/ironman/1574)
-> 可以更加瞭解 C# 的委派和 LINQ 的關係
+- [深入探索LINQ :: 2018 iT 邦幫忙鐵人賽](https://ithelp.ithome.com.tw/users/20107789/ironman/1574) (可以更加瞭解 C# 的委派和 LINQ 的關係)
 - [LINQ寫法：類SQL查詢語法 vs 方法串接-黑暗執行緒](https://blog.darkthread.net/blog/linq-sql-query-vs-methods/)
 - [在撰寫 LINQ to SQL 時應注意的幾個小地方 - The Will Will Web](https://blog.miniasp.com/post/2008/05/16/Tips-and-Tricks-in-LINQ-to-SQL-Coding)
 - [[C#.NET][LINQ] Query DataTable - 余小章 @ 大內殿堂 - 點部落](https://dotblogs.com.tw/yc421206/2014/07/14/145944)
