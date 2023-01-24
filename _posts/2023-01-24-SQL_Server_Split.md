@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL Server 的字串分割
-date: 2023-01-14 12:00:00 +0800
+date: 2023-01-24 12:00:00 +0800
 categories: [SQL, SQL Server]
 ---
 
