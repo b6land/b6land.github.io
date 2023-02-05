@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 策略模式筆記
+title: 策略模式 (Strategy Pattern)
 date: 2022-01-03 12:00:00 +0800
 categories:  [Design Pattern]
 --- 
 
-本篇以條列式的方式，簡單描述策略模式的幾個重點。
+本篇以條列式的方式，簡單描述策略模式的特色，並在文末附上範例。
 
 ### 特色
 
@@ -22,6 +22,88 @@ categories:  [Design Pattern]
 
 - 單元測試注入假物件時。
 - 同樣行為，但使用不同的程式碼實作，例如各種繪畫的行為：實心方形、空心方形、實心圓形...。
+
+### 範例
+
+假如有個加油站提供不同車種的里程預估，用策略模式實作如下。
+
+```cs
+public class Strategy
+{
+    ///<summary> 車輛介面 </summary>
+    protected interface ICar
+    {
+        public void AddFuel(int vol);
+        public void CalcDistance();
+    }
+
+    ///<summary> 跑車類別 </summary>   
+    protected class SportsCar : ICar
+    {
+        int fuel = 0;
+        public void AddFuel(int vol)
+        {
+            this.fuel += vol;
+        }
+        public void CalcDistance()
+        {
+            double distance = fuel * 0.1;
+            Console.WriteLine("Sports Car distance: " + distance);
+        }
+    }
+
+    ///<summary> 轎車類別 </summary>
+    protected class Sedan : ICar
+    {
+        int fuel = 0;
+        public void AddFuel(int vol)
+        {
+            this.fuel += vol;
+        }
+        public void CalcDistance()
+        {
+            double distance = fuel * 0.3;
+            Console.WriteLine("Sedan distance: " + distance);
+        }
+    }
+
+    public void Run(int car)
+    {
+        // 原本的寫法
+        // if (car == 0)
+        // {
+        //     SportsCar s = new SportsCar();
+        //     s.AddFuel(100);
+        //     s.CalcDistance();
+        // }
+        // else if(car == 1)
+        // {
+        //     Sedan s = new Sedan();
+        //     s.AddFuel(100);
+        //     s.CalcDistance();
+        // }
+
+        // 根據參數產生不同類別
+        ICar s = GetCarInstance(0);
+        // 保留相同的部分
+        s.AddFuel(100);
+        s.CalcDistance();
+    }
+
+    ///<summary> 策略模式，取得不同類別 </summary>
+    protected ICar GetCarInstance(int car)
+    {
+        if(car == 0)
+        {
+            return new SportsCar();
+        }
+        else
+        {
+            return new Sedan();
+        }
+    }
+}
+```
 
 ### 參考資料
 
