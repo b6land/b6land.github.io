@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 表象模式 (Facade Pattern)
-date: 2023-01-30 12:00:00 +0800
+date: 2023-02-04 12:00:00 +0800
 categories:  [Design Pattern]
 ---
 
