@@ -36,6 +36,7 @@ categories:  [C#, Design Pattern]
 ### 範例
 
 ```cs
+///<summary> 單例模式類別 </summary>
 public sealed class Singleton // 使用 sealed 關鍵字表示不能被繼承
 {
     private static Singleton instance = null;
@@ -50,6 +51,7 @@ public sealed class Singleton // 使用 sealed 關鍵字表示不能被繼承
             return instance; // 之後直接回傳先前建立的物件
         }
     }
+    // NOTE: 如果在多執行緒的狀態下使用單例類別，要在取得 Instance 時，加入 lock 檢查
     
     private Singleton() { } // 宣告私有建構子，強迫外部程式使用 Instance
 
