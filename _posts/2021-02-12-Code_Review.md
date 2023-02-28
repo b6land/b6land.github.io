@@ -2,7 +2,7 @@
 layout: post
 title: Code Review 經驗談
 date: 2021-02-12 12:00:00 +0800
-categories:  [Code Review]
+categories:  [Programming]
 --- 
 
 這一篇是結合至目前為止的工作經驗，將經驗過的好 Code Review 習慣記錄下來，並附上相關連結，以便未來 Code Review 時能夠盡可能改善專案品質。
