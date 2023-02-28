@@ -5,7 +5,7 @@ date: 2023-01-23 12:00:00 +0800
 categories: [C#]
 ---
 
-C# 有一個特色稱之為 Delegate (委派)。以下是我對 [A tour of C# - Major language areas - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features#delegates-and-lambda-expressions) 的解讀。
+C# 有一個特色稱之為 Delegate (委派)。以下是我對 [A tour of C# - Major language areas - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features#delegates-and-lambda-expressions) 中委派的解讀。
 
 ### 微軟的介紹
 
