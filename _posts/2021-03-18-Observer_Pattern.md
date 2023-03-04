@@ -5,7 +5,7 @@ date: 2021-03-18 12:00:00 +0800
 categories:  [Design Pattern]
 --- 
 
-本篇文章將簡單介紹觀察者模式 (Observer Pattern) 的概念。
+本篇文章將簡單介紹觀察者模式 (Observer Pattern) 的概念，並包含 C# 範例程式碼。
 
 ### 摘要
 
@@ -207,3 +207,4 @@ public class ObserverWithInterface
 - [觀念 設計模式–Observer Pattern - 我，傑夫。開發人](https://jeffprogrammer.wordpress.com/2015/07/23/淺談設計模式-observer-pattern/)
 - [[C#]Observer Pattern到Delegate和Event - 全端開發人員天梯 - 點部落](https://dotblogs.com.tw/wellwind/2016/05/22/csharp-observer-pattern-delegate-event)
 - [[Design Pattern] 觀察者模式 Observer Pattern - Jesper程式學習筆記 - 點部落](https://dotblogs.com.tw/JesperLai/2018/04/16/225616): 如果既有類別也想實作觀察者模式，可以使用 Delegate + EventHandler 發送通知。
+- [Observer Pattern abstract vs interface - Stack Overflow](https://stackoverflow.com/questions/16948306/observer-pattern-abstract-vs-interface): 要用 Abstract Class 預先寫好訂閱行為，或是用 Interface 自定義訂閱行為？都可以，取決於使用情境。
