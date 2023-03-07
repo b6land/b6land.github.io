@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 觀察者模式簡介
+title: 觀察者模式 (Observer Pattern)
 date: 2021-03-18 12:00:00 +0800
 categories:  [Design Pattern]
 --- 
@@ -86,7 +86,7 @@ public class ObserverPattern
 
 ```
 
-但是沒有實作 Interface 的話，假如同時有多種主題要發佈，也有不同的觀眾行為要處理，還是要加入 Interface，以減少類別間的耦合。
+但是沒有實作 Interface 的話，假如同時有多種主題要發佈，也有不同的觀察者行為要處理，還是要加入 Interface，以減少類別間的耦合。
 
 ``` csharp
 public class ObserverWithInterface
