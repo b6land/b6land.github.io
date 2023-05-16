@@ -32,8 +32,10 @@ categories: [C#]
   - [[faq]解決C#呼叫有ssl憑證問題的網站出現遠端憑證是無效的錯誤問題 @ Alan Tsai 的學習筆記](https://blog.alantsai.net/posts/2017/12/csharp-ssl-remote-validation-error)
 
 - 只用在特定 HttpWebRequest 上。
-  > var request = (HttpWebRequest)HttpWebRequest.Create(myUri);
-  > request.ServerCertificateValidationCallback = delegate { return true; };
+  ```cs
+  var request = (HttpWebRequest)HttpWebRequest.Create(myUri);
+  request.ServerCertificateValidationCallback = delegate { return true; };
+  ```
   - [c# - Best way to handle self signed certificates - Stack Overflow](https://stackoverflow.com/questions/44506561/best-way-to-handle-self-signed-certificates)
 
 ### 其他可能的做法
