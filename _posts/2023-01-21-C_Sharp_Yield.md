@@ -15,9 +15,9 @@ categories: [C#]
 
 但如果要自己實作 IEnumerable 介面，會需要寫很多程式碼，因此可以透過 `yield` 精簡程式碼，寫出更直覺的語法。
 
-從 [IEnumerable<T> Interface (System.Collections.Generic) - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-7.0) 的例子，可以看到要實作 IEnumerable 介面，就要實作 Current 屬性, Dispose()、MoveNext()、Reset() 等方法。
+從 [IEnumerable\<T\> Interface (System.Collections.Generic) - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-7.0) 的例子，可以看到要實作 IEnumerable 介面，就要實作 Current 屬性, Dispose()、MoveNext()、Reset() 等方法。
 
-使用 `yield` 的話， [yield statement - provide the next element in an iterator - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield?redirectedfrom=MSDN)，只需要在 IEnumerable 介面內撰寫列舉的邏輯，並加入 `yield` 關鍵字即可。
+使用 `yield` 的話，參考 [yield statement - provide the next element in an iterator - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield?redirectedfrom=MSDN) 的例子，只需要在 IEnumerable 介面內撰寫列舉的邏輯，並加入 `yield` 關鍵字即可。
 
 ### 其它參考資料
 
