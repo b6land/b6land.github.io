@@ -1,13 +1,13 @@
 ---
 layout: post
-title: C# async/await
+title: C# async 與 await 的用法
 date: 2023-10-09 12:00:00 +0800
 categories: [C#]
 ---
 
 本文介紹 C# 中非同步程式的寫法─使用 `async` 和 `await` 關鍵字。
 
-### `async`` 和 `await`
+### `async` 和 `await`
 
 使用 `async` 和 `await` 關鍵字，可以將同步程式改為非同步程式。
 
