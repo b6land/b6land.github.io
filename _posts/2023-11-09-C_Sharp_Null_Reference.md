@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# Nullable Reference Types
-date: 2023-11-08 12:00:00 +0800
+date: 2023-11-09 12:00:00 +0800
 categories: [C#]
 ---
 
