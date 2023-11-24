@@ -9,7 +9,7 @@ C# Nullable Reference Types 是在 C# 8.0 提供的功能。可以選擇是否�
 
 ### 介紹
 
-啟用前，參考型別預設可為 `Null`，但是容易在傳入 `Null`` 時，引發 `NullReferenceException`。
+啟用前，參考型別預設可為 `Null`，但是容易在傳入 `Null` 時，引發 `NullReferenceException`。
 啟用後，參考型別預設變得不能 `Null`，必須在型別後面加入 ?，宣告成 Nullable 型別才可為 Null。
 
 範例可參考 [C# 8 的 Nullable Reference Types - Huan-Lin 學習筆記](https://www.huanlintalk.com/2020/03/csharp-8-nullable-reference-types.html) 的程式碼：
