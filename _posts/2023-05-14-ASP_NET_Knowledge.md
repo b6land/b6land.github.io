@@ -2,7 +2,7 @@
 layout: post
 title: ASP.NET 常識
 date: 2023-05-14 12:00:00 +0800
-categories: [ASP.NET]
+categories: [ASP.NET, Interview]
 ---
 
 本篇介紹 ASP.NET 中，時常會用到的知識，包含瀏覽網頁時如何存取資料、以及連向其他網頁的差異。

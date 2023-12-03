@@ -2,7 +2,7 @@
 layout: post
 title: Git 的 Fast Forward 與合併多個 Commit
 date: 2022-06-30 12:00:00 +0800
-categories: [Git]
+categories: [Git, Interview]
 ---
 
 本文介紹 Git 的 Fast Forward 合併概念、Rebase 狀態下如何合併多個 Commit。

@@ -2,7 +2,7 @@
 layout: post
 title: 分層模式簡介
 date: 2023-11-24 12:00:00 +0800
-categories:  [Programming]
+categories:  [Programming, Interview]
 --- 
 
 分層模式表示軟體結構分成多層，不過沒有規定一定要分成幾層，以及要如何分層。以下將簡單的介紹分層模式。
