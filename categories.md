@@ -4,6 +4,20 @@ permalink: /categories/
 title: 分類
 ---
 
+## 所有分類
+
+<div id="category_list">
+{% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  <a href="#{{ category_name }}"
+    style="font-size: {{ category | last | size | times: 4 | plus: 80  }}%">
+    {{ category_name | replace: ' ', '&nbsp;'}}&nbsp;({{ category | last | size }})
+  </a>
+  
+{% endfor %}
+</div>
+
+## 分類文章
 
 <div id="archives">
 {% for category in site.categories %}
