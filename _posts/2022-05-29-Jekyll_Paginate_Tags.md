@@ -2,7 +2,7 @@
 layout: post
 title: 啟用 Jekyll 網誌的分頁和標籤功能 (適用 GitHub Pages)
 date: 2022-05-29 12:00:00 +0800
-categories:  [Jekyll, GitHub Pages]
+categories:  [Jekyll in GitHub Pages]
 ---
 
 本篇會介紹使用 Jekyll 在 GitHub Pages 服務建立網誌時，如何加入分頁 (Pagination) 功能和標籤 (Tag) 功能。

@@ -2,7 +2,7 @@
 layout: post
 title: 什麼是 Platform Invoke (P/Invoke)
 date: 2023-01-29 12:00:00 +0800
-categories:  [.Net, DLL]
+categories:  [C#, DLL]
 ---
 
 什麼是 Platform Invoke (P/Invoke，中文或可稱為平台叫用) ? 

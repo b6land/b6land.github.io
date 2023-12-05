@@ -2,7 +2,7 @@
 layout: post
 title: 在 GitHub Pages 內使用 Jekyll 產生網誌，收到來自 dependabot 的 Bump ... from ... to ... 訊息
 date: 2023-01-25 12:00:00 +0800
-categories: [Jekyll, GitHub Pages]
+categories: [Jekyll in GitHub Pages]
 ---
 
 在 GitHub Pages 內建立 Jekyll 產生出來的靜態網誌，可能偶爾會收到 dependabot 寄出，標題如下的訊息：Bump ... from ... to ... 的訊息，例如：Bump commonmarker from 0.23.6 to 0.23.7 (PR #6)。可透過這封郵件修正安全性錯誤。
