@@ -16,7 +16,7 @@ C# 中有 SqlCommand 類別可以放入 Raw SQL，查詢時可以使用 SqlParam
 **範例**
 
 ``` cs
-SqlCommand command = new SqlCommand("SELECT * FROM Dogs1 WHERE Name LIKE @Name", connection)
+SqlCommand command = new SqlCommand("SELECT * FROM Dogs1 WHERE Name LIKE @Name", connection);
 command.Parameters.Add(new SqlParameter("Name", dogName));
 ```
 
