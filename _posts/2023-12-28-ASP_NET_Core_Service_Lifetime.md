@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ASP.NET Core 的服務生命週期、註冊與使用
-date: 2023-12-25 12:00:00 +0800
+date: 2023-12-28 12:00:00 +0800
 categories:  [ASP.NET]
 ---
 
