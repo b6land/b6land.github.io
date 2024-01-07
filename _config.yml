@@ -27,7 +27,7 @@ avatar: https://github.com/b6land.png
 description: >- # this means to ignore newlines until "baseurl:"
   關於 C#、SQL 和其它軟體技術的網誌
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://b6land.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  b6land
 
