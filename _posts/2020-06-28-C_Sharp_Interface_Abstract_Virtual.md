@@ -24,8 +24,8 @@ categories:  [C#, Interview]
 - 可以實作程式內容。
 - 不一定要 Override，但是被 Override 後，可以呼叫 `base.method()`。
 - 預先提供一部分的實作內容。
+- 範例請參考 [C# 繼承 (Inheritance)](/C_Sharp_Inheritance/)
 
 ### 參考資料
 
 - [(原創) interface和abstract class有何不同? (C/C++) (.NET) (C#) - 真 OO无双 - 博客园](https://www.cnblogs.com/oomusou/archive/2007/05/07/738311.html)
-- [Twenty C# Questions Explained: (09) What is the difference between abstract and virtual functions? - Twenty C# Questions Explained - Channel 9](https://channel9.msdn.com/Series/Twenty-C-Questions-Explained/09)
