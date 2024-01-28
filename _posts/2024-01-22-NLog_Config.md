@@ -15,9 +15,8 @@ Rule 功能可以限制不同等級的訊息輸出到特定的目標 (Target) �
 
 部分會用到的 Rule 元素如下：
 
-|     |     |
-| --- | --- |
 | 元素  | 說明  |
+| --- | --- |
 | name <br> | 要記錄的類別名稱，可接受萬用字元 \* 和 ?<br> |
 | minlevel <br> | 要記錄的最小等級 |
 | maxlevel <br> | 要記錄的最大等級<br> |
@@ -30,9 +29,8 @@ Layout 功能是依照特定標籤和格式顯示 Log，標籤可稱為 Layout R
 
 部分會使用到的 Layout 標籤如下：
 
-|     |     |     |
-| --- | --- | --- |
 | 標籤<br> | 描述  | 連結  |
+| --- | --- | --- |
 | aspnet-request-url<br> | 顯示需求的 URL，預設顯示 Scheme, Host 和 Path，可另外顯示 Port 和 Query String | [AspNetRequest Url Layout Renderer · NLog/NLog Wiki · GitHub](https://github.com/NLog/NLog/wiki/AspNetRequest-Url-Layout-Renderer)<br> |
 | activity<br> | .NET 分散式追蹤的列舉，可以加入 property=TraceId 顯示個別 API 請求的 Trace ID | [GitHub - NLog/NLog.DiagnosticSource](https://github.com/NLog/NLog.DiagnosticSource)<br> |
 | level | 訊息等級 | [Level layout renderer · NLog/NLog Wiki · GitHub](https://github.com/NLog/NLog/wiki/Level-Layout-Renderer)<br> |

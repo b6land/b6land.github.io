@@ -32,8 +32,8 @@ FROM syscomments c
 INNER JOIN sysobjects o ON c.id=o.id
 WHERE (o.xtype = 'P'          --查SP
     OR o.xtype = 'V')              --查View
-    AND (o.name LIKE '%IpassTranParams%'  --查SP或View名稱
-        OR c.text LIKE '%IpassTranParams%')  --查SP或View內含文字
+    AND (o.name LIKE '%Text%'  --查SP或View名稱
+        OR c.text LIKE '%Text%')  --查SP或View內含文字
 ```
 
 ### 參考資料
