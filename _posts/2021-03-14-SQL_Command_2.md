@@ -12,12 +12,56 @@ categories:  [SQL]
 - `Union`: 將上下兩句 SQL 語法的查詢結果合併起來，使用 SQL SELECT 查詢的結果欄位需要完全相同。如下範例：
 
 ``` sql
+-- 建立範例資料
+CREATE TABLE Person (
+    Name VARCHAR(50),
+    Sex VARCHAR(10),
+    City VARCHAR(50)
+);
+
+CREATE TABLE Member (
+    Name VARCHAR(50),
+    Sex VARCHAR(10),
+    Account VARCHAR(50),
+    City VARCHAR(50)
+);
+
+INSERT INTO Person (Name, Sex, City) VALUES
+('John', 'Male', 'New York'),
+('Alice', 'Female', 'Los Angeles'),
+('Bob', 'Male', 'Chicago'),
+('Emily', 'Female', 'Houston');
+
+INSERT INTO Member (Name, Sex, Account, City) VALUES
+('Alice', 'Female', 'alice123', 'Los Angeles'),
+('David', 'Male', 'david456', 'San Francisco'),
+('Emily', 'Female', 'emily789', 'Houston'),
+('Frank', 'Male', 'frank012', 'Seattle');
+
+-- 執行合併資料的 SELECT 語法
 SELECT Name FROM Person
 UNION
 SELECT Name FROM Member
 ```
 
-- `Union All`: 與 `Union` 的作用類似，上下兩句查詢結果合併在一起，差異在於 `Union All` 會列出包含重複資料的所有結果，而 Union 僅列出不重複的所有結果。
+結果如下：
+
+```
+Name
+-----
+Alice
+Bob
+David
+Emily
+Frank
+John
+
+```
+
+可以看見重複的 Alice 和 Emily 只會出現一次。
+
+- `Union All`: 與 `Union` 的作用類似，上下兩句查詢結果合併在一起，差異在於 `Union All` 會列出包含重複資料的所有結果，而 `Union` 僅列出不重複的所有結果。
+  - 因為 `Union All` 不需要排序、找出重複的資料並刪除，效率會比 `Union` 更好。如果確認要合併的資料不會重複，或是重複了也沒關係，就可以使用 `Union All`。
 - 參考資料：[SQL UNION ALL - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sqlunionall.html)
 
 ### Not Exists 與 Case
