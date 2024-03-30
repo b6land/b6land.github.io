@@ -1,8 +1,8 @@
 ---
 layout: post
-title: NLog 套件的設定
+title: C# NLog 套件的設定
 date: 2024-01-22 12:00:00 +0800
-categories:  [Programming]
+categories:  [C#]
 --- 
 
 NLog 是一套 Open Source 的 Log 工具，支援多種 .Net 平台，使用上簡單又具備調整的彈性。
