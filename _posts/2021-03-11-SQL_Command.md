@@ -47,6 +47,7 @@ FROM [Tables] WHERE [Conditions]
 
 - 簡單易懂的語法說明文章：[[iT鐵人賽Day33] SQL Server 暫存表(@ # ##)與CTE (Common Table Expressions) - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10225120)
 - `SELECT INTO` 語法說明：[SQL SELECT INTO - SQL 語法教學 Tutorial](https://www.fooish.com/sql/select-into.html)
+- 也請參考 2024 年新增的文章，裡面有多一些補充 (其實也是 2022 年的 ITHome 鐵人賽文章 ...)：[SQL 暫存資料表與資料表連接](/SQL_Temporary_Table_Join/)
 
 ### INNER JOIN 和 LEFT JOIN
 
@@ -54,6 +55,7 @@ FROM [Tables] WHERE [Conditions]
 - LEFT JOIN：對於左方的表格 (Table 1)，無論是否有符合連接結果，都會返回資料，不存在的欄位為 NULL。 
 
 #### 參考資料
+
 - `INNER JOIN` 語法說明：[SQL INNER JOIN 內部連接 - SQL 語法教學 Tutorial](https://www.fooish.com/sql/inner-join.html)
 
 ### 要使用 WHERE 還是 INNER JOIN 連接資料 ?
