@@ -35,7 +35,6 @@ FROM Table_a WITH(NOLOCK)
 2. [##Table] 暫存資料表：所有人都可以使用
 3. [@Table] 資料表變數：批次資料執行完後立即從記憶體被刪除
 
-- `SELECT INTO` 可以將查詢的結果插入至一個新的資料表，不能插入至已存在的資料表。
 - 以下是從已有的資料表產生新的暫存表的範例語法，其中 Columns 表示要查詢的欄位，#Table_name 是想插入的暫存表名稱，Tables 表示來源資料表，Conditions 表示篩選的條件：
 
 ``` sql
@@ -43,20 +42,38 @@ SELECT [Columns] INTO [#Table_name]
 FROM [Tables] WHERE [Conditions]
 ```
 
+不過 `SELECT INTO` 不能插入至已存在的資料表，如果需要覆蓋的話，應該要先使用 `DROP TABLE` 指令：
+
+```sql
+DROP TABLE [#Table_name]
+```
+
+另外，可以加上 `WHERE 0=1`，只複製資料表結構，而不複製裡面的內容。
+
+```sql
+SELECT Column1, Column2… 
+INTO [#Table_name] 
+FROM [Tables]
+WHERE 0=1
+```
+
 #### 參考資料
 
 - 簡單易懂的語法說明文章：[[iT鐵人賽Day33] SQL Server 暫存表(@ # ##)與CTE (Common Table Expressions) - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10225120)
 - `SELECT INTO` 語法說明：[SQL SELECT INTO - SQL 語法教學 Tutorial](https://www.fooish.com/sql/select-into.html)
-- 也請參考 2024 年新增的文章，裡面有多一些補充 (其實也是 2022 年的 ITHome 鐵人賽文章 ...)：[SQL 暫存資料表與資料表連接](/SQL_Temporary_Table_Join/)
 
-### INNER JOIN 和 LEFT JOIN
+### JOIN 的分別
 
-- INNER JOIN：等值連接，只會返回符合連接結果 (條件) 的資料；
-- LEFT JOIN：對於左方的表格 (Table 1)，無論是否有符合連接結果，都會返回資料，不存在的欄位為 NULL。 
+- `INNER JOIN`：只會返回兩個資料表都符合連接結果 (條件) 的資料。
+- `LEFT JOIN`：只要左方的資料表符合條件，就取回資料。右方資料表不存在的欄位為 `NULL`。
+- `RIGHT JOIN`：只要右方的資料表符合條件，就取回資料。左方資料表不存在的欄位為 `NULL`。
+
+*(對我來說，通常會將左方資料表稱為主資料表，右方資料表稱為子資料表，較能區分連接後的結果。)*
 
 #### 參考資料
 
 - `INNER JOIN` 語法說明：[SQL INNER JOIN 內部連接 - SQL 語法教學 Tutorial](https://www.fooish.com/sql/inner-join.html)
+- 可透過文中圖解，快速理解各種 JOIN 的關係：[SQL Joins](https://www.w3schools.com/sql/sql_join.asp) 
 
 ### 要使用 WHERE 還是 INNER JOIN 連接資料 ?
 
