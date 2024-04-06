@@ -17,11 +17,11 @@ Rule 功能可以限制不同等級的訊息輸出到特定的目標 (Target) �
 
 | 元素  | 說明  |
 | --- | --- |
-| name <br> | 要記錄的類別名稱，可接受萬用字元 \* 和 ?<br> |
-| minlevel <br> | 要記錄的最小等級 |
-| maxlevel <br> | 要記錄的最大等級<br> |
-| writeTo <br> | 要寫入的 Target |
-| final <br> | (此類別) 最後適用的規則，列在後方的不處理 |
+| name | 要記錄的類別名稱，可接受萬用字元 \* 和 ? |
+| minlevel | 要記錄的最小等級 |
+| maxlevel | 要記錄的最大等級 |
+| writeTo | 要寫入的 Target |
+| final | (此類別) 最後適用的規則，列在後方的不處理 |
 
 ### Layout 功能  
 
@@ -29,7 +29,7 @@ Layout 功能是依照特定標籤和格式顯示 Log，標籤可稱為 Layout R
 
 部分會使用到的 Layout 標籤如下：
 
-| 標籤<br> | 描述  | 連結  |
+| 標籤 | 描述  | 連結  |
 | --- | --- | --- |
 | aspnet-request-url<br> | 顯示需求的 URL，預設顯示 Scheme, Host 和 Path，可另外顯示 Port 和 Query String | [AspNetRequest Url Layout Renderer · NLog/NLog Wiki · GitHub](https://github.com/NLog/NLog/wiki/AspNetRequest-Url-Layout-Renderer)<br> |
 | activity<br> | .NET 分散式追蹤的列舉，可以加入 property=TraceId 顯示個別 API 請求的 Trace ID | [GitHub - NLog/NLog.DiagnosticSource](https://github.com/NLog/NLog.DiagnosticSource)<br> |
@@ -41,6 +41,20 @@ Layout 功能是依照特定標籤和格式顯示 Log，標籤可稱為 Layout R
 | truncate<br> | 內容超過指定長度時，截斷後方內容 | [I want to truncate message layout renderer after 30 characters in database logging.Any suggestion? · Issue #3040 · NLog/NLog · GitHub](https://github.com/NLog/NLog/issues/3040 )<br> |
 
 詳細列表可以參考：[Layout Renderers - Config - NLog](https://nlog-project.org/config/?tab=layout-renderers)
+
+### Log 等級
+
+NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高：
+
+
+| 等級  | 順序  | 說明  |
+| --- | --- | --- |
+| Trace | 0   | 通常用在開發程式的觀察 |
+| Debug | 1   | 用於除錯想檢查的部分 |
+| Info | 2   | 標示出應用程式的重要事件 |
+| Warn | 3   | 警告驗證問題或是可被還原的暫時性錯誤 |
+| Error | 4   | 例外發生或功能失效 |
+| Fatal | 5   | 最嚴重等級，應用程式將要停止運作 |
 
 ### 加入 Trace ID
 
