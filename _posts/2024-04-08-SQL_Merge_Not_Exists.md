@@ -2,7 +2,7 @@
 layout: post
 title: SQL 更新資料─使用 MERGE 或 NOT EXISTS
 date: 2024-04-08 12:00:00 +0800
-categories: [C#]
+categories: [SQL]
 --- 
 
 本文介紹「有資料時更新，沒有資料時插入」時適用的 `MERGE` 語法。「沒有資料時才插入」則可以用 `INSERT` 語法搭配 `NOT EXISTS` 條件達成。
