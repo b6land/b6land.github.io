@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL 更新資料─使用 MERGE 或 NOT EXISTS
-date: 2024-02-29 12:00:00 +0800
+date: 2024-04-08 12:00:00 +0800
 categories: [C#]
 --- 
 
