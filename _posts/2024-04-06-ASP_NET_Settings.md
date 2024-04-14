@@ -2,7 +2,7 @@
 layout: post
 title: ASP.NET Core 的設定檔案、Secret Manager
 date: 2024-04-06 12:00:00 +0800
-categories:  [C#]
+categories:  [ASP.NET]
 --- 
 
 本文要介紹 ASP.NET Core 專案的設定檔案，其與舊有的 ASP.NET 專案有很大的不同。最大的差異是改用了 JSON 格式，比舊有的 XML 格式體積更小、更容易閱讀。
