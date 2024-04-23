@@ -5,14 +5,14 @@ date: 2021-03-14 12:00:00 +0800
 categories:  [SQL]
 --- 
 
-這篇文章介紹 Union 和 Union All 語法的作用，Not Exists 與 Case 語法的使用時機，以及其它的 SQL 語法，包含註解的使用，以及如何取得目前時間。
+這篇文章介紹 `UNION` 和 `UNION ALL` 語法的作用與範例，`NOT EXISTS` 與 `CASE` 語法的簡介，以及其它的 SQL 語法，包含註解的使用，以及如何取得目前時間。
 
-### Union 和 Union All
+### UNION 和 UNION ALL
 
-- `Union`: 將上下兩句 SQL 語法的查詢結果合併起來，使用 SQL SELECT 查詢的結果欄位需要完全相同。如下範例：
+`UNION` 可以將上下兩句 SQL 語法的查詢結果合併起來，使用 `SELECT` 查詢的結果欄位需要完全相同。如下範例：
 
 ``` sql
--- 建立範例資料
+
 CREATE TABLE Person (
     Name VARCHAR(50),
     Sex VARCHAR(10),
@@ -37,11 +37,14 @@ INSERT INTO Member (Name, Sex, Account, City) VALUES
 ('David', 'Male', 'david456', 'San Francisco'),
 ('Emily', 'Female', 'emily789', 'Houston'),
 ('Frank', 'Male', 'frank012', 'Seattle');
+```
 
--- 執行合併資料的 SELECT 語法
-SELECT Name FROM Person
+接著執行合併資料的 SELECT 語法：
+
+``` sql
+SELECT [Name] FROM Person
 UNION
-SELECT Name FROM Member
+SELECT [Name] FROM Member
 ```
 
 結果如下：
@@ -60,9 +63,35 @@ John
 
 可以看見重複的 Alice 和 Emily 只會出現一次。
 
-- `Union All`: 與 `Union` 的作用類似，上下兩句查詢結果合併在一起，差異在於 `Union All` 會列出包含重複資料的所有結果，而 `Union` 僅列出不重複的所有結果。
-  - 因為 `Union All` 不需要排序、找出重複的資料並刪除，效率會比 `Union` 更好。如果確認要合併的資料不會重複，或是重複了也沒關係，就可以使用 `Union All`。
-- 參考資料：[SQL UNION ALL - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sqlunionall.html)
+`UNION ALL`: 與 `UNION` 的作用類似，上下兩句查詢結果合併在一起，差異在於 `UNION ALL` 會列出包含重複資料的所有結果，而 `UNION` 僅列出不重複的所有結果。
+
+因為 `UNION ALL` 不需要排序、找出重複的資料並刪除，效率會比 `UNION` 更好。如果確認要合併的資料不會重複，或是重複了也沒關係，就可以使用 `UNION ALL`。
+
+以上面的範例資料為例：
+
+``` sql
+SELECT [Name] FROM Person
+UNION ALL
+SELECT [Name] FROM Member
+```
+
+結果如下：
+
+```
+Name
+-----
+John
+Alice
+Bob
+Emily
+Alice
+David
+Emily
+Frank
+
+```
+
+參考資料：[SQL UNION ALL - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sqlunionall.html)
 
 ### Not Exists 與 Case
 
