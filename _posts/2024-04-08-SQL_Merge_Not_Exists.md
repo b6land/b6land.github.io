@@ -106,3 +106,4 @@ WHERE NOT EXISTS ( -- 若 ID 不存在 ExampleTable 內時，才插入資料
 2. [SQL MERGE vs INSERT, UPDATE, DELETE Performance Considerations](https://www.mssqltips.com/sqlservertip/7590/sql-merge-performance-vs-insert-update-delete/) (用實驗告訴你 MERGE 和一般 `INSERT` , `UPDATE` 和 `DELETE`  的效能影響)
 3. [How to update if row exists else insert in SQL Server - My Tec Bits](https://www.mytecbits.com/microsoft/sql-server/update-if-row-exists-else-insert) (使用 `IF` ... `EXISTS` 更新資料的做法)
 4. [MERGE (Transact-SQL) - SQL Server - Microsoft Learn](https://learn.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql?view=sql-server-ver16) (說明 `MERGE` 各項參數並提供範例，也在一開頭就告訴你可以用更簡單的 `NOT EXISTS` 語法)
+5. [SQL 用 NOT EXISTS 取得不存在於子查詢中的資料](/SQL_Not_Exists/) (拙作)

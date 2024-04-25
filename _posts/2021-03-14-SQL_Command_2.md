@@ -93,17 +93,11 @@ Frank
 
 參考資料：[SQL UNION ALL - 1Keydata SQL 語法教學](https://www.1keydata.com/tw/sql/sqlunionall.html)
 
-### Not Exists 與 Case
+### NOT EXISTS 與 CASE
 
-- 可以透過子查詢，將**不存在**於子查詢中的資料列出來。以下會列出在 Person 內，但不在 Member 資料表內的紀錄：
-
-``` sql
-SELECT * FROM Person
-WHERE NOT EXISTS (
-   SELECT ID FROM Member WHERE Person.ID=Member.ID)
-```
-
-- 參考資料：[法蘭雞的學習筆記: SQL NOT EXISTS 怎麼用？](http://frankiestudy.blogspot.com/2012/01/sql-not-exists.html)
+- NOT EXISTS 可以將**不存在**於子查詢中的資料列出來。請參考拙作：
+  - [SQL 用 NOT EXISTS 取得不存在於子查詢中的資料](/SQL_Not_Exists/)
+  - [SQL 更新資料─使用 MERGE 或 NOT EXISTS](/SQL_Merge_Not_Exists/)
 
 - 類似程式語言中 `if` 的寫法：`CASE`，關鍵字包含 `WHEN`, `THEN`和 `ELSE`，語法範例如下：
 
