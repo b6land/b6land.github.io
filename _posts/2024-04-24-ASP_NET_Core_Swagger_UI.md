@@ -9,7 +9,7 @@ Swagger UI 可以產生互動式的 API 的說明文件，列出 API 的說明�
 
 ### 專案文件設定
 
-如果方案底下有兩個或以上的專案，要把所有的專案的說明加入至 Swagger UI 內，需要增加以下兩行至每個專案的 csproj 檔案，放置於 `PropertyGroup`  標籤內：
+如果方案底下有兩個或以上的專案，要把所有的專案的說明加入至 Swagger UI 內，需要增加以下兩行至每個專案的 csproj 檔案，放置於 `PropertyGroup` 標籤內：
 
 ```xml
 <PropertyGroup>
@@ -18,7 +18,7 @@ Swagger UI 可以產生互動式的 API 的說明文件，列出 API 的說明�
 </PropertyGroup>
 ```
 
-這樣專案在建置時會產生 {專案名稱}.xml 的檔案，需要在 `Program.cs`  內的 `AddSwaggerGen`  方法加入 XML 檔案：
+這樣專案在建置時會產生 {專案名稱}.xml 的檔案，需要在 `Program.cs` 內的 `AddSwaggerGen` 方法加入 XML 檔案：
 
 ```csharp
 builder.Services.AddSwaggerGen(c =>
@@ -32,8 +32,9 @@ builder.Services.AddSwaggerGen(c =>
 
 如果今天 API 的設計包含額外的 Header，例如請求來源、語系、Token 等，想要在 Swagger 內加入這些自訂的 Header 的話，可以用以下的方式新增：
 
-1\. 建立一個實作 `IOperationFilter`  的類別，包含 `Apply`  方法。
-2\. Apply 方法內填入以下的程式碼：
+1\. 建立一個實作 `IOperationFilter` 的類別，包含 `Apply` 方法。
+
+2\. `Apply` 方法內填入以下的程式碼：
 
 ```csharp
 public void Apply(OpenApiOperation operation, OperationFilterContext context)
