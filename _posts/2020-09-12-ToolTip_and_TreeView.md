@@ -5,7 +5,7 @@ date: 2020-09-12 12:00:00 +0800
 categories:  [C#]
 --- 
 
-本文介紹 ToolTip 氣泡提示的彈出方式，與 TreeView 樹狀列表如何強制展開所有節點。
+本文介紹在 Winform 中 ToolTip 氣泡提示的彈出方式，與 TreeView 樹狀列表如何強制展開所有節點。
 
 ## ToolTip 氣泡提示
 
@@ -33,10 +33,10 @@ toolTip1.Show("Tooltip text goes here", (Button)sender);
 ```
 
 ### 參考資料
-**如何建立氣泡提示**: [c# - How can I show a Balloon Tip over a textbox? - Stack Overflow](https://stackoverflow.com/questions/7541767/how-can-i-show-a-balloon-tip-over-a-textbox)
-**氣泡提示的彈出方式 1 (當元件為焦點時，才會彈出)**: 
+- 如何建立氣泡提示: [c# - How can I show a Balloon Tip over a textbox? - Stack Overflow](https://stackoverflow.com/questions/7541767/how-can-i-show-a-balloon-tip-over-a-textbox)
+- 氣泡提示的彈出方式 1 (當元件為焦點時，才會彈出): 
 [ToolTip.SetToolTip(Control, String) Method (System.Windows.Forms)](https://docs.microsoft.com/zh-tw/dotnet/api/system.windows.forms.tooltip.settooltip?view=netcore-3.1)
-**氣泡提示的彈出方式 2 (無論元件是否為焦點，都會彈出)**: 
+- 氣泡提示的彈出方式 2 (無論元件是否為焦點，都會彈出): 
 [c# - WinForms tooltips not showing up - Stack Overflow](https://stackoverflow.com/questions/27192532/winforms-tooltips-not-showing-up)
 
 ## TreeView 樹狀列表
