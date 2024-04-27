@@ -42,5 +42,5 @@ categories: [ASP.NET]
 
 ### 其它參考資料
 
-- 應用程式初始化 (Application Initialization) 官方頁面：[Application Initialization <applicationInitialization> - Microsoft Learn](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/applicationinitialization/)
+- 應用程式初始化 (Application Initialization) 官方頁面：[Application Initialization - Microsoft Learn](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/applicationinitialization/)
 - [Use IIS Application Initialization for keeping ASP.NET Apps alive - Rick Strahl's Web Log](https://weblog.west-wind.com/posts/2013/oct/02/use-iis-application-initialization-for-keeping-aspnet-apps-alive#IIS-Configuration-for-Application-Initialization)
