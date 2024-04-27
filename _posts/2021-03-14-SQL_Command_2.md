@@ -95,21 +95,31 @@ Frank
 
 ### NOT EXISTS 與 CASE
 
-- NOT EXISTS 可以將**不存在**於子查詢中的資料列出來。請參考拙作：
-  - [SQL 用 NOT EXISTS 取得不存在於子查詢中的資料](/SQL_Not_Exists/)
-  - [SQL 更新資料─使用 MERGE 或 NOT EXISTS](/SQL_Merge_Not_Exists/)
+- NOT EXISTS 可以將**不存在**於子查詢中的資料列出來，其用法範例如下：
 
-- 類似程式語言中 `if` 的寫法：`CASE`，關鍵字包含 `WHEN`, `THEN`和 `ELSE`，語法範例如下：
-
-``` sql
-SELECT Name, CASE
-WHEN IsMember=0, THEN 'Not Member'
-WHEN IsMember=1, THEN 'Member'
-END AS IsMember
-FROM Person
+```sql
+SELECT 資料欄位
+FROM 資料表1
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM 資料表2
+    WHERE 資料表1.欄位 = 資料表2.關聯欄位
+);
 ```
 
-- 參考資料：[SQL CASE - SQL 語法教學 Tutorial](https://www.fooish.com/sql/case.html)
+- `CASE` 是類似其它程式語言中 `if` 的寫法，其格式如下：
+
+```sql
+CASE
+    WHEN 條件成立 THEN 結果
+    [其它的 WHEN ...]
+    [ELSE 結果]
+END;
+```
+- 詳細範例請參考拙作：
+  - [SQL 用 NOT EXISTS 取得不存在於子查詢中的資料](/SQL_Not_Exists/)
+  - [SQL 更新資料─使用 MERGE 或 NOT EXISTS](/SQL_Merge_Not_Exists/)
+  - [SQL 的 CASE 條件敘述](/SQL_Case/)
 
 ### 其它
 
