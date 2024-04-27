@@ -14,9 +14,11 @@ Swagger UI 可以產生互動式的 API 的說明文件，列出 API 的說明�
 ```xml
 <PropertyGroup>
   <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  <NoWarn>$(NoWarn);1591</NoWarn> <!-- 如果有其它需壓制的警告，也一起加進去 -->
+  <NoWarn>$(NoWarn);1591</NoWarn> <!-- 這個屬性可以設定要壓制的警告，如果有其它需壓制的警告，也一起加進去 -->
 </PropertyGroup>
 ```
+
+*CS1591 的警告，是告知已啟用產生註解的 XML 文件，但是卻沒有為每個成員和類別建立註解。*
 
 這樣專案在建置時會產生 {專案名稱}.xml 的檔案，需要在 `Program.cs` 內的 `AddSwaggerGen` 方法加入 XML 檔案：
 
