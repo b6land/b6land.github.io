@@ -26,3 +26,8 @@ categories: [ASP.NET]
 - [ASP.NET與ASP.NET Core差異 - 攻城獅的學習筆記 - 點部落](https://dotblogs.com.tw/cotton/2021/08/02/113844)
 - [App startup in ASP.NET Core - Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-5.0)
 - [Routing differences between ASP.NET MVC and ASP.NET Core - .NET - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/routing-differences)
+
+### 功能
+
+- Filter: 在送入請求 (Request) 後，實際執行請求的動作 (Action) 前，可以透過 Filter 檢查請求內容。
+- Background Service: 可以透過實作託管服務介面 (IHostedService) 快速建立背景服務的程式。請參考拙作 [ASP.NET Core 使用 Hosted Service 建立背景服務](/ASP_NET_Core_Hosted_Service)。
