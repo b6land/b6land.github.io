@@ -2,7 +2,7 @@
 layout: post
 title: 寫文件的 Why, Which 和 How
 date: 2023-08-22 12:00:00 +0800
-categories: [Software Development]
+categories: [Programming]
 ---
 
 本文介紹一些寫文件的入門觀念文章，並記錄重點與自己的想法。

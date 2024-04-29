@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll 網誌與 Google 搜尋
 date: 2024-01-21 12:00:00 +0800
-categories: [Jekyll]
+categories: [Jekyll in GitHub Pages]
 ---
 
 利用 Jekyll 建立網誌後，如果想要確認被 Google 搜尋的狀況，可以跟著以下的步驟操作。
