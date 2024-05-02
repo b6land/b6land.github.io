@@ -1,8 +1,8 @@
 ---
 layout: post
-title: SQL 資料庫並行違規
+title: C# 中的 SQL 並行違規錯誤
 date: 2021-04-06 12:00:00 +0800
-categories:  [SQL, Database]
+categories:  [C#]
 --- 
 
 在寫資料庫讀寫指令的過程遇到此錯誤，在此紀錄 SQL 並行違規發生的可能原因與處理方式。
