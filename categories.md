@@ -30,10 +30,10 @@ title: 分類
     
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a><span> — <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time></span></li>
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a><span class="post_date-list"> — <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time></span></li>
     </article>
     {% endfor %}
   </div>
-  <p><a href="#top" >回到最上方 &#8593;</a></p>
+  <p><a href="#top" class="back_top">回到最上方 &#8593;</a></p>
 {% endfor %}
 </div>
