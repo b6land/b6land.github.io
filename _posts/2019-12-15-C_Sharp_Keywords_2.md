@@ -51,5 +51,4 @@ public class Program
 
 ### 參考資料
 
-- [C# Language - out var聲明 - c# Tutorial](https://riptutorial.com/zh-TW/csharp/example/6326/out-var%E8%81%B2%E6%98%8E)
 - [C# - const vs static readonly - John Wu's Blog](https://blog.johnwu.cc/article/c-sharp-const-vs-static-readonly.html)
