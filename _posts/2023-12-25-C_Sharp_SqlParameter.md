@@ -7,7 +7,7 @@ categories: [C#]
 
 C# 中有 SqlCommand 類別可以放入 Raw SQL，查詢時可以使用 SqlParamter 類別加入查詢的條件，並避免 SQL Injection 導致的資安風險。
 
-### 用法
+### 基本用法
 
 SQL 查詢語法中，為要加入的查詢條件設定名稱，並在前方加上 `@` 符號。
 
@@ -15,7 +15,7 @@ SQL 查詢語法中，為要加入的查詢條件設定名稱，並在前方加�
 
 若傳入的變數內容包含 SQL Injection 的控制符號時，會拋出例外。
 
-**範例**
+以下是範例：
 
 ``` cs
 SqlCommand command = new SqlCommand("SELECT * FROM Dogs1 WHERE Name LIKE @Name", connection);
@@ -24,7 +24,7 @@ command.Parameters.Add(new SqlParameter("Name", dogName));
 
 更詳細的用法，請參閱：[C# SqlParameter Example - Dot Net Perls](https://www.dotnetperls.com/sqlparameter)
 
-### SQL 如何在 IN 條件加入參數
+### 如何在 IN 條件加入參數
 
 如果今天要查詢的 SQL 語法，裡面的條件包含用 `IN` 查詢多個條件的話，可以自己組多個參數和查詢語法。
 
