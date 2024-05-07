@@ -21,10 +21,8 @@ categories:  [C#]
 
 ### Concurrent Collection 常用的語法
 
-`ConcurrentDictionary<TKey,TValue>.TryAdd(TKey, TValue)`  : 嘗試加入物件，回傳加入成功或失敗，參數為要加入的物件。 
-`ConcurrentBag<T>.TryTake(T)`、`ConcurrentDictionary<TKey,TValue>.TryRemove(TKey, TValue)`  : 嘗試移除物件，回傳移除物件成功或失敗，成功時參數會傳回被移除的物件，否則回傳該類別的預設值。
-
-其它語法可參考：[System.Collections.Concurrent Namespace - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent?view=net-8.0 )
+- `ConcurrentDictionary<TKey,TValue>.TryAdd(TKey, TValue)`  : 嘗試加入物件，回傳加入成功或失敗，參數為要加入的物件。 
+- `ConcurrentBag<T>.TryTake(T)`、`ConcurrentDictionary<TKey,TValue>.TryRemove(TKey, TValue)`  : 嘗試移除物件，回傳移除物件成功或失敗，成功時參數會傳回被移除的物件，否則回傳該類別的預設值。
 
 ### 範例
 
@@ -74,43 +72,46 @@ public void Run()
 改成一般的 List：
 
 ``` cs
-// 改成用一般 List 來存放字串
-List<string> list = new List<string>();
-
-// 啟動 3 個 Task 來新增和移除項目
-Task[] tasks = new Task[3];
-
-// 增加項目的 Task
-for (int i = 0; i < tasks.Length; i++)
+public void Run()
 {
-    int taskNum = i; 
-    tasks[i] = Task.Run(() =>
-    {
-        for (int j = 0; j < 50000; j++) // 模擬大量的資料處理
-        {
-            string item = $"Task {taskNum} - Item {j}";
-            list.Add(item);
-        }
-    });
-}
+    // 改成用一般 List 來存放字串
+    List<string> list = new List<string>();
 
-// 移除項目的 Task
-for (int i = 0; i < tasks.Length; i++)
-{
-    tasks[i] = Task.Run(() =>
-    {
-        string item;
-        while (list.Count > 0)
-        {
-            // 這裡可能會有 Race Condition
-            item = list[0];
-            list.RemoveAt(0);
-        }
-    });
-}
+    // 啟動 3 個 Task 來新增和移除項目
+    Task[] tasks = new Task[3];
 
-// 等待所有 Task 完成
-Task.WaitAll(tasks);
+    // 增加項目的 Task
+    for (int i = 0; i < tasks.Length; i++)
+    {
+        int taskNum = i; 
+        tasks[i] = Task.Run(() =>
+        {
+            for (int j = 0; j < 50000; j++) // 模擬大量的資料處理
+            {
+                string item = $"Task {taskNum} - Item {j}";
+                list.Add(item);
+            }
+        });
+    }
+
+    // 移除項目的 Task
+    for (int i = 0; i < tasks.Length; i++)
+    {
+        tasks[i] = Task.Run(() =>
+        {
+            string item;
+            while (list.Count > 0)
+            {
+                // 這裡可能會有 Race Condition
+                item = list[0];
+                list.RemoveAt(0);
+            }
+        });
+    }
+
+    // 等待所有 Task 完成
+    Task.WaitAll(tasks);
+}
 ```
 
 使用 List 的版本就可能出現以下錯誤：
