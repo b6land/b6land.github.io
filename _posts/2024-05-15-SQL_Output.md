@@ -66,7 +66,7 @@ OUTPUT [DELETED].ID, [DELETED].Name, [DELETED].Age, [DELETED].Gender
 WHERE Age <= 25
 ```
 
-結果：
+插入資料後：
 
 | ID  |
 | --- |
@@ -74,9 +74,13 @@ WHERE Age <= 25
 | 2   |
 | 3   |
 
+更新後：
+
 | ID  | Name | UpdatedAge | OriginAge |
 | --- | --- | --- | --- |
 | 3   | Sam Brown | 45  | 40  |
+
+刪除後：
 
 | ID  | Name | Age | Gender |
 | --- | --- | --- | --- |
