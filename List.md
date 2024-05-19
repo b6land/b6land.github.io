@@ -24,7 +24,7 @@ title: 文章列表
           <h3 style="text-align:left;">{{ post.date | date: '%B %Y' }}</h3>
           {% endif %}
           {% endunless %}
-          <li><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a><span class="post_date-list"> - {% if post.date and post.date != "" %}{{ post.date | date: "%e %B %Y" }}{%endif%}</span></li>
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a><span class="post_date-list"> - {% if post.date and post.date != "" %}{{ post.date | date: "%B %-d, %Y" }}{%endif%}</span></li>
           {% endfor %}
       </ul>
   </section>
