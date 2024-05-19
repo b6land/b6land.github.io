@@ -38,4 +38,4 @@ Microsoft Message Queue，可簡稱為 MSMQ，是一種實作訊息佇列模式�
 
 另一種解決方式，是重新啟動 MSMQ 服務：
 
-- 、[You must restart the Message Queuing service to clean up message files - Microsoft Support](https://support.microsoft.com/en-us/topic/you-must-restart-the-message-queuing-service-to-clean-up-message-files-4d6a1e97-4428-6756-7584-81a1d1213ec1)
+- [You must restart the Message Queuing service to clean up message files - Microsoft Support](https://support.microsoft.com/en-us/topic/you-must-restart-the-message-queuing-service-to-clean-up-message-files-4d6a1e97-4428-6756-7584-81a1d1213ec1)
