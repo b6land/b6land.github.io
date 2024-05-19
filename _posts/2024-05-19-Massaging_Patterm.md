@@ -19,6 +19,8 @@ categories:  [Messaging]
 
 ### 關於 Azure Service Bus
 
+![官方的 Azure Service Bus 介紹](/assets/imgs/2024-05-19/azure_service_bus.png)
+
 - 同時提供「Publish - Subscribe」和「Message Queue」模式。
 - 可以透過「無效信件佇列」處理無法傳遞或處理的訊息。
 - 負載平衡，以及使用佇列避免流量尖峰的過大負擔。
@@ -32,6 +34,8 @@ categories:  [Messaging]
 - [Azure 服務匯流排 (企業訊息代理程式) 簡介 - Azure Service Bus - Microsoft Learn](https://learn.microsoft.com/zh-tw/azure/service-bus-messaging/service-bus-messaging-overview)  
 
 ### 關於 MQTT
+
+![MQTT 官網的自我介紹](/assets/imgs/2024-05-19/MQTT.png)
 
 - 因其使用較少資源、網路頻寬的特性，常用於 IoT (Internet of Things，物聯網) 設備間的訊息交換。
 - 需要藉由網路協議提供有序、無失真、雙向的連線。
