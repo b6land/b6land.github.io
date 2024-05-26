@@ -88,3 +88,7 @@ dotnet add .\Service package Refit
 ```
 
 [https://learn.microsoft.com/zh-tw/nuget/consume-packages/install-use-packages-dotnet-cli](https://learn.microsoft.com/zh-tw/nuget/consume-packages/install-use-packages-dotnet-cli)
+
+### 其它參考資料
+
+- 建立單元測試：[如何使用 .NET Core CLI 建立 Unit Test ? - 點燈坊](https://old-oomusou.goodjack.tw/netcore/unit-test/)
