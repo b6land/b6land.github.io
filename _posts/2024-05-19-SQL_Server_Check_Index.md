@@ -14,6 +14,11 @@ SQL 查詢速度很慢的原因，通常和索引的使用有關。如果對於�
 3. 若有多個索引，並發現 SQL Server 的 Query Optimizer 使用了不適當的索引，可用  `WITH(INDEX([INDEX_NAME]))`  語法強制指定索引 (INDEX\_NAME 代換成你想使用的索引名稱)，避免產生不恰當的執行計畫 \[3\]。
 4. 若要建立新的索引，要先檢查目前的資料量，並確認建立索引的時間會不會過長，影響 SQL Server 資料庫的其它作業。如果使用企業版，可以使用 `WITH ONLINE=ON` 參數一邊建立索引、一邊執行其它作業 \[4\]。
 
+### 索引以外的改善方式
+
+1. 分批刪除不需要的資料。
+2. 設定 Partition Table 提升效率。
+
 ### 參考資料
 
 - \[1\] [sql server - SQL query suddenly takes a long time to run - Super User](https://superuser.com/questions/745679/sql-query-suddenly-takes-a-long-time-to-run)
