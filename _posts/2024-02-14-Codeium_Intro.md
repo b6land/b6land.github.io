@@ -36,9 +36,9 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 
 ### VSCode 特定專案停用 Codeium
 
-雖然 Codeium 遵守嚴格的隱私權政策，不會利用上傳的程式碼訓練模型，但程式碼仍會被送至遠端伺服器。
+雖然 Codeium 遵守嚴格的隱私權政策，不會利用上傳的程式碼訓練模型，但**程式碼仍會被送至遠端伺服器**，以提供自動完成的功能。
 
-由於目前版本的 Codeium 不能設定要排除使用的目錄，若有不能使用 Codeium 產生程式碼的專案，可以使用 VSCode 內建功能，在專案目錄停用擴充套件 (包含 Codeium)，來避免上傳程式碼。
+由於目前版本的 Codeium 不能設定要排除使用的目錄，若有不想使用 Codeium 產生程式碼的專案，可以使用 VSCode 內建功能，在專案目錄停用擴充套件 (包含 Codeium)，來避免上傳程式碼。
 
 1\. 在 VSCode 中開啟需要設定的目錄。
 2\. 從左方開啟 Extensions 頁籤，然後選擇 Codeium，再按下 Disable 右方的小箭頭，並選擇 Disable (Workspace)。
@@ -51,3 +51,4 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 
 - Codeium 官方網站: [Codeium · Free AI Code Completion & Chat](https://codeium.com/)
 - 特定專案不使用擴充套件: [VS Code disable certain extensions for a specific subdirectory of a workspace - Stack Overflow](https://stackoverflow.com/questions/44797445/vs-code-disable-certain-extensions-for-a-specific-subdirectory-of-a-workspace)
+- Reddit 一則原始碼被上傳至遠端伺服器的相關討論：[I accidentally leaked my company source code : r/cscareerquestionsEU](https://www.reddit.com/r/cscareerquestionsEU/comments/1bmnz6m/i_accidentally_leaked_my_company_source_code/)，使用前請留意 Codeium, GitHub Copliot 和其它 AI 助理的資料使用策略。
