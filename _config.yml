@@ -85,3 +85,7 @@ sass:
 # Pagination
 paginate: 10
 paginate_path: "/page:num/"
+
+# Sitemap
+exclude : 
+ - google62fd257cff71942b.html
