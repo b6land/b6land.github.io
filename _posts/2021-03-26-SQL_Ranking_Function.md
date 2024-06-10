@@ -1,11 +1,11 @@
 ---
 layout: post
-title: SQL ROW_NUMBER() 和 ISNULL() 函數
-date: 2021-03-26 12:00:00 +0800
+title: SQL 用 ROW_NUMBER 和其它次序函數產生名次
+date: 2024-06-10 16:00:00 +0800
 categories:  [SQL]
 --- 
 
-本篇包含 SQL 中的 `ROW_NUMBER()` 和 `ISNULL()` 的介紹。
+本篇介紹 SQL Server 中的 `ROW_NUMBER`、`RANK`、`DENSE_RANK` 函數，可以用來產生名次，最常用來幫成績排名。
 
 ### ROW_NUMBER()
 
@@ -66,7 +66,7 @@ FROM Student
 |6 | 80 | B | 2|
 |4 | 70 | B | 3|
 
-4\. 也有與 `ROW_NUMBER()` 類似的**次序函數**可以使用，如 `RANK()`：資料值相同時賦予相同整數，會跳號。請見以下範例：
+4\. 也有與 `ROW_NUMBER()` 類似的次序函數可以使用，如 `RANK()`：資料值相同時賦予相同整數，會跳號。請見以下範例：
 
 ```sql
 SELECT ID, Score, Class, RANK() OVER(ORDER BY Score DESC) AS Rank
@@ -103,21 +103,7 @@ FROM Student;
 |6 | 80 | B | 4|
 |4 | 70 | B | 5|
 
-
-### ISNULL()
-
-- 當使用彙總函數 (如 `SUM()`) 時，可能會遇到部分資料的欄位數值為空的狀況，此時可以用 `ISNULL()` 函數將 NULL 取代為特定的值。例如下面指令會將價格欄位加總，遇到沒有價格的資料時，以 0 代替。
-``` sql
-SUM(ISNULL(Price, 0))
-```
-- 加總時，若相加的欄位可能為 NULL 值，應以 `ISNULL(column, 0)` 代替，因為 NULL 加上任何數字都會為 NULL ，而導致計算錯誤。
-``` sql
-SELECT ISNULL(NULL, 0) + 100 -- 結果為 100
-SELECT NULL + 100 -- 結果為 NULL
-```
-
 ### 參考資料
 
 - [SQL QnA: 次序函數](http://sqlqna.blogspot.com/2018/01/blog-post_25.html)
 - [德瑞克：SQL Server 學習筆記: SQL Server：認識「次序函數(Window Ranking Functions)」(2)](http://sharedderrick.blogspot.com/2012/10/sql-serverwindow-ranking-functions2.html)
-- [德瑞克：SQL Server 學習筆記: SQL Server：認識 ISNULL 函數](http://sharedderrick.blogspot.com/2012/06/t-sql-isnull.html)
