@@ -2,6 +2,7 @@
 layout: page
 permalink: /categories/
 title: 分類
+sitemap: false
 ---
 
 ## 所有分類
