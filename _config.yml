@@ -84,5 +84,11 @@ sass:
 
 # Pagination
 paginate: 10
-paginate_path: "/page:num/"
+paginate_path: "/page/:num"
+defaults:
+  -
+    scope:
+      path: "page"
+    values:
+      sitemap: false
 

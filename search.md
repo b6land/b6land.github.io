@@ -2,6 +2,7 @@
 layout: page
 title: 搜尋
 permalink: /search/
+sitemap: false
 ---
 
 <div id="search-container">
