@@ -66,6 +66,14 @@ Console.WriteLine("Execute finished.");
 
 ### 參考資料
 
-- [async 與 await - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/async-and-await.html)
-- [c# - How to Replace WebClient with HttpClient? - Stack Overflow](https://stackoverflow.com/questions/33020657/how-to-replace-webclient-with-httpclient)
+- async/await 詳細解說，與很棒的流程圖：[async 與 await - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/async-and-await.html)
+- 如何用 HttpClient 取代 WebClient 的取得網頁內容：[c# - How to Replace WebClient with HttpClient? - Stack Overflow](https://stackoverflow.com/questions/33020657/how-to-replace-webclient-with-httpclient)
 - 使用 Lambda 撰寫非同步語法，且可傳入多參數、回傳參數：[c# - Task.Run with Input Parameters and Output - Stack Overflow](https://stackoverflow.com/questions/49587439/task-run-with-input-parameters-and-output)
+
+### 補充：await 和 GetAwaiter()
+
+`await`  和 `GetAwaiter()`  本質上是一樣的，同樣可用來等待非同步程式完成工作。
+
+在編譯器內， `await`  也會被編譯成 `GetAwaiter()` ，因此編譯器比較常使用 `GetAwaiter()` 。而在程式碼內，適合用 `async`  / `await`  處理非同步邏輯。  
+
+不過，使用  `GetAwaiter().GetResult()`，有容易導致 Deadlock / Thread Stravation 的風險。詳細資訊可參考：[閒聊 - GetAwaiter 到底能不能用？-黑暗執行緒](https://blog.darkthread.net/blog/getawaiter-or-not/)
