@@ -23,7 +23,7 @@ categories:  [Programming]
 
 - REPL 是 Read-Eval-Print Loop 的縮寫，是一種簡易的命令列互動環境，表示讀取使用者指令、執行計算、列印結果的循環。
 
-以下是一個範例 REPL 程式：
+以下是一個範例 REPL 程式，使用 C# 語言：
 
 
 ```cs
@@ -68,7 +68,7 @@ class Program
 ```
 
 1. 輸入讀取：程式進入一個無限循環 (Loop)，等待用戶輸入 (Read)。
-2. 表達式評估：利用 DataTable 的 `Compute` 方法來評估 (Evaluate) 用戶輸入的數學表達式，並顯示結果 (Print)。
+2. 表達式評估：利用 DataTable 的 `Compute` 方法來評估 (Evaluate) 用戶輸入的數學表達式 (例如 5+10)，並顯示結果 (Print)。
 3. 退出檢查：如果用戶輸入 exit，會退出循環並結束程式。
 4. 錯誤處理：如果在評估過程中出現錯誤（例如輸入無效的表達式），會顯示錯誤訊息。
 
