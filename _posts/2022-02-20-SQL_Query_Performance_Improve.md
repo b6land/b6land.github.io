@@ -2,7 +2,7 @@
 layout: post
 title: SQL 改善查詢效能
 date: 2022-02-20 12:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 ---
 
 本篇記錄當遇到查詢速度過慢時，如何檢查效能瓶頸與改善。
@@ -25,6 +25,6 @@ b. 使用 `LIKE %` ：同上，沒有建立索引的狀況下，會大幅增加�
 
 - [SolarWinds(SentryOne) Plan Explorer](https://www.sentryone.com/plan-explorer)
 - [[Tool]免費查看SQL PLAN的工具 - SQL Sentry Plan Explorer - 亂馬客 - 點部落](https://dotblogs.com.tw/rainmaker/2012/07/27/73659)
-- [~楓花雪岳~: [SQL] 觀看執行計畫重點](http://jengting.blogspot.com/2013/12/executionplan-keypoint.html)
-- [[SQL][效能調教]在 SQL 內使用 LIKE 或 Substring 來做字串資料的效能問題 - 五餅二魚工作室 - 點部落](https://dotblogs.com.tw/jamesfu/2017/01/12/Like_and_Substring)
+- [~楓花雪岳~: [SQL Server] 觀看執行計畫重點](http://jengting.blogspot.com/2013/12/executionplan-keypoint.html)
+- [[SQL Server][效能調教]在 SQL 內使用 LIKE 或 Substring 來做字串資料的效能問題 - 五餅二魚工作室 - 點部落](https://dotblogs.com.tw/jamesfu/2017/01/12/Like_and_Substring)
 - [SQL指令優化SQL Tuning](https://www.cc.ntu.edu.tw/chinese/epaper/0031/20141220_3109.html)

@@ -2,7 +2,7 @@
 layout: post
 title: SQL Stored Procedure 的優缺點與查詢內文
 date: 2024-01-21 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 Stored Procedure (儲存程序，也可稱為 SP) 是資料庫系統中儲存多個 SQL 邏輯，以便應用程式呼叫的資料庫物件，可作為子程式使用 \[1\]。

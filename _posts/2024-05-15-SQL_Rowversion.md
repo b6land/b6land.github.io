@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 用 Rowversion 紀錄資料列版本
 date: 2024-05-15 20:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 在資料庫內產生可存放二進位數字的 Rowversion 欄位，資料新增或修改時會自動增加，常用來記錄資料的版本。

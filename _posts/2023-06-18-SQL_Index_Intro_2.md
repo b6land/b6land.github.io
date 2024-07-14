@@ -2,7 +2,7 @@
 layout: post
 title: SQL 索引簡介 2 - 設計索引的原則
 date: 2023-06-18 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 之前曾簡介 MS-SQL 中的索引 (Index) 與常見類別，今天要繼續介紹設計索引的原則。

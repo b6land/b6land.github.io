@@ -2,7 +2,7 @@
 layout: post
 title: SQL 數值處理與多重條件簡化
 date: 2021-09-21 12:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 --- 
 
 本文介紹如何處理含小數的數值進退位、`DATEDIFF` 與 `DATEADD` 等數種日期函式的應用，以及使用程式建立 SQL 語法時，如何簡化多重條件。
@@ -52,4 +52,4 @@ AND ID = 'A123'
 AND DATE = '2020/5/1'
 ```
 
-- 參考資料: [[SQL] WHERE 1=1 做什麼用的? - CHF's note - 點部落](https://dotblogs.com.tw/invercent914/2013/09/16/118728)
+- 參考資料: [[SQL Server] WHERE 1=1 做什麼用的? - CHF's note - 點部落](https://dotblogs.com.tw/invercent914/2013/09/16/118728)

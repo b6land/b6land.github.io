@@ -2,7 +2,7 @@
 layout: post
 title: SQL WHERE 語法的查詢條件
 date: 2024-04-14 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 這篇文章是 [C# LINQ to Entities 與 SQL 語法使用技巧](/SQL_and_LINQ_to_Entities/) 的重新整理再出發，收錄其中的 SQL WHERE 語法小技巧，並加入範例解說。

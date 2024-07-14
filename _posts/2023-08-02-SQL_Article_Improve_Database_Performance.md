@@ -2,7 +2,7 @@
 layout: post
 title: 文章摘要 - 搶救資料庫效能大作戰
 date: 2023-08-02 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 「搶救資料庫效能大作戰」是李宗翰所著，於 iThome 2012 年刊登的文章專欄，對於改善 SQL Server 的效能此議題，有一個初步而全面性的介紹。以下是此專欄兩篇文章的摘要。

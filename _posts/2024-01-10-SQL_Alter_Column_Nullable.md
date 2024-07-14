@@ -2,7 +2,7 @@
 layout: post
 title: SQL 變更資料表欄位為 Nullable
 date: 2024-01-10 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 如何在不 DROP 資料表的情形下，將資料表中的某一個欄位轉成可為 NULL？

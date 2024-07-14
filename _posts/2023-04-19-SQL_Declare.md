@@ -2,7 +2,7 @@
 layout: post
 title: SQL 的宣告變數與使用
 date: 2023-04-19 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 在 SQL 中，可以使用 `DECLARE` 宣告變數，方便作為查詢的條件或查詢的預設值使用。

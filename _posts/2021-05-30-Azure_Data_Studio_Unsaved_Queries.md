@@ -2,7 +2,7 @@
 layout: post
 title: Azure Data Studio 關閉未儲存的 SQL 查詢
 date: 2021-05-30 12:00:00 +0800
-categories:  [Azure Data Studio]
+categories:  [IDE]
 --- 
 
 本文章介紹如何關閉 Azure Data Studio 未儲存的 SQL 查詢。

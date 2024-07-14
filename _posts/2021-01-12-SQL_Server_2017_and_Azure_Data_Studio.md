@@ -2,12 +2,13 @@
 layout: post
 title: SQL Server 2017 和 Azure Data Studio 介紹
 date: 2021-01-12 12:00:00 +0800
-categories:  [SQL Server, Azure Data Studio]
+categories:  [SQL Server]
 --- 
 
 本篇介紹 SQL Server 2017 推出時的新功能，以及 Azure Data Studio 的簡介。
 
 ### SQL Server 2017
+
 - 現在支援安裝在 Linux，或使用 Docker 安裝，也可以和 R 語言、 Python 等多種語言。
 - 在 Linux 上安裝時，可以使用主流發行套件的套件管理系統，例如：
 a. Ubuntu : apt-get

@@ -2,7 +2,7 @@
 layout: post
 title: SQL 取得當月第一天和最後一天
 date: 2023-02-23 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 以下是在 SQL 結合 `DATEPART()` 和 `DATEADD()` 方法取得當月第一天和最後一天，並去除時間。

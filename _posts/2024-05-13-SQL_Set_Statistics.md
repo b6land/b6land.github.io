@@ -2,7 +2,7 @@
 layout: post
 title: SQL 用 SET STATISTICS 陳述式查看統計資訊
 date: 2024-05-13 22:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 在 MS-SQL 中，SET 陳述式 (SET Statement) 可以設定要不要輸出一些特定的資訊。`SET STATISTICS` 提供好幾種陳述式，可用來顯示查詢的統計資訊，快速確認查詢的效能。

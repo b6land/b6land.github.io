@@ -2,7 +2,7 @@
 layout: post
 title: Hyper Parameter Search
 date: 2019-04-20 12:00:00 +0800
-categories:  [Deep Learning]
+categories:  [Machine Learning]
 ---
 
 本文介紹 Hyper Parameter Search 的類型與使用方式，以增加類神經網路模型的預測準確率。

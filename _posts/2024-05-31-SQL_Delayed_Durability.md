@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 交易持久性與延遲交易持久
 date: 2024-05-31 21:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 如果需要大量寫入資料庫的時候，可以要求 SQL Server 先回報成功，再將變更結果從緩衝區寫入資料庫，即「延遲交易持久」功能。_(標題看起來很饒舌)_

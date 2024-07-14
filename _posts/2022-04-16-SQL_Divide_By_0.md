@@ -2,7 +2,7 @@
 layout: post
 title: SQL 避免除以 0 的錯誤 - ISNULL 和 NULLIF 函數
 date: 2022-04-16 12:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 ---
 
 在 SQL 計算除法時，如果遇到除以 0 的狀況要如何處理呢？`ISNULL` 和 `NULLIF` 函數可以幫助你避免產生錯誤，算出正確的結果。

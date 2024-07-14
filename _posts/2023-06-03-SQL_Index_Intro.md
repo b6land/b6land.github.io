@@ -2,7 +2,7 @@
 layout: post
 title: SQL 索引簡介
 date: 2023-06-03 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 本文簡介 MS-SQL 中的索引 (Index)，以及常見的幾種索引類別。

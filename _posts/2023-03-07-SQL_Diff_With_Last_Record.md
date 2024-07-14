@@ -2,7 +2,7 @@
 layout: post
 title: SQL 計算與上一筆的差值
 date: 2023-03-07 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 這篇文章介紹如何計算一組資料中，該筆與上一筆的差值，例如計算當月與上個月的金額差多少。

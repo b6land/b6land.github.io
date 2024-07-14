@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 查詢變慢時，檢查索引的提示
 date: 2024-05-19 21:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 SQL 查詢速度很慢的原因，通常和索引的使用有關。如果對於查詢效率變差這件事感到毫無頭緒，不妨從以下幾個提示著手。

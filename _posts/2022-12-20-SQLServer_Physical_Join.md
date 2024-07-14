@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 執行計畫中的資料表連接方式
 date: 2022-12-20 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 平常我們在使用 SQL 語法執行查詢時，會使用 `JOIN` 關鍵字連接不同資料表。但實際連接資料表時，其實有幾種不同的連接方式，以下是這些方式的介紹。 (適用於SQL Server)

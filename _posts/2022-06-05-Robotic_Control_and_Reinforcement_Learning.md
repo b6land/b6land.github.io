@@ -2,7 +2,7 @@
 layout: post
 title: 機器人控制與強化學習
 date: 2022-06-05 12:00:00 +0800
-categories: [Deep Learning]
+categories: [Machine Learning]
 ---
 
 在 GTC 2018 接觸到的智慧型機器人與強化學習 (Reinforcement Learning) 的心得整理。

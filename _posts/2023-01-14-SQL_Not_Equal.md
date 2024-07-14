@@ -2,7 +2,7 @@
 layout: post
 title: SQL Not Equal 的效能影響
 date: 2023-01-14 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 在 SQL 中，可用 `<>` 找出不等於特定值的資料，可是當有很多資料時，它的效能可能不如 `=` 或 `IN` 來得好。

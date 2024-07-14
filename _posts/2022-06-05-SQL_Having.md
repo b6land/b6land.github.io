@@ -2,7 +2,7 @@
 layout: post
 title: SQL Having 語法與列出重複項目
 date: 2022-06-05 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 這篇文章介紹 SQL 的 `HAVING` 函數和 `WHERE` 的差異，並試著用 `HAVING` 搭配 `COUNT` 找出重複的資料項目。

@@ -2,7 +2,7 @@
 layout: post
 title: SQL 的鎖定 (Lock) 和死結 (Deadlock)
 date: 2023-02-19 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 死結 (Deadlock) 的發生與資料庫的鎖定 (Lock) 有關，這篇文章將介紹資料庫為什麼需要鎖定、MS SQL 的鎖定擴大 (Lock Escalation) 機制，以及減少死結的方法。

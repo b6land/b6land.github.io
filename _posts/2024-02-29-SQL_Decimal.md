@@ -2,7 +2,7 @@
 layout: post
 title: SQL Decimal 類型筆記
 date: 2024-02-29 12:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 --- 
 
 SQL 的 decimal 可以用來儲存特定位數的整數與小數。與 float 不同的地方，在於 decimal 儲存精確的數字，而 float 則採取二進位儲存的方式，因此僅能表現出近似值。

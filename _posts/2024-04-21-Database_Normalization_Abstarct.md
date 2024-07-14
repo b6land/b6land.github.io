@@ -2,7 +2,7 @@
 layout: post
 title: 資料庫正規化摘要
 date: 2024-04-21 12:00:00 +0800
-categories: [SQL, Interview]
+categories: [SQL Server, Interview]
 ---
 
 這篇文章是 Prograss Bar 網站「不是工程師」系列內，「資料庫正規化」系列文章的摘要，推薦在設計資料表 ~~(和面試)~~ 時閱讀，確保資料庫的查詢效能和編輯的方便性。文末還有另一篇對正規化文章的摘要。

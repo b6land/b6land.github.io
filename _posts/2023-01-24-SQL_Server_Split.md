@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 的字串分割
 date: 2023-01-24 12:00:00 +0800
-categories: [SQL, SQL Server]
+categories: [SQL Server]
 ---
 
 這篇文章會提到如何在 SQL Server 中實作字串分割 (類似 C# 字串的 Split 方法)。

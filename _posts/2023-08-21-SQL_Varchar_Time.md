@@ -2,7 +2,7 @@
 layout: post
 title: SQL 資料類型 - varchar, time
 date: 2023-08-21 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 本文介紹常見的 Varchar 和 Time 屬性的部份特性。

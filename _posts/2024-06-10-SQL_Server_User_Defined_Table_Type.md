@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 利用「使用者定義資料表類型」傳遞資料和加速
 date: 2024-06-10 21:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 在 SQL Server 中，想要傳遞資料表給 SP，或是想將資料表放入記憶體加速，可以善用「使用者定義資料表類型」。

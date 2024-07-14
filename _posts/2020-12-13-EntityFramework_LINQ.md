@@ -2,7 +2,7 @@
 layout: post
 title: C# Entity Framework 和 LINQ 摘要
 date: 2020-12-13 12:00:00 +0800
-categories:  [C#, LINQ]
+categories:  [C#]
 --- 
 
 本文是練習 Entity Framework 和 LINQ 時的教學網站與筆記整理。

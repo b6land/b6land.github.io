@@ -2,7 +2,7 @@
 layout: post
 title: SQL 用 ROW_NUMBER 和其它次序函數產生名次
 date: 2021-03-26 19:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 --- 
 
 本篇介紹 SQL Server 中的 `ROW_NUMBER`、`RANK`、`DENSE_RANK` 函數，可以用來產生名次，最常用來幫成績排名。

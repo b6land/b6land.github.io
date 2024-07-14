@@ -2,7 +2,7 @@
 layout: post
 title: SQL 的鎖定擴大 (Lock Escalation)
 date: 2023-01-01 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 在檢查 SQL 語法發生死結的原因時，發現是鎖定擴大 (Lock Escalation，或稱鎖定升級) 造成死結，究竟是怎麼回事呢？ (適用於 SQL Server)

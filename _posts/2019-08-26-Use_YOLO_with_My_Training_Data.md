@@ -2,7 +2,7 @@
 layout: post
 title: 使用 YOLO 訓練自定義資料
 date: 2019-08-26 12:00:00 +0800
-categories:  [Deep Learning]
+categories:  [Machine Learning]
 ---
 
 本文是使用 YOLO 視覺辨識類神經網路模型，訓練自定義資料的紀錄。

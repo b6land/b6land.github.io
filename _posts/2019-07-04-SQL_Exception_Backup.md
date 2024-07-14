@@ -2,7 +2,7 @@
 layout: post
 title: 查詢 SQL 容量錯誤並備份資料庫
 date: 2019-07-04 12:00:00 +0800
-categories:  [SQL, SQL Server]
+categories:  [SQL Server]
 ---
 
 可以參考下文檢查 SQL 的錯誤，如果 SQL 會插入大量資料時，可使用 Script 備份資料庫並移除資料。

@@ -2,7 +2,7 @@
 layout: post
 title: 用 FOR XML PATH 將多筆資料合併成一筆
 date: 2022-07-16 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 在 SQL Server 中，可以用 `FOR XML PATH` 語法，將多筆資料合併成一筆，輸出至同一欄位。

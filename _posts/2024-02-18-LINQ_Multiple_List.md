@@ -2,7 +2,7 @@
 layout: post
 title: C# LINQ 查詢多個列表 (List)
 date: 2024-02-18 12:00:00 +0800
-categories:  [C#, LINQ]
+categories:  [C#]
 --- 
 
 LINQ 可以用來查詢多個列表、資料表連接後的資料，請見後方的說明。

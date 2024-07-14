@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 的全部取代函數
 date: 2022-07-14 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 SQL Server 沒有提供字串的「全部取代」功能，這篇文章 [A pure T-SQL replace-all function using PATINDEX :: Bart Wolff](https://www.bartwolff.com/Blog/2020/05/03/a-pure-t-sql-replace-all-function-using-patindex) 自行寫了一段程式實作。

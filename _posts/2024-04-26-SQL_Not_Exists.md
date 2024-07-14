@@ -2,7 +2,7 @@
 layout: post
 title: SQL 用 NOT EXISTS 取得不存在於子查詢中的資料
 date: 2024-04-26 07:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 `NOT EXISTS` 可以將**不存在**於子查詢中的資料列出來。

@@ -2,7 +2,7 @@
 layout: post
 title: LINQ 是不是一種 ORM ?
 date: 2022-08-20 12:00:00 +0800
-categories:  [C#, LINQ]
+categories:  [C#]
 ---
 
 本篇介紹 LINQ 與 ORM 之間的關係，並另外描述在 .NET 執行 SQL 邏輯的三種方法。

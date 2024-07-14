@@ -2,7 +2,7 @@
 layout: post
 title: SQL Server 用 OUTPUT 指令輸出編輯結果
 date: 2024-05-15 22:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 --- 
 
 `OUTPUT` 指令可以輸出被新增、修改、刪除的資料，適用於 `INSERT`、`UPDATE`、`DELETE`、`MERGE` 等語法。可用來檢查這些動作的結果是否正確*(請參閱[莫菲定律](https://en.wikipedia.org/wiki/Murphy%27s_law))*，或是結合 `INTO` 輸出結果至資料表內。

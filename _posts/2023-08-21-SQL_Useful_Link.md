@@ -2,7 +2,7 @@
 layout: post
 title: 一些 SQL 效能最佳化、正規化的網頁整理
 date: 2023-08-21 12:00:00 +0800
-categories: [SQL]
+categories: [SQL Server]
 ---
 
 本文紀錄一些 SQL 效能最佳化、正規化的網頁連結，部份並附註個人心得。

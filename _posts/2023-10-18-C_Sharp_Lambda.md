@@ -2,7 +2,7 @@
 layout: post
 title: C# Lambda 語法介紹
 date: 2023-10-18 12:00:00 +0800
-categories: [C#, Lambda]
+categories: [C#]
 ---
 
 轉載自己在 IT 邦幫忙發表的文章 [Day 13: C# Lambda 語法介紹 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10297407) 和 [Day 10: C# 再寫一次 Lambda - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10326389)。

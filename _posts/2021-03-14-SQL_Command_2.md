@@ -2,7 +2,7 @@
 layout: post
 title: SQL 語法 - UNION、NOT EXISTS、CASE
 date: 2021-03-14 12:00:00 +0800
-categories:  [SQL]
+categories:  [SQL Server]
 --- 
 
 這篇文章介紹 `UNION` 和 `UNION ALL` 語法的作用與範例，`NOT EXISTS` 與 `CASE` 語法的簡介，以及其它的 SQL 語法，包含註解的使用，以及如何取得目前時間。

@@ -2,7 +2,7 @@
 layout: post
 title: Visual Studio Code 尋找與取代新行
 date: 2023-06-11 12:00:00 +0800
-categories:  [VSCode]
+categories:  [IDE]
 --- 
 
 本篇介紹 Visual Studio Code (VSCode) 中，怎麼尋找與取代新行。
