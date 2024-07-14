@@ -22,7 +22,7 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 
 ![按下 Tab 自動完成](/assets/imgs/2024-02-14/Codeium_AutoComplete.png)  
 
-可以按下左方的 Codeium 圖示，輸入問題獲得程式的回答，輸入中英文皆可。若答案為英文，也可要求輸出中文的答案。
+可以按下左方的 Codeium 圖示，輸入問題獲得程式的回答，輸入中英文皆可。若答案為英文，也可要求輸出中文的答案。此外，可以用 @ 符號指定特定的類別或函數。
 
 ![回答依賴注入的問題](/assets/imgs/2024-02-14/Codeium_Chat.png)  
 
@@ -30,9 +30,27 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 
 ![解釋選取程式碼的邏輯](/assets/imgs/2024-02-14/Codeium_Explain.png)  
 
-發生錯誤時，也能在錯誤的提示中要求解釋
+發生錯誤時，也能在錯誤的提示中要求解釋。
 
 ![解釋錯誤發生的原因與處理方式](/assets/imgs/2024-02-14/Codeium_Explain_Problem.png)  
+
+在程式碼的任一處按下 Ctrl + Shift + I 組合鍵，會出現 Codeium Command 方塊，可以在裡面輸入指令。
+
+![Codeium Command 方塊](/assets/imgs/2024-02-14/Codeium_Command.png)
+
+如果 Codeium 有變更內容，可以選擇要接受或拒絕變更。
+
+![Diff 內容](/assets/imgs/2024-02-14/Codeium_Diff.png)
+
+### 進階：設定 Context
+
+可以在 Codeium 的窗格中，選擇 Context 的分頁。在這一頁可以設定：
+
+1. 自訂的提示字：輸入後，執行的自動完成 / 對談皆會附帶自訂提示。例如：輸入「use C# 6.0 syntax」指定使用特定版本的語法。*(經測試，可能會有沒套用提示效果的情形。)*
+2. 設定產生提示的來源：可以是本機端的相關資料夾、已開啟的檔案等等。
+3. 底下的 Local Indexes 可以看到本機引用的來源。
+
+![自訂提示與提示來源](/assets/imgs/2024-02-14/Codeium_Context.png)
 
 ### VSCode 特定專案停用 Codeium
 
