@@ -36,6 +36,8 @@ INNER MERGE JOIN
 LEFT HASH JOIN
 ```
 
+接著來看索引的知識：[SQL Server 效能搶救 (5) 什麼是索引 – Lazy Coding](/SQL_Server_Help_5_Index/)
+
 ### 參考資料
 
 - 微軟對三種連接的解釋：

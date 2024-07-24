@@ -47,4 +47,4 @@ categories: [SQL Server 效能搶救]
 
 重新改寫自 [Query Processing Architecture Guide - SQL Server - Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/query-processing-architecture-guide?view=sql-server-ver16)。
 
-接著來看執行計畫的節點資訊表示的意義：[SQL Server 效能搶救 (3) 執行計畫 - 數值解說 – Lazy Coding](SQL_Server_Help_3_Explain_Plan)
+接著來看執行計畫的節點資訊表示的意義：[SQL Server 效能搶救 (3) 執行計畫 - 數值解說 – Lazy Coding](/SQL_Server_Help_3_Explain_Plan/)
