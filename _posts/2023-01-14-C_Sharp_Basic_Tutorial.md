@@ -15,6 +15,10 @@ categories: [C#, ASP.NET]
 - [程式語言教學誌 C Sharp](http://kaiching.org/pydoing/c-sharp.html)
 - [C#與ASP.Net入門-我要成為工程師!! :: 第 11 屆 iThome 鐵人賽](https://ithelp.ithome.com.tw/users/20120055/ironman/2275)
 
+### C# 物件導向觀念
+
+- [Note For Object-Oriented Programming Fundamentals in C# - HackMD](https://hackmd.io/@CityChen/Hk0jiEXbs#Note-For-Object-Oriented-Programming-Fundamentals-in-C)
+
 ### ASP.NET MVC 教學
 
 已有基礎的 C# 能力時，可以參考以下的鐵人賽文章，學習寫 ASP.NET MVC。
@@ -28,3 +32,9 @@ categories: [C#, ASP.NET]
 
 - [菜雞新訓記 (0): 前言 - 伊果的沒人看筆記本](https://igouist.github.io/post/2021/04/newbie-0-menu/)
 - [我與 ASP.NET Core 的 30天 :: 第 12 屆 iThome 鐵人賽](https://ithelp.ithome.com.tw/users/20129389/ironman/3185)
+
+### 寫程式的觀念
+
+不要盲目地嘗試所有可能的方式，而是思考問題的本質，找出合適的解決方式。
+
+- [別依賴「試誤法」寫程式 - Code and Me](https://blog.kyomind.tw/stop-trial-and-error/)
