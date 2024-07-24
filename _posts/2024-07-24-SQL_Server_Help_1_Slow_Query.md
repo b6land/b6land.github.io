@@ -1,24 +1,28 @@
 ---
 layout: post
-title: SQL Server 效能搶救 (1) 一個速度慢的查詢具備哪些因素
+title: SQL Server 效能搶救 (1) 速度慢的查詢具備的因素
 date: 2024-07-24 11:00:00 +0800
 categories: [SQL Server 效能搶救]
 --- 
 
-「反過來想，總是反過來想」─查理·蒙格。讓我們列出很慢的查詢會具備的因素。
+本文列出 SQL Server 內很慢的查詢會具備的因素，以及改善的效率。
 
-### 因素
+### 變慢的因素
 
-- 要處理的資料太多。
-- 沒有建立索引。
-- 無法有效利用索引：不適當的查詢條件。
-- 取得資料的邏輯有問題。
+1. 沒有為查詢語法會用到的資料表建立索引。
+2. 無法有效利用索引：不適當的查詢條件。
+3. 取得資料的邏輯有問題。
     - 例如：明明只要取一個月的資料，但是取的時候都把一整年的資料都取出來？只需要查詢姓名、電話的通訊錄，卻取得整張基本資料表的欄位？
-    - 不理解你的商業邏輯，做效能優化是事倍功半。
-- 不適當的資料表設計。
-    - 資料重複過多的資料表 (沒有正規化) vs 切得太細 (取得資料要使用多次 Join，需要反正規化)。這個問題可能需要交給 DBA 解決。
+4. 不適當的資料表設計。
+    - 資料重複過多的資料表 (沒有正規化) vs 切得太細 (取得資料要多次 Join，需要考慮反正規化)。這個問題可能需要交給 DBA 解決。
+    - 請參考 [什麼是資料庫反正規化？優缺點是什麼 - ExplainThis](https://www.explainthis.io/zh-hant/interview-guides/backend/database-denormalization)。
 
-### 參考資料
+### 改善方式
 
-- [文章摘要 - 搶救資料庫效能大作戰 – Lazy Coding](/SQL_Article_Improve_Database_Performance/)
-- [什麼是資料庫反正規化？優缺點是什麼 - ExplainThis](https://www.explainthis.io/zh-hant/interview-guides/backend/database-denormalization)
+1. **查閱執行計畫、調整查詢語法和索引。**：執行計畫可以告訴你 「SQL Server 如何做查詢？」，可以從執行計畫看到 SQL 運算的每個步驟，並用來找到效能的瓶頸。
+  - SQL 是一種宣告式程式語言 *(告知想得到的結果，而非建立的步驟)*，會在內部產生 SQL 語法對應的查詢步驟。
+2. 擴充 SQL Server 所在伺服器的硬體。
+3. 減少、限制使用者的存取範圍。
+4. 調整伺服器、資料庫的組態。
+
+請參考下一篇文章，瞭解查詢計畫：[SQL Server 效能搶救 (2) 執行計畫 - 產生、檢視與一點點背景知識 – Lazy Coding](/SQL_Server_Help_2_Generate_Plan/)

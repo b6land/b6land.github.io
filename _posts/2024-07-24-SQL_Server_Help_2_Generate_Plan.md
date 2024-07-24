@@ -31,12 +31,12 @@ categories: [SQL Server 效能搶救]
 
 ### 查詢時如何產生執行計畫
 
+執行計畫會依照以下的順序產生：
 
-
-1. 剖析 SELECT 語法，分成關鍵字、表達式、運算子、識別碼。
-2. 建立成查詢樹，用以描述如何將來源資料變成查詢結果。
-3. Query Optimizer 分析存取來源資料表的不同方法。然後從中選擇一系列的步驟，其使用較少資源且能最快的取得查詢結果。查詢樹會更新以記錄這一系列的步驟。最佳版本的查詢樹被稱為「執行計畫」。
-4. Relational Engine 開始執行「執行計畫」，當取得資料的步驟已被處理後，Relational Engine 要求 Storage Engine 取得需要的資料列集合。
-5. Relational Engine 處理從 Storage Engine 取得的資料，將資料轉成查詢結果需要的格式，並回傳至 Client。
+1. **剖析**：剖析 SELECT 語法，分成關鍵字、表達式、運算子、識別碼。
+2. **建立查詢樹**：用以描述如何將來源資料變成查詢結果。
+3. **最佳化**：SQL Server 的 Query Optimizer 會分析存取來源資料表的不同方法。然後從中選擇一系列的步驟，其使用較少資源且能最快的取得查詢結果。查詢樹會更新以記錄這一系列的步驟。最佳版本的查詢樹被稱為「執行計畫」。
+4. **執行查詢**：SQL Server 的 Relational Engine 開始執行「執行計畫」，當取得資料的步驟已被處理後，Relational Engine 要求 Storage Engine 取得需要的資料列集合。
+5. **處理結果**：Relational Engine 處理從 Storage Engine 取得的資料，將資料轉成查詢結果需要的格式，並回傳至 Client。
 
 重新改寫自 [Query Processing Architecture Guide - SQL Server - Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/query-processing-architecture-guide?view=sql-server-ver16)。

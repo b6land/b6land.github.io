@@ -64,3 +64,4 @@ SQL 效能調整常常需要因查詢語法、資料表規格、資料的分布�
 - [Blog - Brent Ozar Unlimited®](https://www.brentozar.com/blog/)
 - [Think as sql optimizer, then code for it. - DBA jungle - Medium](https://medium.com/dba-jungle/think-as-sql-optimizer-then-code-for-it-f0bb2036cfa6)
 - 拙作：[一些 SQL 效能最佳化、正規化的網頁整理 – Lazy Coding](/SQL_Useful_Link/)
+- [文章摘要 - 搶救資料庫效能大作戰 – Lazy Coding](/SQL_Article_Improve_Database_Performance/)
