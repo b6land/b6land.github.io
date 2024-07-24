@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [SQL Server 效能搶救] 2. 執行計畫 - 產生、檢視與一點點背景知識
+title: SQL Server 效能搶救 (2) 執行計畫 - 產生、檢視與一點點背景知識
 date: 2024-07-24 11:00:00 +0800
 categories: [SQL Server 效能搶救]
 --- 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [SQL Server 效能搶救] 3. 執行計畫 - 數值解說
+title: SQL Server 效能搶救 (3) 執行計畫 - 數值解說
 date: 2024-07-24 11:00:00 +0800
 categories: [SQL Server 效能搶救]
 --- 

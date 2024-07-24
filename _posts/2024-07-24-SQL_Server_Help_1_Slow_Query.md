@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [SQL Server 效能搶救] 1. 一個速度慢的查詢具備哪些因素
+title: SQL Server 效能搶救 (1) 一個速度慢的查詢具備哪些因素
 date: 2024-07-24 11:00:00 +0800
 categories: [SQL Server 效能搶救]
 --- 
