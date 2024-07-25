@@ -1,11 +1,11 @@
 ---
 layout: post
-title: SQL Server 效能搶救 (1) 速度慢的查詢具備的因素
+title: SQL Server 效能搶救 (1) 速度慢的查詢具備哪些因素
 date: 2024-07-24 11:00:00 +0800
 categories: [SQL Server 效能搶救]
 --- 
 
-本文列出 SQL Server 內很慢的查詢會具備的因素，以及改善的效率。
+本文列出 SQL Server 內很慢的查詢會具備哪些因素，以及改善的效率。
 
 ### 變慢的因素
 
