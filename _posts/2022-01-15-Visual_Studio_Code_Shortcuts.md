@@ -46,6 +46,7 @@ VSCode 具有彈性又親合的搜尋功能，在檔案內的搜尋方塊，可�
 ### 把多行文字合併成一行
 
 1\. 選取要合併的範圍。
+
 2\. 按下 `F1` 或 `Ctrl + Shift + P` 鍵開啟 VSCode 的命令列，輸入 `Join Lines`。
 
 ![Join Lines](/assets/imgs/2022-01-15/join_lines.png)
