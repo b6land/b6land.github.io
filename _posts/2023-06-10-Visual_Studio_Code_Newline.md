@@ -5,7 +5,7 @@ date: 2023-06-11 12:00:00 +0800
 categories:  [IDE]
 --- 
 
-本篇介紹 Visual Studio Code (VSCode) 中，怎麼尋找與取代新行。
+本篇介紹 Visual Studio Code (VSCode) 中，怎麼尋找與取代新行。尋找與取代的介紹，請參考拙作 [Visual Studio Code 用快捷鍵、搜尋與合併多行增進開發效率](/Visual_Studio_Code_Shortcuts/)。
 
 ### 尋找與取代新行
 
