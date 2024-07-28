@@ -51,7 +51,7 @@ public class TimerExample
 
 ## System.Timer.Timer 
 
-可以同時執行多個 Timer，適用需要多個定時發送事件的狀況。當應用程式需要高精度的計時功能或在多執行緒環境中運行時，可以考慮使用 `System.Timers.Timer`，會比 `System.Windows.Form.Timer` 更加適合。
+可以同時執行多個 Timer，適用需要多個定時發送事件的狀況。當應用程式需要高精度的計時功能或在多執行緒環境中運行時，可以考慮使用 System.Timers.Timer，會比 System.Windows.Form.Timer 更加適合。
 
 1. 建立 Timer 物件。
 2. 設定 Timer 的間隔時間。
@@ -91,9 +91,9 @@ public class TimerExample
 - 可使用 `SynchronizingObject` 屬性解決跨執行緒更新 UI 的問題。
 - 可參考  [Timer Class (System.Timers)](https://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.110).aspx) 最下方的 Examples 與 [[C#.NET][Thread] 執行緒定時器](https://dotblogs.com.tw/yc421206/2011/01/30/21141)
 
-### System.Threading.Timer
+## System.Threading.Timer
 
-提供了一種基於執行緒集區 (Threading Pool) 的定時器機制，適合在多執行緒環境中執行計時任務。當需要在背景執行緒中執行計時任務，且不需與 UI 交互時，可以使用 `System.Threading.Timer`。
+提供了一種基於執行緒集區 (Threading Pool) 的定時器機制，適合在多執行緒環境中執行計時任務。當需要在背景執行緒中執行計時任務，且不需與 UI 交互時，可以使用 System.Threading.Timer。
 
 1. 建立 Timer 物件，並設定 Callback 函數和狀態。
 2. 設定 Timer 的間隔時間。
