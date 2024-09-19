@@ -77,3 +77,13 @@ Console.WriteLine("Execute finished.");
 在編譯器內， `await`  也會被編譯成 `GetAwaiter()` ，因此編譯器比較常使用 `GetAwaiter()` 。而在程式碼內，適合用 `async`  / `await`  處理非同步邏輯。  
 
 不過，使用  `GetAwaiter().GetResult()`，有容易導致 Deadlock / Thread Stravation 的風險。詳細資訊可參考：[閒聊 - GetAwaiter 到底能不能用？-黑暗執行緒](https://blog.darkthread.net/blog/getawaiter-or-not/)
+
+### 補充：寫多個 await 好嗎 ?
+
+在同一個 async 方法內，寫多個 await 是好的，因為在等待 await 程式完成的期間，程式可以先跳出 async 方法，回到呼叫的程式那邊執行其它的程式，直到 await 的程式完成。
+
+關於這個議題的討論如下：[c# - Effects of using multiple awaits in the same method? - Stack Overflow](https://stackoverflow.com/questions/36976810/effects-of-using-multiple-awaits-in-the-same-method)、[c# - Multiple Awaits in a single method - Stack Overflow](https://stackoverflow.com/questions/18445279/multiple-awaits-in-a-single-method)。
+
+### 8/12 補充：不要 await Task.FromResult
+
+不要撰寫 `await Task.FromResult`  ，因為程式本身會等待 Task 程式完成，不是一個非同步作業。這樣的寫法只會增加多餘的程式碼 ([Task.FromResult 用法與注意事項 - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/await-taskfromresult.html))。  

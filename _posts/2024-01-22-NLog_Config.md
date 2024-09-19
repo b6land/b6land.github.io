@@ -9,6 +9,17 @@ NLog 是一套 Open Source 的 Log 工具，支援多種 .Net 平台，使用上
 
 可以跟著 [NLog](https://nlog-project.org/download/) 官網教學安裝。安裝好 NLog 後，可以藉由調整 `nlog.config` 來調整 Log 的格式。以下介紹 `nlog.config` 檔案的常用設定值 (也可直接查詢 [Configuration file · NLog/NLog Wiki](https://github.com/NLog/NLog/wiki/Configuration-file))。
 
+### Target 功能
+
+指定訊息要輸出的目標，常用的 target 如下：
+
+| Target | 描述  |
+| --- | --- |
+| Console | 顯示在命令列上 |
+| File | 寫入文字檔案 |
+| MailKit | 寄送 SMTP 郵件訊息 |
+| Memory | 存放訊息在 ArrayList |
+
 ### Rule 功能
 
 Rule 功能可以限制不同等級的訊息輸出到特定的目標 (Target) ，如檔案或網路位址。
