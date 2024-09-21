@@ -163,17 +163,17 @@ namespace ExampleApp
 
 ### 建立專案
 
-1. 安裝 .NET SDK
+1\. 安裝 .NET SDK
 
 如果尚未安裝，請先從 [Microsoft .NET](https://dotnet.microsoft.com/zh-tw/download) 官網下載並安裝 .NET SDK。
 
-2. 建立新的 ASP.NET Core Web API 專案
+2\. 建立新的 ASP.NET Core Web API 專案
 
 打開終端機（命令提示字元或 PowerShell），執行 `dotnet new webapi -n ExampleApp` 指令，會在資料夾下建立一個名為 ExampleApp 的 .NET 8 Web API 專案。
 
-3. 進入專案目錄
+3\. 進入專案目錄
 
-4. 建立分層式結構
+4\. 建立分層式結構
 
 分別建立下列資料夾與檔案，並將剛剛的程式碼填入對應的檔案：
 
@@ -182,7 +182,7 @@ namespace ExampleApp
 - Repositories 資料夾: 放置持久層的 `IProductRepository.cs` 和 `ProductRepository.cs`。
 - Models 資料夾: 放置資料模型 `Product.cs`。
 
-5. 新增、註冊分層架構
+5\. 新增、註冊分層架構
 
 在專案主資料夾找到 `Program.cs`，並加入剛剛的 Controller，再註冊 Service 和 Repository。
 
@@ -206,7 +206,7 @@ var app = builder.Build();
 app.MapControllers();
 app.Run();
 ```
-6. 建置和執行專案
+6\. 建置和執行專案
 
 呼叫 `dotnet run`，預設會幫你建置專案並直接啟動。
 
