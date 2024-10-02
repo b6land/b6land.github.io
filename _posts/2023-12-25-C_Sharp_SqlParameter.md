@@ -7,7 +7,7 @@ categories: [C#]
 
 C# 中有 SqlCommand 類別可以放入 Raw SQL，查詢時可以使用 SqlParamter 類別加入查詢的條件，並避免 SQL Injection 導致的資安風險。
 
-### 基本用法
+### 使用方式
 
 SQL 查詢語法中，為要加入的查詢條件設定名稱，並在前方加上 `@` 符號。
 
@@ -22,7 +22,15 @@ SqlCommand command = new SqlCommand("SELECT * FROM Dogs1 WHERE Name LIKE @Name",
 command.Parameters.Add(new SqlParameter("Name", dogName));
 ```
 
-更詳細的用法，請參閱：[C# SqlParameter Example - Dot Net Perls](https://www.dotnetperls.com/sqlparameter)
+另外，因為 SqlParameter 實作 DbParameter 抽象類別，當方法需要傳入 DbParameter 時，可以直接建立 SqlParameter。從以下範例中，可看到建立 SqlParameter 時直接指定屬性名稱、值。
+
+```csharp
+var parameters = new[]{
+            new SqlParameter(){ ParameterName="foo", Value="hello" },
+            new SqlParameter(){ ParameterName="bar", Value="World" }
+        };
+x.ExecuteScalar<int>(commandText, commandType, parameters);
+```
 
 ### 如何在 IN 條件加入參數
 
@@ -52,4 +60,8 @@ string[] values = new [] {"value1", "value2", "value3", "value4"};
 Select * From Table Where Column in (@arg0, @arg1, @arg2, @arg3)
 ```
 
-請參閱: [c# 2.0 - Using an 'IN' operator with a SQL Command Object and C# 2.0 - Stack Overflow](https://stackoverflow.com/questions/400819/using-an-in-operator-with-a-sql-command-object-and-c-sharp-2-0)
+### 參考資料
+
+- 更詳細的用法：[C# SqlParameter Example - Dot Net Perls](https://www.dotnetperls.com/sqlparameter)
+- DbParameter 的使用：[c# - How to create array DbParameter\[\] - Stack Overflow](https://stackoverflow.com/questions/7097624/how-to-create-array-dbparameter )
+- IN 的使用：[c# 2.0 - Using an 'IN' operator with a SQL Command Object and C# 2.0 - Stack Overflow](https://stackoverflow.com/questions/400819/using-an-in-operator-with-a-sql-command-object-and-c-sharp-2-0)
