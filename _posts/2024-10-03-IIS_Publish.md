@@ -23,6 +23,8 @@ categories: [ASP.NET]
 5. 輸入連線資訊，在「伺服器」中填入名稱、IP 或 URL 位置，例如 `localhost` ；「網站名稱」是 IIS 中的網站名稱；目的地 URL 是發佈完成後要開啟的網址；最後填入存取 IIS 需要的帳號與密碼。其它設定值可參考「[Manage web deployment settings - Visual Studio (Windows) - Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/deployment/web-deployment-settings?view=vs-2022 "https://learn.microsoft.com/en-us/visualstudio/deployment/web-deployment-settings?view=vs-2022")」
 6. 接著可以進行發布。
 
+![Web Deploy 的設定值](/assets/imgs/2024-10-03/web_deploy.png)
+
 欲發布的主機，需安裝 Web Management Service，否則無法發布成功。 此外，如果有防火牆擋住 8172 Port，還是無法使用發佈方式直接更新檔案。
 
 - 其它問題排解，可參考：[針對 Visual Studio 的 Web 部署問題進行疑難排解 - Microsoft Learn](https://learn.microsoft.com/zh-tw/iis/publish/troubleshooting-web-deploy/troubleshooting-web-deploy-problems-with-visual-studio)  
