@@ -5,7 +5,7 @@ date: 2024-09-25 22:00:00 +0800
 categories: [SQL Server]
 --- 
 
-在 SQL Server 裡面，產生自動遞增的編號，請參考內文！
+在 SQL Server 裡面，如何產生自動遞增的編號呢？請參考內文。
 
 ### 增加自動編號的欄位
 
@@ -19,6 +19,20 @@ CREATE TABLE [dbo].[SomeData](
 );
 ```
 
+新增資料時插入 IDENTITY 以外的欄位即可：
+
+```sql
+INSERT INTO SomeData ([Name]) VALUES('Apple');
+INSERT INTO SomeData ([Name]) VALUES('Banana');
+```
+
+插入結果如下，可看見有自動編號：
+
+| SN | Name |
+|---|---|
+| 1 | Apple |
+| 2 | Banana |
+
 參考資料：[IDENTITY (屬性) (Transact-SQL) - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/t-sql/statements/create-table-transact-sql-identity-property?view=sql-server-ver16)  
 
 ### 在 Identity 欄位新增特定的編號
@@ -27,7 +41,7 @@ CREATE TABLE [dbo].[SomeData](
 
 ```sql
 SET IDENTITY_INSERT SomeData ON ;
-INSERT INTO SomeData (ID, [Name]) VALUES(0, 'Lazy');
+INSERT INTO SomeData (SN, [Name]) VALUES(0, 'Lazy');
 SET IDENTITY_INSERT SomeData OFF;
 ```
 
