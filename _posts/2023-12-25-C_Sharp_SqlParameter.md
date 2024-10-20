@@ -60,8 +60,25 @@ string[] values = new [] {"value1", "value2", "value3", "value4"};
 Select * From Table Where Column in (@arg0, @arg1, @arg2, @arg3)
 ```
 
+### 正確的處理資料
+
+如果資料庫欄位允許插入 Null，那麼可以用以下方式指定 Null 值：
+
+```csharp
+decimal? price = 100m;
+var parameter = new SqlParameter { ParameterName = $"price", Value = (object)price ?? DBNull.Value}
+```
+
+另外，建議指定插入的資料類型，避免系統判斷失誤，而導致存放不正確的資料，或執行時出現轉型的錯誤訊息，例如：
+
+```csharp
+decimal? price = 100m;
+var parameter = new SqlParameter { ParameterName = $"price", Value = (object)price ?? DBNull.Value, DbType = System.Data.DbType.Decimal}
+```
+
 ### 參考資料
 
 - 更詳細的用法：[C# SqlParameter Example - Dot Net Perls](https://www.dotnetperls.com/sqlparameter)
 - DbParameter 的使用：[c# - How to create array DbParameter\[\] - Stack Overflow](https://stackoverflow.com/questions/7097624/how-to-create-array-dbparameter )
 - IN 的使用：[c# 2.0 - Using an 'IN' operator with a SQL Command Object and C# 2.0 - Stack Overflow](https://stackoverflow.com/questions/400819/using-an-in-operator-with-a-sql-command-object-and-c-sharp-2-0)
+- 如何指定 Null 值： [c# - Assign null to a SqlParameter - Stack Overflow](https://stackoverflow.com/questions/4555935/assign-null-to-a-sqlparameter "https://stackoverflow.com/questions/4555935/assign-null-to-a-sqlparameter")
