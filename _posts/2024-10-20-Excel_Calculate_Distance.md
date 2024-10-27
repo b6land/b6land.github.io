@@ -33,7 +33,7 @@ d=acos(sin(lat1)*sin(lat2)+cos(lat1)*cos(lat2)*cos(lon1-lon2))
 
 由於電腦計算的精度誤差、座標轉換時的誤差、球體模型視為正圓 (實際上地球是些微的橢圓形)，因此會有一點點誤差，但通常可忽略不計。如果需要非常精確的距離，如導航或地理資訊系統，可以用橢球體模型的 Vincenty 公式或 Haversine 公式計算。
 
-## 其它參考資料
+### 其它參考資料
 
 - ChatGPT
 - Excel 公式的中文說明：[使用 Excel 計算2個地點之間的直線距離](http://ricky0512.blogspot.com/2015/01/excel-2.html)
