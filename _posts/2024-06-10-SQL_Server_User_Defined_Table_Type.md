@@ -76,3 +76,8 @@ ALTER DATABASE AdventureWorks2019 ADD FILE (name='AdventureWorks2019_mod1', file
 - [Table-Valued Parameters in SQL Server](https://www.sqlshack.com/table-valued-parameters-in-sql-server/ )
 - [記憶體最佳化加快暫存資料表與資料表變數的速度 - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization?view=sql-server-ver16 )
 - [記憶體最佳化檔案群組 - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/relational-databases/in-memory-oltp/the-memory-optimized-filegroup?view=sql-server-ver16 )
+
+#### 資料表值參數
+
+- [使用資料表值參數 (Database Engine) - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/relational-databases/tables/use-table-valued-parameters-database-engine?view=sql-server-ver16)
+- [~楓花雪岳~: \[SQL\] 資料表值參數 (Table Value Parameters)](https://jengting.blogspot.com/2020/10/Table-Value-Parameters.html)

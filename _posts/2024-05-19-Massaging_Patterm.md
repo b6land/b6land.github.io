@@ -33,6 +33,11 @@ categories:  [Messaging]
 - [訊息服務站 - ServiceBus - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10240878)  
 - [Azure 服務匯流排 (企業訊息代理程式) 簡介 - Azure Service Bus - Microsoft Learn](https://learn.microsoft.com/zh-tw/azure/service-bus-messaging/service-bus-messaging-overview)  
 
+#### 個人心得
+
+- 快速入門：[快速入門 - 從 .NET 應用程式使用 Azure 服務匯流排佇列 - Azure Service Bus - Microsoft Learn](https://learn.microsoft.com/zh-tw/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues?tabs=connection-string)
+- 當傳送失敗時，會將訊息轉入無效信件 (Dead-Letter Queues, DLQ)，沒辦法自行刪除。當訊息成功接收時，會自動被清除。詳情請參考：[Service Bus dead-letter queues - Azure Service Bus - Microsoft Learn](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)
+
 ### 關於 MQTT
 
 ![MQTT 官網的自我介紹](/assets/imgs/2024-05-19/MQTT.png)
