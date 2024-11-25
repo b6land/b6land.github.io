@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-
+<div itemscope itemtype="https://schema.org/WebSite">
+  <link itemprop="url" href="{{ site.url }}" />
+  <meta itemprop="name" content="{{ site.name }}"/>
+</div>
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
