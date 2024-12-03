@@ -5,14 +5,19 @@ date: 2024-10-03 08:30:00 +0800
 categories: [ASP.NET]
 --- 
 
-為放在 IIS 伺服器上的 ASP.NET 的網站、API 更新版本時，使用以下的步驟更新，避免服務發生錯誤。
+為放在 IIS 伺服器上的 ASP.NET 的網站、API 更新版本時，使用以下的步驟更新，可避免服務發生錯誤。
 
 ### 手動更新
 
-1. 從 IIS 先停止應用程式。
+1. 從 IIS 先停止 API、網站等站台所屬的應用程式集區。
 2. 更換應用程式的檔案。
     - 可能要避免更換到設定檔，導致測試的設定值覆蓋到生產環境。
-3. 在 IIS 啟動應用程式。
+3. 在 IIS 啟動應用程式集區。
+
+停止應用程式集區的好處，是可以避免 `w3wp.exe` 程序 (Process)鎖定程式的 dll 元件，而且可以讓 API、網站站台回應 HTTP 503 (Service Unavailable)。
+
+延伸閱讀：[如何正確地發行 ASP.NET Core 網站到遠端 IIS 站台 - The Will Will Web](https://blog.miniasp.com/post/2021/06/07/Deploy-ASPNET-Core-to-IIS-without-locking-issue)
+
 
 ### 使用 Visual Studio 更新
 

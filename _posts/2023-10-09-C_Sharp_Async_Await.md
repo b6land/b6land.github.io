@@ -84,6 +84,20 @@ Console.WriteLine("Execute finished.");
 
 關於這個議題的討論如下：[c# - Effects of using multiple awaits in the same method? - Stack Overflow](https://stackoverflow.com/questions/36976810/effects-of-using-multiple-awaits-in-the-same-method)、[c# - Multiple Awaits in a single method - Stack Overflow](https://stackoverflow.com/questions/18445279/multiple-awaits-in-a-single-method)。
 
-### 8/12 補充：不要 await Task.FromResult
+### 補充：不要 await Task.FromResult
 
-不要撰寫 `await Task.FromResult`  ，因為程式本身會等待 Task 程式完成，不是一個非同步作業。這樣的寫法只會增加多餘的程式碼 ([Task.FromResult 用法與注意事項 - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/await-taskfromresult.html))。  
+不要撰寫 `await Task.FromResult`  ，因為程式本身會等待 Task 程式完成，不是一個非同步作業。這樣的寫法只會增加多餘的程式碼 ([Task.FromResult 用法與注意事項 - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/await-taskfromresult.html))。
+
+### 補充：在 ASP.NET WebAPI 的 API 端點內，非同步方法避免使用  result 取得結果
+
+在 WebAPI 中，API 端點的方法內部若有 `await`  的程式碼，例如在底層呼叫其它 API，但在 API 端點使用 `Task.Result`  取得資料，編譯器不會發出警告，但會發生 API 端點沒有回傳結果的問題，這與死結有關。
+  
+ASP.NET 中使用 `SynchronizationContext`  類別的物件來控制非同步方法的控制流，但是若在 `Task.Result`  阻擋物件以後，`await`  的程式碼 (例如從外部資源取得資料) 才結束工作，想取用該物件處理後續作業，就會造成死結。
+
+在新版的 ASP.NET Core 不會有這樣的問題。
+
+請參考以下網頁：
+
+- 詳細說明，包含 WinForm、WebAPI 的死結範例：[.NET 程式鎖死與 SynchronizationContext - Huan-Lin 學習筆記](https://www.huanlintalk.com/2016/01/asyc-deadlock-in-aspbet.html)
+- 這篇的問題過程比較好懂：[await與Task.Result/Task.Wait()的Deadlock問題-黑暗執行緒](https://blog.darkthread.net/blog/await-task-block-deadlock/)
+- 另一個 API 死結的範例：[c# - 'await' works, but calling task.Result hangs/deadlocks - Stack Overflow](https://stackoverflow.com/questions/17248680/await-works-but-calling-task-result-hangs-deadlocks)

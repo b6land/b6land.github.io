@@ -9,6 +9,8 @@ categories: [C#]
 
 ### 作法
 
+⚠️前提：此做法因為減少了使用評估執行計畫快取的機會，較適用於 Connection Pool 關閉的情形，減少連線的時間；若 Connection Pool 有啟用 (大部分的狀況)，因為沒有多次連線至資料庫，一次插入一筆資料反而較能利用先前已產生的執行計畫，而加快速度。
+
 假設建立以下的資料表：
 
 ```sql
@@ -114,8 +116,11 @@ class Program
 
 不過要留意，組合出多個 `INSERT INTO` 語法時，要小心語法長度不要超過 SQL Server 的查詢語法長度上限，是 65,536 \* 網路封包大小 (封包大小預設是每個 4KB)。
 
+建議一次插入 5 ~ 10 筆資料，再多可能會沒辦法改善插入的效率，或造成反效果。
+
 ### 參考資料
 
 - 改善插入多筆資料效率：[c# - How should I multiple insert multiple records? - Stack Overflow](https://stackoverflow.com/questions/2972974/how-should-i-multiple-insert-multiple-records)
 - 查詢語法上限：[Maximum size for a SQL Server Query? IN clause? Is there a Better Approach - Stack Overflow](https://stackoverflow.com/questions/1869753/maximum-size-for-a-sql-server-query-in-clause-is-there-a-better-approach)
 - Bulk Insert 的效能改善效果：[\[Azure\]\[SQL\]改善大量資料塞入效能低弱的案例分享 - 五餅二魚工作室 - 點部落](https://dotblogs.com.tw/jamesfu/2023/02/19/DataInsertAzureSqlDatabase)
+- Connection Pool 介紹 (連線池)：[\[C#\] SQL 資料庫 Connection Pool 連線池觀念釐清 – 從入門到放棄](https://exfast.me/2018/11/c-sharp-sql-database-connection-pool-to-understand/)
