@@ -50,6 +50,6 @@ protected class Watch
 
 在 Visual Studio Code 中預覽結果如下：
 
-![顯示摘要和備註](/assets/imgs/comment_tags_1.png)
+![顯示摘要和備註](/assets/imgs/2023-02-12/comment_tags_1.png)
 
-![顯示參數](/assets/imgs/comment_tags_2.png)
+![顯示參數](/assets/imgs/2023-02-12/comment_tags_2.png)
