@@ -1,24 +1,33 @@
 ---
 layout: post
-title: 用 Codeium 自動完成程式碼
+title: 用 Codeium 自動完成程式碼 (含下載與安裝於 VSCode 的說明)
 date: 2024-02-14 12:00:00 +0800
 categories:  [Programming]
 --- 
 
-Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)，可以幫助開發人員產生程式片段，猜測將輸入的程式碼，以及協助除錯。
+Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)，可以幫助開發人員產生程式片段，猜測將輸入的程式碼，以及協助除錯。以下將介紹重要功能、下載與安裝方式 (以 VSCode 為例)。
+
+### 目錄
+
+- [Codeium 特色](#codeium-特色)
+- [Codeium 重要功能](#codeium-重要功能)
+- [進階：設定 Context](#進階設定-context)
+- [VSCode 特定專案停用 Codeium](#vscode-特定專案停用-codeium)
+- [Codeium 下載與安裝 (以 VSCode 為例)](#codeium-下載與安裝-以-vscode-為例)
+- [參考資料](#參考資料)
 
 ### Codeium 特色
 
-1. 個人使用完全免費。
+1. 個人使用完全免費 (需要登入 / 註冊一個免費的帳號)。
 2. 支援多種不同的整合開發環境 (IDE)，以及不同的程式語言。 
 3. 主打程式碼的自動完成、對話協助產生 / 除錯程式片段等功能。
 4. 不會使用非 GPL 授權的程式碼進行訓練。
 
-### 使用方式
+### Codeium 重要功能
 
-以下使用 Visual Studio Code (下稱 VSCode) 安裝 Codeium 擴充套件，安裝時需要登入 / 註冊一個免費的帳號。
+以下使用 Visual Studio Code (下稱 VSCode) 示範重要功能。
 
-啟用 Codeium 後，輸入程式碼時，可以看到 Codeium 出現程式碼的提示，按下 Tab 鍵就可以套用。
+輸入程式碼時，可以看到 Codeium 出現程式碼的提示，按下 Tab 鍵就可以套用。
 
 ![按下 Tab 自動完成](/assets/imgs/2024-02-14/Codeium_AutoComplete.png)  
 
@@ -44,13 +53,17 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 
 ### 進階：設定 Context
 
-可以在 Codeium 的窗格中，選擇 Context 的分頁。在這一頁可以設定：
+可以在 Codeium 的窗格中，在下方找到 Context 區域。在這裡可以設定：
 
-1. 自訂的提示字：輸入後，執行的自動完成 / 對談皆會附帶自訂提示。例如：輸入「use C# 6.0 syntax」指定使用特定版本的語法。*(經測試，可能會有沒套用提示效果的情形。)*
-2. 設定產生提示的來源：可以是本機端的相關資料夾、已開啟的檔案等等。
-3. 底下的 Local Indexes 可以看到本機引用的來源。
+1. 設定產生提示的來源：可以是本機端的相關資料夾、已開啟的檔案等等。
+1. 按下 Advance 可以設定自訂的提示字。輸入後，執行的自動完成 / 對談皆會套用自訂提示。例如：輸入「use C# 6.0 syntax」指定使用特定版本的語法。*(經測試，可能會有沒套用提示效果的情形。)*
+3. 在按下 Advance 後，可以在 Local Indexes 看到本機引用的來源。
 
-![自訂提示與提示來源](/assets/imgs/2024-02-14/Codeium_Context.png)
+![自訂提示與提示來源](/assets/imgs/2024-02-14/Codeium_Context_202412.png)
+△目前版本畫面 (2024/12)
+
+![自訂提示與提示來源 (2024-02)](/assets/imgs/2024-02-14/Codeium_Context.png)
+△舊版畫面，Context 位於上方分頁
 
 ### VSCode 特定專案停用 Codeium
 
@@ -59,11 +72,41 @@ Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)�
 由於目前版本的 Codeium 不能設定要排除使用的目錄，若有不想使用 Codeium 產生程式碼的專案，可以使用 VSCode 內建功能，在專案目錄停用擴充套件 (包含 Codeium)，來避免上傳程式碼。
 
 1\. 在 VSCode 中開啟需要設定的目錄。
+
 2\. 從左方開啟 Extensions 頁籤，然後選擇 Codeium，再按下 Disable 右方的小箭頭，並選擇 Disable (Workspace)。
 
 ![選擇 Disable 停用 Codeium 套件](/assets/imgs/2024-02-14/Codeium_Disable.png)  
 
 3\. 以後 VSCode 開啟該目錄時，就不會啟動 Codeium (可觀察右下方未載入 Codeium 伺服器)。
+
+### Codeium 下載與安裝 (以 VSCode 為例)
+
+1\. 進入[官網](https://codeium.com/)，按下右邊的下載。
+![按下右邊的下載](/assets/imgs/2024-02-14/Download.png)
+
+2\. 選擇右方要安裝 Codeium 的 IDE，這裡選 Visual Sutdio Code。
+![右方選 VSCode](/assets/imgs/2024-02-14/Download_2.png)
+
+3\. 註冊帳號或登入。
+![註冊帳號或登入](/assets/imgs/2024-02-14/Download_3.png)
+
+4\. 按下 Quick Install 按鈕，如果瀏覽器有詢問是否同意開啟連結，選擇同意。此頁面下方也有手動安裝的說明。
+![按下 Quick Install 按鈕](/assets/imgs/2024-02-14/Download_4.png)
+
+5\. 進入 VSCode 的擴充頁面頁面，按下 Install 按鈕。
+![按下 Install 按鈕](/assets/imgs/2024-02-14/Download_5.png)
+
+6\. 詢問是否允許認證，按下 Allow。
+![允許認證](/assets/imgs/2024-02-14/Download_6.png)
+
+7\. 按下 Open 開啟 Codeium 網站。
+![按下 Open](/assets/imgs/2024-02-14/Download_7.png)
+
+8\. 因為剛剛已經登入帳號，接著按下瀏覽器的開啟網站 (連結)。
+![按下開啟網站](/assets/imgs/2024-02-14/Download_8.png)
+
+9\. 最後再按下 Open，允許 Codeium 開啟此連結，就完成安裝。
+![按下 Open](/assets/imgs/2024-02-14/Download_9.png)
 
 ### 參考資料
 
