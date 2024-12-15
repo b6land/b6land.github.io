@@ -77,3 +77,10 @@ Invoke-WebRequest: 基礎連接已關閉: 無法為 SSL/TLS 安全通道建立�
 
 - [POWERSHELL 呼叫WEB API ，無法為 SSL/TLS 安全通道建立信任關係 - iT 邦幫忙](https://ithelp.ithome.com.tw/questions/10214882 "https://ithelp.ithome.com.tw/questions/10214882")  
 - 拙作 [自簽署憑證 – Lazy Coding](https://b6land.github.io/Self_Signed_Certificate/ "https://b6land.github.io/Self_Signed_Certificate/")  
+
+## Bonus: 透過 PowerShell 定期呼叫 API
+
+可以參考以下網址，使用 Windows 排程執行 PowerShell Script，來定期呼叫 API。
+
+- [c# - Could a windows scheduled task connect to a rest endpoint? - Stack Overflow](https://stackoverflow.com/questions/25435288/could-a-windows-scheduled-task-connect-to-a-rest-endpoint)  
+- [How to Schedule PowerShell Script Using Task Scheduler](https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler/)
