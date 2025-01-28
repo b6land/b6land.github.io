@@ -30,8 +30,16 @@ WHERE ClassID = @QueryID -- 相當於 WHERE ClassID = '00001'
 - 根據參考資料 2，使用變數作為條件式時，可能會導致執行計畫判斷時更容易誤判預測的資料量，而導致查詢效能的降低。解決方式是將放入 `sp_executesql` 參數化，讓 Query Optimizer 能正確預測資料量。
 - 若作為查詢、連接時的條件，使查詢範圍大幅減少時，仍可以加快連接的速度。
 
+### Bonus: 一次設定多個變數
+
+```sql
+SELECT @variable1 = col1, @variable2 = col2
+FROM table1
+```
+
 ### 參考資料
 
 1. [筆記。隨手: [MS SQL] 變數宣告與使用](http://sorryicannot.blogspot.com/2018/12/ms-sql.html "‌")
 2. [Impact of SQL Variables on Performance (sqlshack.com)](https://www.sqlshack.com/impact-of-sql-variables-on-performance/)
 3. [如何在 T-SQL 中宣告變數 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10009411)
+4. [sql server - SQL SELECT multi-columns INTO multi-variable - Stack Overflow](https://stackoverflow.com/questions/1340775/sql-select-multi-columns-into-multi-variable)
