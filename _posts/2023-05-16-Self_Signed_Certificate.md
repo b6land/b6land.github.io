@@ -17,7 +17,7 @@ categories: [C#]
 
 - 在 Postman 的設定中，於 General 頁籤裡將 **SSL Certificate Verification** 選項關閉，即可正常連線。
 
-![SSL Certificate Verification](/assets/imgs/ssl_certificate_verification.png)
+![SSL Certificate Verification](/assets/imgs/2023-05-16/ssl_certificate_verification.png)
 
 - [How to Troubleshoot SSL Certificate & Server Connection Issues - Postman](https://blog.postman.com/self-signed-ssl-certificate-troubleshooting/)
 - [Setting up Postman - Postman Learning Center](https://learning.postman.com/docs/getting-started/settings/)

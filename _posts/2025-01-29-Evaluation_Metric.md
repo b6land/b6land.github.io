@@ -78,7 +78,7 @@ nDCG 將 DCG 轉為 0 ~ 1 之間的浮點數，會參考到 IDCG （即最優排
 
 F1-score 是 Precision 和 Recall 的調和平均數。
 
-公式：
+- 公式：
 
 ![F1-Score 公式](/assets/imgs/2025-01-29/F1_Eq.png)
 

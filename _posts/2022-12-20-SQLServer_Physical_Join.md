@@ -15,7 +15,7 @@ categories: [SQL Server]
 - Hash Join: 先建立雜湊表，根據雜湊值快速取得資料，但是較耗記憶體空間。
 - Merge Join: 需要使用已排序過的資料作為查詢來源，適合已經建立索引的資料表
 
-![Hash Match](/assets/imgs/hash_match.png)
+![Hash Match](/assets/imgs/2022-12-20/hash_match.png)
 *(使用 Hash Match 連接的例子)*
 
 在實際執行時，SQL 會自行依據預估的資料量，選擇合適的連接方式，以獲得最佳的執行效率，不需要我們自行去指定。

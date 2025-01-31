@@ -13,7 +13,7 @@ TFS 的標註功能，可以查看特定行最後是由誰變更的（不過沒�
 
 從原始碼檔案總管找到要檢查的檔案，點擊右鍵，並選擇標註 (Annotation)，就可以看到哪一段最後由誰編輯簽入。
 
-![TFS 右鍵功能表 - 標註功能](/assets/imgs/TFS_annotation.png)
+![TFS 右鍵功能表 - 標註功能](/assets/imgs/2022-04-16/TFS_annotation.png)
 
 
 ### 參考資料
