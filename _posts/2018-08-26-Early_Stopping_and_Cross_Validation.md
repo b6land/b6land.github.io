@@ -41,7 +41,7 @@ return number (total wrong) / (wrong + correct)
 
 ### 如何取資料
 
-![K-Fold 如何處理資料](/assets/imgs/kFold.jpg)
+![K-Fold 如何處理資料](/assets/imgs/2018-08-26/kFold.jpg)
 
 K = 0 時，取出 5 ~ 14 作為訓練資料，0 ~ 4 作為測試資料。
 
@@ -81,6 +81,5 @@ K = 2 時，取出 0 ~ 9 作為訓練資料，10 ~ 14 作為測試資料。
 
 ### 參考資料
 
-[Understanding and Using K-Fold Cross-Validation for Neural Networks](https://visualstudiomagazine.com/articles/2013/10/01/understanding-and-using-kfold.aspx)
-
-[在 sci-kit learn 中使用 K-Fold : sklearn.model_selection.StratifiedKFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold)
+- [Understanding and Using K-Fold Cross-Validation for Neural Networks](https://visualstudiomagazine.com/articles/2013/10/01/understanding-and-using-kfold.aspx)
+- [在 sci-kit learn 中使用 K-Fold : sklearn.model_selection.StratifiedKFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold)

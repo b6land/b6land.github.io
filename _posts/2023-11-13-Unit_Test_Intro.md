@@ -38,3 +38,12 @@ categories:  [Unit Test]
 - 觀念、如何在 Java 進行單元測試：[【單元測試】改變了我程式設計的思維方式 by pcbill - CodeData](https://www.codedata.com.tw/java/unit-test-the-way-changes-my-programming/)
 - 如何寫出好的測試程式，特別可以看 Stub 和 Mock 的章節：[撰寫單元測試的最佳做法 - .NET - Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/core/testing/unit-testing-best-practices) 
 - 測試靜態方法：[3 Amazing Ways to Unit Test Code That Calls Static Method in C#](https://methodpoet.com/unit-test-static-method/)
+
+### C# API 單元測試問題
+
+如果執行單元測試時，遇到「找不到 app.config」的問題時，有兩種解決方法：
+
+1. 正規解法：建立一個 web.config 的 mock class。
+2. 替代解法：將原本的 web.config 重命名為 app.config，放置於單元測試專案的執行目錄內。
+
+- 參考資料：[c# - How to read Web.Config file while Unit Test Case Debugging? - Stack Overflow](https://stackoverflow.com/questions/23513355/how-to-read-web-config-file-while-unit-test-case-debugging)

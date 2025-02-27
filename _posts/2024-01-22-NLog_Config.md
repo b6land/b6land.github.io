@@ -79,6 +79,11 @@ NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高�
 </extensions>
 ```
 
-即安裝完成。
+即安裝完成。接著在 nlog.config 的 Layout 內增加 `activity:property=TraceId` 屬性，例如：
+
+```xml
+<target xsi:type="File" name="web" fileName="${shortdate}.log"
+  layout="${time}-[${level}]-[${activity:property=TraceId:truncate=6}]-${replace-newlines:${message}} ${exception:format=tostring}" />
+```
 
 
