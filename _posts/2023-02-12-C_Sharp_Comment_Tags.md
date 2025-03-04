@@ -53,3 +53,20 @@ protected class Watch
 ![顯示摘要和備註](/assets/imgs/2023-02-12/comment_tags_1.png)
 
 ![顯示參數](/assets/imgs/2023-02-12/comment_tags_2.png)
+
+### 補充：泛型 (Generic) 適用的標籤
+
+可以用 `typeparamref`  標籤，表示泛型類別 `T` (及表示其代表的實際類別)，適用於 Visual Studio 的 Intellisense。
+
+```csharp
+        /// <summary>
+        /// 透過 key 取得類型 <typeparamref name="T"/> 的資料
+        /// </summary>
+        /// <param name="key"> 索引鍵 </param>
+        /// <returns> 類型 <typeparamref name="T"/> 資料 </returns>
+        public T Access<T>(string key){
+            /* 程式內容 ... */
+        }
+```
+
+請參考：[Substitute Generics For Actual Type In Intellisense For XML Comments - Developer Community](https://developercommunity.visualstudio.com/t/substitute-generics-for-actual-type-in-intellisens/638896)
