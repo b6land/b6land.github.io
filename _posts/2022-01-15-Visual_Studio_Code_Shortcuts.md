@@ -27,17 +27,17 @@ VSCode 具有彈性又親合的搜尋功能，在檔案內的搜尋方塊，可�
 
 搜尋框右方分別是符合大小寫、符合整個搜尋詞、使用正規表達式。
 
-![檔案內搜尋、取代方塊](/assets/imgs/2022-01-15/replace.png)
+![檔案內搜尋、取代方塊](/assets/imgs/2022-01-15/replace.png){:height="102px" width="636px"}
 
 可以從左方面板叫出檔案間的搜尋功能，同樣可以在左上方箭頭切換搜尋 / 取代模式，搜尋框也能使用符合大小寫、整個搜尋詞、正規表達式等功能。
 
 搜尋框下方可以設定要搜尋的檔案，該欄位右方的圖示可以指定僅搜尋開啟的編輯器；另外也能排除搜尋的檔案，還能進一步排除 .gitignore 內忽略的檔案。
 
-![檔案間搜尋、取代面板](/assets/imgs/2022-01-15/replace_in_files.png)
+![檔案間搜尋、取代面板](/assets/imgs/2022-01-15/replace_in_files.png){:height="688px" width="551px"}
 
 如果需要查看搜尋結果的上下文，也能按下 Open in editor 功能另外顯示結果。
 
-![查看搜尋結果的上下文](/assets/imgs/2022-01-15/open_in_editor.png)
+![查看搜尋結果的上下文](/assets/imgs/2022-01-15/open_in_editor.png){:height="298px" width="720px"}
 
 *(寫到這裡，十分佩服 VSCode 的搜尋介面可以包含這麼多功能，但是又設計得十分簡潔。)*
 
@@ -49,11 +49,11 @@ VSCode 具有彈性又親合的搜尋功能，在檔案內的搜尋方塊，可�
 
 2\. 按下 `F1` 或 `Ctrl + Shift + P` 鍵開啟 VSCode 的命令列，輸入 `Join Lines`。
 
-![Join Lines](/assets/imgs/2022-01-15/join_lines.png)
+![Join Lines](/assets/imgs/2022-01-15/join_lines.png){:height="394px" width="720px"}
 
 3\. 即會合併成一行。
 
-![合併為一行](/assets/imgs/2022-01-15/oneline.png)
+![合併為一行](/assets/imgs/2022-01-15/oneline.png){:height="62px" width="720px"}
 
 ### 延伸閱讀
 

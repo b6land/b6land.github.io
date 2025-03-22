@@ -9,7 +9,7 @@ jQuery 和 jQuery UI 可以快速地建立網站，常常用在官方網站、�
 
 ### 什麼是 jQuery
 
-![jQuery 官網介紹](/assets/imgs/2024-05-27/jQuery_Homepage.png)
+![jQuery 官網介紹](/assets/imgs/2024-05-27/jQuery_Homepage.png){:height="336px" width="720px"}
 △ jQuery 官網介紹
 
 jQuery 是一個功能豐富的 JavaScript 函式庫，目標是提升使用 JavaScript 的體驗。
@@ -22,7 +22,7 @@ jQuery 簡化了 JavaScript 的事件處理機制，例如 `$('#button').click(f
 
 ### 什麼是 jQuery UI
 
-![jQuery UI 官網的日期選擇器範例](/assets/imgs/2024-05-27/jQuery_UI_Datepicker.png)
+![jQuery UI 官網的日期選擇器範例](/assets/imgs/2024-05-27/jQuery_UI_Datepicker.png){:height="736px" width="561px"}
 △ jQuery UI 官網的日期選擇器範例
 
 jQuery UI 是基於 jQuery 的擴充函式庫，提供許多可立即使用的 UI 控制項與動畫效果，例如日期選擇器 (Datepicker)、功能表 (Menu)... 等。

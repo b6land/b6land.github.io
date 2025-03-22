@@ -23,16 +23,16 @@ ALTER TABLE myTable ALTER COLUMN myColumn {DataType} NULL
 
 在 SSMS 內，可以使用設計工具變更資料表的欄位 Null 屬性。勾選或取消特定欄位的「允許 Null」屬性後，按右鍵選擇「產生變更指令碼」即可。
 
-![SSMS 資料表設計工具](/assets/imgs/2024-01-10/SSMS_Table_Designer.png) 
+![SSMS 資料表設計工具](/assets/imgs/2024-01-10/SSMS_Table_Designer.png){:height="312px" width="237px"}
 
 不過，當資料表裡已有資料時，變更欄位的 Null 屬性，會出現「不允許儲存變更...」的錯誤訊息：
 
-![不允許儲存變更](/assets/imgs/2024-01-10/changes_is_not_permitted.png)
+![不允許儲存變更](/assets/imgs/2024-01-10/changes_is_not_permitted.png){:height="115px" width="671px"}
 
 這是因為從設計工具變更屬性時，會需要重新建立資料表，有可能在重建的過程中，遺失部分資料表內的資料。
 
 如果可以接受資料遺失的風險 (ex. 修改開發環境內的資料表結構)，可以從 SSMS 的設定 > 選項 > 設計，取消「防止儲存需要資料表重建的變更」勾選來關閉此錯誤訊息：
 
-![防止儲存需要資料表重建的變更](/assets/imgs/2024-01-10/SSMS_Options.png)  
+![防止儲存需要資料表重建的變更](/assets/imgs/2024-01-10/SSMS_Options.png){:height="436px" width="720px"}  
 
 請參考微軟的官方說明 [Saving changes is not permitted error message - SQL Server - Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/sql/ssms/error-when-you-save-table) 與 [SQL Server 無法修改資料表定義？！ - Yowko's Notes](https://blog.yowko.com/sql-server-cahnges-not-permitted/)。
