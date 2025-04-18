@@ -84,6 +84,7 @@ public class RefitAPI
 ### 小秘訣
 
 - 要判斷是否成功接收資料，可以用 `response.IsSuccessStatusCode` 。
+  - Refit 在反序列化資料物件時，可能會失敗，但不一定會中斷程式，此時可以用 try...catch... 可以檢查失敗的原因。
 - 使用 POST 發送字串資料時，如果希望傳送出去的內容被視為 JSON，可以加入 Content-Type 的 Header 屬性，範例如下：
 
 ```csharp
