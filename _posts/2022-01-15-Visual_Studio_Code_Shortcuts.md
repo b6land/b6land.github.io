@@ -55,6 +55,12 @@ VSCode 具有彈性又親合的搜尋功能，在檔案內的搜尋方塊，可�
 
 ![合併為一行](/assets/imgs/2022-01-15/oneline.png){:height="62px" width="720px"}
 
+### 縮排
+
+- 縮排：選擇要縮排的行 (或一整段)，然後按下 Tab 鍵。
+- 取消縮排：選擇要取消縮排的行 (或一整段)，然後按下 Shift + Tab 鍵。
+- [indentation - How to indent/format a selection of code in Visual Studio Code? - Stack Overflow](https://stackoverflow.com/questions/40492960/how-to-indent-format-a-selection-of-code-in-visual-studio-code)
+
 ### 延伸閱讀
 
 - [Visual Studio Code Key Bindings](https://code.visualstudio.com/docs/getstarted/keybindings)

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 用 Codeium 自動完成程式碼 (含下載與安裝於 VSCode 的說明)
+title: 用 Windsurf (Codeium) 自動完成程式碼 (含下載與安裝於 VSCode)
 date: 2024-02-14 12:00:00 +0800
 categories:  [Programming]
 --- 
 
-Codeium 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)，可以幫助開發人員產生程式片段，猜測將輸入的程式碼，以及協助除錯。以下將介紹重要功能、下載與安裝方式 (以 VSCode 為例)。
+Windsurf (以前稱為 Codeium) 是和 GitHub Copilot 類似的產品，透過大型語言模型 (LLM)，可以幫助開發人員產生程式片段，猜測將輸入的程式碼，以及協助除錯。以下將介紹重要功能、下載與安裝方式 (以 VSCode 為例)。
 
 ### 目錄
 
