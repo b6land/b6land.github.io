@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Elasticsearch 儲存經緯度與計算距離
-date: 2025-05-13 17:00:00 +0800
+date: 2025-05-03 17:00:00 +0800
 categories: [Elasticsearch]
 ---  
 
