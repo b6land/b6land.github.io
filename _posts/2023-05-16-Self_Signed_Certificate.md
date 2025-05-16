@@ -41,3 +41,27 @@ categories: [C#]
 ### 其他可能的做法
 
 - 在 Windows 內安裝自簽署憑證: [Installing Self-Signed CA Certificate in Windows - IT Security - Spiceworks](https://community.spiceworks.com/how_to/1839-installing-self-signed-ca-certificate-in-windows)
+
+### Untrusted Root 問題
+
+如果在連線到伺服器時，發生以下的錯誤：
+
+```
+AuthenticationException: The remote certificate is invalid because of errors in the certificate chain: NotValidTime, UntrustedRoot
+```
+
+這是自簽署憑證的問題，可以跳過驗證：
+
+```cs
+var handler = new HttpClientHandler();
+handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+handler.ServerCertificateCustomValidationCallback =
+    (httpRequestMessage, cert, cetChain, policyErrors) =>
+{
+    return true;
+};
+
+var client = new HttpClient(handler);
+```
+
+- [c# - AuthenticationException: The remote certificate is invalid because of errors in the certificate chain: UntrustedRoot, NotValidTime - Stack Overflow](https://stackoverflow.com/questions/73403893)
