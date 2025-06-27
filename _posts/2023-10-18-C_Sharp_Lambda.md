@@ -5,7 +5,7 @@ date: 2023-10-18 12:00:00 +0800
 categories: [C#]
 ---
 
-轉載自己在 IT 邦幫忙發表的文章 [Day 13: C# Lambda 語法介紹 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10297407) 和 [Day 10: C# 再寫一次 Lambda - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10326389)。
+轉載自己在 IT 邦幫忙發表的文章 [Day 13: C# Lambda 語法介紹 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10297407) 和 [Day 10: C# 再寫一次 Lambda - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10326389)，並略微改寫。
 
 ## Part 1: Lambda 語法介紹
 
@@ -122,7 +122,7 @@ public class Program
 Receiver start with J:3
 ```
 
-若要使用 Lambda 排序，可以使用 `OrderBy()`、`OrderByDescending()` 對欄位分別作遞增、遞減排序。如果需要接著對其它欄位排序，還可以使用 `ThenBy()`、`ThenByDescending()` 。
+若要使用 Lambda 排序，可以搭配 LINQ 的 `OrderBy()`、`OrderByDescending()` 語法，對欄位分別作遞增、遞減排序。如果需要接著對其它欄位排序，還可以使用 `ThenBy()`、`ThenByDescending()` 。
 
 延續上方的例子，修改內部的 Run 方法，要求以 Receiver 類別的 email 欄位遞增、遞減排序：
 
@@ -161,8 +161,25 @@ Eddy@hotmail.com(Eddy)
 Chen.Jeff@gmail.com(Jeff)
 ```
 
-### 參考資料
+## Part 3: Lambda 檢查 null
 
-[C# 3.0 極簡風 - Lambda Expression-黑暗執行緒](https://blog.darkthread.net/blog/lambda-expression/)
-[c# - Multiple Order By with LINQ - Stack Overflow](https://stackoverflow.com/questions/2318885/multiple-order-by-with-linq)
-[c# - Get item count of a list<> using Linq - Stack Overflow](https://stackoverflow.com/questions/3853010/get-item-count-of-a-list-using-linq)
+如果需要在 Lambda 語法內檢查 null 並指定 null 的預設值，以下的程式碼是沒有辦法編譯的：
+
+```csharp
+x.ExchangeAttempts.HasValue
+   ? x.ExchangeAttempts.Value
+   : 1 <= 1
+```
+
+需要改用以下的方法：
+
+```csharp
+x => (x.ExchangeAttempts ?? 1) <= 1
+```
+
+## 參考資料
+
+- [C# 3.0 極簡風 - Lambda Expression-黑暗執行緒](https://blog.darkthread.net/blog/lambda-expression/)
+- [c# - Multiple Order By with LINQ - Stack Overflow](https://stackoverflow.com/questions/2318885/multiple-order-by-with-linq)
+- 查詢數量的方式：[c# - Get item count of a list<> using Linq - Stack Overflow](https://stackoverflow.com/questions/3853010/get-item-count-of-a-list-using-linq)
+- Lambda 如何處理 null：[c# - lambda check for null and then set to 0 - Stack Overflow](https://stackoverflow.com/questions/72396526/lambda-check-for-null-and-then-set-to-0)

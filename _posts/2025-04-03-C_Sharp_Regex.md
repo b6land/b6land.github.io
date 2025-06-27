@@ -29,6 +29,8 @@ Regex.IsMatch("信義路號", "[0-9]+號"); // false
 Regex.Matches("中文字123", "[\u4e00-\u9fff]").Count // Count = 3
 ```
 
+(註：UTF-8 的中日韓漢字即位於 U+4E00..U+9FFF 之間，請參考 [整理 Unicode 經常會使用到的內碼區域並透過 Regex 自動比對文字 - The Will Will Web](https://blog.miniasp.com/post/2019/01/02/Common-Regex-patterns-for-Unicode-characters))
+
 ### 參考資料
 
 - 維基百科：[正規表示式 - 維基百科，自由的百科全書](https://zh.wikipedia.org/zh-tw/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F)
