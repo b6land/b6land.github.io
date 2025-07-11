@@ -2,7 +2,7 @@
 layout: post
 title: C# 單元測試 (2) 用 NUnit 和 Moq 寫單元測試
 date: 2025-06-20 07:00:00 +0800
-categories: [C#]
+categories: [C#, Unit Test]
 --- 
 
 這篇文章要來介紹 C# 單元測試的主流套件 NUnit、Moq 的語法。
