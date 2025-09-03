@@ -34,7 +34,7 @@ GET _cat/nodes?v=true
 更多的節點角色介紹，可以進一步參考：
 
 1. [ES Node 的種類 - 喬叔的 Elastic Stack 專業教育訓練](https://training.onedoggo.com/tech-sharing/uncle-joe-teach-es-elasticsearch/elastic-cloud-ru-he-jian-li-deployment/es-node-de-zhong-lei)  
-2. [Nodes | Elasticsearch Guide \[8.15\] - Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html)  
+2. [Nodes - Elasticsearch Guide \[8.15\] - Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html)  
 
 ### 節點的配置與數量
 
