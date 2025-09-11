@@ -2,7 +2,7 @@
 layout: post
 title: 用 Postman 呼叫 WebService
 date: 2025-09-11 22:00:00 +0800
-categories: [ASP.NET]
+categories: [Other]
 ---  
 
 如何用 Postman 呼叫 WebService，像一般 Restful API 測試呢 ?
