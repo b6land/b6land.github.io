@@ -31,11 +31,26 @@ categories:  [jQuery]
 
 ### 跨網域的 API 請求
 
+| 呼叫方式 | 請求發出地點 | 是否受 CORS 限制 |
+| --- | --- | --- |
+| AJAX (前端 JS) | 使用者瀏覽器（使用者電腦） | ✅ 會受限制 |
+| 後端程式 (C#、PHP、Node.js) | 網頁伺服器 | ❌ 不受限制 |
+
 從瀏覽器發送 API 請求時，如果和 API 所在的主機不同網域，要避免 CSRF (Cross Site Request Forgery, 跨站請求偽造) 問題。例如使用者取得 A 網站 cookie 後，瀏覽 B 網站，B 網站取得使用者的 A 網站 Cookie 後，對 A 網站發送偽造請求。
 
 如果請求為 GET 時，會使用 JSONP 處理跨網域的請求。否則就會需要處理 CORS (Cross-Origin Resource Sharing, 跨來源資源共享) 策略。如果沒有使用 JSONP 或 CORS 策略，請求會被拒絕。
 
 處理 AJAX 請求時，如果發現不屬於簡單跨來源請求，會自動發送 Preflight request (預檢請求)，若後端通過預檢請求，瀏覽器才會再接著發送原本的請求。未通過直接發送請求時，會得到 405 Method Not Allowed 的錯誤。
+
+### 不能繞過 HTTPS 憑證
+
+瀏覽器出 安全性設計，永遠會強制驗證 HTTPS 憑證，並且不允許 JavaScript 代碼修改這項行為。
+
+也就是說：瀏覽器會自動檢查伺服器的 SSL 憑證是否有效（例如憑證是否過期、是否由受信任 CA 簽發、網域是否匹配）。
+
+一旦驗證失敗，使用者會看到 「不安全的連線」，而 AJAX 請求則會被瀏覽器直接阻擋。
+
+JavaScript 也不像後端或 PowerShell 的 Invoke-WebRequest 指令一樣可以設定略過憑證。
 
 ### 參考資料
 

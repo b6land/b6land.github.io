@@ -40,8 +40,22 @@ AS
 GO
 ```
 
+### 暫時停用 TRIGGER
+
+可以用以下的語法暫時停用和重新啟用 Trigger：
+
+```sql
+-- 停用 Trigger
+ALTER TABLE table_name DISABLE TRIGGER tr_name
+-- 啟用 Trigger
+ALTER TABLE table_name ENABLE TRIGGER tr_name
+```
+
+將 table\_name 換成實際的資料表名稱，tr\_name 換成 Trigger 的名稱。
+
 ### 參考資料
 
 - [MSSQL 的觸發程序 TRIGGER](https://waynecheng.coderbridge.io/2021/02/11/MSSQL-Trigger/)
 - [VITO の 學習筆記: Trigger](https://vito-note.blogspot.com/2013/05/trigger.html)
 - 官方說明：[CREATE TRIGGER (Transact-SQL) - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16)
+- [Disable Enable Trigger SQL server for a table - Stack Overflow](https://stackoverflow.com/questions/1388072)
