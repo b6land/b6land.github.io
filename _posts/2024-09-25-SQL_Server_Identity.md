@@ -45,6 +45,12 @@ INSERT INTO SomeData (SN, [Name]) VALUES(0, 'Lazy');
 SET IDENTITY_INSERT SomeData OFF;
 ```
 
+NOTE: 將 `IDENTITY_INSERT`  設為 OFF 以後，會從原本的 Identity 繼續自動編號。如果需要設定新的起始編號，應使用 `DBCC CHECKIDENT`  方法，例如：
+
+```sql
+DBCC CHECKIDENT ('Users', RESEED, 200);
+```
+
 參考資料：[\[MSSQL\]新增特定的識別欄位值(Identity) - 甚麼都略懂 就是不懂 - 點部落](https://dotblogs.azurewebsites.net/rexhuang/2018/06/14/113052)  
 
 ### 新增資料後取得目前的編號
@@ -61,3 +67,15 @@ SET IDENTITY_INSERT SomeData OFF;
 Note: Scope 表示一個 SP、Trigger、function 或 batch。
 
 參考資料：[sql - How to get the identity of an inserted row? - Stack Overflow](https://stackoverflow.com/questions/42648/how-to-get-the-identity-of-an-inserted-row)
+
+### 為既有的資料表增加 Identity 欄位
+
+語法如下：
+
+```sql
+ALTER TABLE xxx ADD NewId INT IDENTITY(1,1);
+```
+
+這個語法會為目前的所有資料列更新，以加上流水號，並產生 transaction log。
+
+如果原本有很多資料的話，就會花費大量的時間更新，除了會導致 Table Lock，期間不能對資料表作 insert/update/delete 以外，也會產生大量的 transaction log。所以請小心使用。

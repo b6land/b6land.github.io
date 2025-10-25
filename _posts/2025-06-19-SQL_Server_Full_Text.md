@@ -40,6 +40,16 @@ SQL Server 提供全文檢索引擎，建立對應的索引後，可以做到比
 
 如果查詢時輸入萬用字元 \* 符號，例如 `FORMSOF(THESAURUS, "*")` ，可能會導致語法錯誤或無效的查詢。此外，? 問號和 " 引號可能也會引發語法錯誤。
 
+### 重建索引
+
+如果資料有變動的時候，需要重建全文索引。
+
+語法如下 (或參考微軟 [建立及管理全文檢索目錄 - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/relational-databases/search/create-and-manage-full-text-catalogs?view=sql-server-ver16))：
+
+```sql
+ALTER FULLTEXT CATALOG catalog_name REBUILD
+```
+
 ### 官方說明
 
 - [全文檢索搜尋 - SQL Server - Microsoft Learn](https://learn.microsoft.com/zh-tw/sql/relational-databases/search/full-text-search?view=sql-server-ver16)
