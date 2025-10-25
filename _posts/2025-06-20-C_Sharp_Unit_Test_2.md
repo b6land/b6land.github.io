@@ -59,9 +59,6 @@ Moq 的常見語法如下：
 
 - `Setup` : 設定如何執行裡面的功能，例如要回傳的值 (Returns)，或是驗證是否被執行過 (Verifiable)。用於 Arrange 階段。
 - `Verify` : 可以用來判斷方法是否被執行過。有些方法的結果不是輸出數值，而是執行外部方法，此時這個語法就會很有用。用於 Assert 階段。可以用 `It.IsAny<string>` 讓參數接受任意字串 (`It.IsAny<object>` 設定任意物件)。
-- `VerifySet`  : 判斷物件是否被設定特定數值，用於 Assert 階段。
-
-#### 範例語法
 
 ```csharp
 var mock = new Mock<IMyService>();
@@ -76,6 +73,16 @@ mock.Setup(s => s.Save(It.IsAny<string>())).Returns(true);
 mock.Verify(s => s.SendData(), Times.Once);
 ```
 
+以下兩個是進階用法：
+
+- `SetupSequence` : 想要多次呼叫，並依序傳回不同結果時，可以用此語法設定多組結果 。
+- `VerifySet`  : 判斷物件是否被設定特定數值，用於 Assert 階段。
+
+```csharp
+// 第一次呼叫回傳 Hello，第二次呼叫回傳 World
+mock.SetupSequence(s => s.GetData()).Returns("Hello").Returns("World");
+```
+
 #### 參考資料
 
 [ASP.NET MVC 單元測試系列 (3)：瞭解 Mock 假物件 ( moq ) - The Will Will Web](https://blog.miniasp.com/post/2010/09/16/ASPNET-MVC-Unit-Testing-Part-03-Using-Mock-moq)  
@@ -83,6 +90,8 @@ mock.Verify(s => s.SendData(), Times.Once);
 [c# - Verify a method call using Moq - Stack Overflow](https://stackoverflow.com/questions/9136674/verify-a-method-call-using-moq)  
 
 [c# - Using Moq to set any by any key and value - Stack Overflow](https://stackoverflow.com/questions/6294234/using-moq-to-set-any-by-any-key-and-value)
+
+[c# - moq SetupSequence with queue only executing first time - Stack Overflow](https://stackoverflow.com/questions/74305401/moq-setupsequence-with-queue-only-executing-first-time)
 
 ### 小技巧
 
