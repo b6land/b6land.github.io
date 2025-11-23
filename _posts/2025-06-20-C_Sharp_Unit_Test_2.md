@@ -57,7 +57,7 @@ NUnit 是一種測試框架，常用的語法如下：
 
 Moq 的常見語法如下：
 
-- `Setup` : 設定如何執行裡面的功能，例如要回傳的值 (Returns)，或是驗證是否被執行過 (Verifiable)。用於 Arrange 階段。
+- `Setup` : 設定如何執行裡面的功能，例如要回傳的值 (Returns)，或是驗證是否被執行過 (Verifiable)，也可以拋出例外 ([Throws](https://stackoverflow.com/questions/10323794/))。用於 Arrange 階段。
 - `Verify` : 可以用來判斷方法是否被執行過。有些方法的結果不是輸出數值，而是執行外部方法，此時這個語法就會很有用。用於 Assert 階段。可以用 `It.IsAny<string>` 讓參數接受任意字串 (`It.IsAny<object>` 設定任意物件)。
 
 ```csharp
@@ -73,9 +73,9 @@ mock.Setup(s => s.Save(It.IsAny<string>())).Returns(true);
 mock.Verify(s => s.SendData(), Times.Once);
 ```
 
-以下兩個是進階用法：
+#### 進階用法：SetupSequence 和 VerifySet
 
-- `SetupSequence` : 想要多次呼叫，並依序傳回不同結果時，可以用此語法設定多組結果 。
+- `SetupSequence` : 想要多次呼叫，並依序傳回不同結果時，可以用此語法設定多組結果 。
 - `VerifySet`  : 判斷物件是否被設定特定數值，用於 Assert 階段。
 
 ```csharp
@@ -83,15 +83,37 @@ mock.Verify(s => s.SendData(), Times.Once);
 mock.SetupSequence(s => s.GetData()).Returns("Hello").Returns("World");
 ```
 
+#### 進階用法：Callback
+
+如果想要知道傳入的參數是什麼 (例如程式內部用條件式產生的字串)，可以用 `Callback`  來做。以下是一個範例程式：
+
+```csharp
+var mockRepo = new Mock<IUserRepository>();
+string capturedName = null;
+int capturedAge = 0;
+
+mockRepo.Setup(r => r.InsertUser(It.IsAny<string>(), It.IsAny<int>()))
+        .Callback<string, int>((name, age) => {
+            capturedName = name;
+            capturedAge = age;
+        });
+
+var service = new UserService(mockRepo.Object);
+service.CreateUser("Bob", 25);
+
+// 驗證捕捉到的參數值
+Assert.That(capturedName, Is.EqualTo("Bob"));
+Assert.That(capturedAge, Is.EqualTo(25));
+```
+
+這樣可以在測試內，直接取得受測方法實際傳給模仿物件 (mock) 的參數。
+
 #### 參考資料
 
-[ASP.NET MVC 單元測試系列 (3)：瞭解 Mock 假物件 ( moq ) - The Will Will Web](https://blog.miniasp.com/post/2010/09/16/ASPNET-MVC-Unit-Testing-Part-03-Using-Mock-moq)  
-
-[c# - Verify a method call using Moq - Stack Overflow](https://stackoverflow.com/questions/9136674/verify-a-method-call-using-moq)  
-
-[c# - Using Moq to set any by any key and value - Stack Overflow](https://stackoverflow.com/questions/6294234/using-moq-to-set-any-by-any-key-and-value)
-
-[c# - moq SetupSequence with queue only executing first time - Stack Overflow](https://stackoverflow.com/questions/74305401/moq-setupsequence-with-queue-only-executing-first-time)
+- [ASP.NET MVC 單元測試系列 (3)：瞭解 Mock 假物件 ( moq ) - The Will Will Web](https://blog.miniasp.com/post/2010/09/16/ASPNET-MVC-Unit-Testing-Part-03-Using-Mock-moq)  
+- [c# - Verify a method call using Moq - Stack Overflow](https://stackoverflow.com/questions/9136674/verify-a-method-call-using-moq)  
+- [c# - Using Moq to set any by any key and value - Stack Overflow](https://stackoverflow.com/questions/6294234/using-moq-to-set-any-by-any-key-and-value)
+- [c# - moq SetupSequence with queue only executing first time - Stack Overflow](https://stackoverflow.com/questions/74305401/moq-setupsequence-with-queue-only-executing-first-time)
 
 ### 小技巧
 

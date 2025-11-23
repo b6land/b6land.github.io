@@ -52,9 +52,22 @@ categories:  [jQuery]
 
 JavaScript 也不像後端或 PowerShell 的 Invoke-WebRequest 指令一樣可以設定略過憑證。
 
-### 參考資料
+### CORS 參考資料
 
-- 用 jQuery 的 AJAX 呼叫 API：[AJAX : 網頁顯示資料-Jquery篇 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10192450)
-- jQuery 的 AJAX 進階用法：[\[jQuery\]\[筆記\] 小心使用 Ajax 防止 Bug 產生 - 分享你的 Coding 新鮮事 - 點部落](https://dotblogs.com.tw/jasonyah/2013/06/02/use-ajax-you-need-to-be-care)
-- 詳細瞭解跨來源資源共享：[\[教學\] 深入了解 CORS (跨來源資源共用): 如何正確設定 CORS？ - Shubo 的程式開發筆記](https://www.shubo.io/what-is-cors/)
-- 番外 - 如何在 ASP.NET Core 中設定跨來源請求：[Enable Cross-Origin Requests (CORS) in ASP.NET Core - Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-3.1)  
+- ChatGPT
+- [AJAX : 網頁顯示資料-Jquery篇 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10192450)
+- [\[jQuery\]\[筆記\] 小心使用 Ajax 防止 Bug 產生 - 分享你的 Coding 新鮮事 - 點部落](https://dotblogs.com.tw/jasonyah/2013/06/02/use-ajax-you-need-to-be-care)
+- [javascript - What is the Diff between type and method in ajax - Stack Overflow](https://stackoverflow.com/questions/43543174/what-is-the-diff-between-type-and-method-in-ajax )
+- [httprequest - How to send a PUT/DELETE request in jQuery? - Stack Overflow](https://stackoverflow.com/questions/2153917/how-to-send-a-put-delete-request-in-jquery)
+- [jQuery AJAX and CORS - Scaler Topics](https://www.scaler.com/topics/jquery/ajax-and-cors-jquery/)
+- [零基礎資安系列（一）-認識 CSRF（Cross Site Request Forgery）](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-request-forgery/ )
+- [Preflight request - MDN Web Docs Glossary: Definitions of Web-related terms - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request)
+- [\[教學\] 深入了解 CORS (跨來源資源共用): 如何正確設定 CORS？ - Shubo 的程式開發筆記](https://www.shubo.io/what-is-cors/)
+
+### 如何在 ASP.NET (Core) 裡設定 CORS
+
+- [第十四节：Asp.Net Core 中的跨域解决方案（Cors、jsonp改造、chrome配置） - Yaopengfei - 博客园](https://www.cnblogs.com/yaopengfei/p/11191938.html)
+- [Enable Cross-Origin Requests (CORS) in ASP.NET Core - Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-3.1 )
+- [c# MVC CORS 存取 - 劍龍腦小 - 點部落](https://dotblogs.com.tw/stegosoft/2018/11/09/231522 )
+- [json - Setting Access-Control-Allow-Origin in ASP.Net MVC - simplest possible method - Stack Overflow](https://stackoverflow.com/questions/6290053/setting-access-control-allow-origin-in-asp-net-mvc-simplest-possible-method)
+- [IIS 設定啟用 CORS (Cross-Origin Resource Sharing) - 跨來源資源共用 - Yowko's Notes](https://blog.yowko.com/iis-enable-cors/)
