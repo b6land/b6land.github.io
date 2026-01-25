@@ -33,6 +33,8 @@ Rule 功能可以限制不同等級的訊息輸出到特定的目標 (Target) �
 | maxlevel | 要記錄的最大等級 |
 | writeTo | 要寫入的 Target |
 | final | (此類別) 最後適用的規則，列在後方的不處理 |
+| finalMinLevel | (此類別) 只記錄該等級以上的訊息  
+適用於 NLog 5.0 和之後的版本，請參考：[Logging Rules FinalMinLevel · NLog/NLog Wiki · GitHub](https://github.com/NLog/NLog/wiki/Logging-Rules-FinalMinLevel) |
 
 ### Layout 功能  
 
@@ -58,7 +60,7 @@ Layout 功能是依照特定標籤和格式顯示 Log，標籤可稱為 Layout R
 NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高：
 
 
-| 等級  | 順序  | 說明  |
+| 等級 | 順序 | 說明 |
 | --- | --- | --- |
 | Trace | 0   | 通常用在開發程式的觀察 |
 | Debug | 1   | 用於除錯想檢查的部分 |
@@ -86,4 +88,36 @@ NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高�
   layout="${time}-[${level}]-[${activity:property=TraceId:truncate=6}]-${replace-newlines:${message}} ${exception:format=tostring}" />
 ```
 
+### File Target 與歸檔功能
 
+如果將 Log 寫在檔案內，需要讓 Log 可以自動歸檔，然後在一段時間後自動刪除，可以藉由設定 Archive 相關的參數達到這個目標。
+
+請參考以下的 File Target：
+
+```xml
+<target name="file" 
+xsi:type="File" 
+keepFileOpen="true"
+layout="${DefaultLayout}"
+fileName="${LogRoot}/${machinename}-${shortdate}.txt"
+encoding="UTF-8"
+archiveFileName="${LogRoot}/${machinename}-${shortdate}.Archive.txt"
+maxArchiveDays="3"  
+archiveEvery="Day"/> 
+```
+
+| 參數  | 說明  |
+| --- | --- |
+| archiveFileName<br> | 歸檔的檔名，推薦檔案放在同一個目錄下<br> |
+| maxArchiveDays<br> | 歸檔最多保留 N 天，超過會刪除<br> |
+| archiveEvery<br> | 每天 (或其它條件) 歸檔<br> |
+
+請參考：
+
+- [File target · NLog/NLog Wiki · GitHub](https://github.com/nlog/NLog/wiki/File-target#archival-options )
+- [c# - NLog - delete logs older than X days - Stack Overflow](https://stackoverflow.com/questions/32068788/nlog-delete-logs-older-than-x-days)
+- [NET C# 使用NLog 紀錄封存處理切割、最多天數、壓縮 · vulcanlee/Blogs2023 · GitHub](https://github.com/vulcanlee/Blogs2023/blob/main/CSharp/Log-Archive-maxFiles-Numbering-Days-Format-Compression.md)
+
+### Memory Target
+
+Memory Target 適用於應用程式內取得寫入的訊息紀錄，因為存取 File Target 時，可能會遇到 NLog 正在占用的情形，可參考：[NLog get log message in c# - Stack Overflow](https://stackoverflow.com/questions/52864862/nlog-get-log-message-in-c-sharp)。

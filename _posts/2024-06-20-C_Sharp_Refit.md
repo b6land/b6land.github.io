@@ -95,6 +95,53 @@ Task<Response> PostSomeStuff([Body] string body);
 
 - 如果 API 請求需要特定標頭或認證，可以參考 [GitHub - reactiveui/refit: Setting request headers](https://github.com/reactiveui/refit?tab=readme-ov-file#setting-request-headers) 一節設定。
 
+### 動態 URL
+
+**Path Parameters**：用中括號`{}`  在 URL 屬性內。 Refit 可以動態的將參數帶進去，也可以用 `[AliasAs("name")]` 屬性自訂 URL 參數名稱。
+
+```csharp
+[Get("/group/{id}/users")]
+Task<List<User>> GroupList([AliasAs("id")] int groupId);
+```
+
+**查詢參數**：方法裡的參數，如果不是 Path Parameter 或沒有標記特定屬性 (像 `[Body]`) ，會自動附加為 URL 的查詢參數。
+
+```csharp
+[Get("/users/list")]
+// URL will be e.g., /users/list?sort=desc&page=1
+Task<List<User>> GetUsersAsync(string sort, int page);
+```
+
+### 錯誤處理
+
+想要更仔細的處理回應錯誤的話，可以要求回傳 `ApiResponse`  物件，例如：
+
+```csharp
+public interface IMyApiClient
+{
+    [Get("/users/{id}")]
+    Task<ApiResponse<User>> GetUserResponseAsync(int id);
+}
+```
+
+然後在呼叫 Refit API 的時候，就可以用 response 物件判斷呼叫是否成功，或是檢查錯誤代碼來做對應的處理。
+
+```csharp
+var response = await myApiClient.GetUserResponseAsync(1);
+
+if (response.IsSuccessStatusCode)
+{
+    var user = response.Content;
+    // 呼叫成功，處理取得的結果
+}
+else
+{
+    // 自行處理錯誤代碼
+    Console.WriteLine($"Status Code: {response.StatusCode}");
+    // 用 response.Error 取得錯誤的細節
+}
+```
+
 ### 參考資料
 
 - 官方網站：[GitHub - reactiveui/refit](https://github.com/reactiveui/refit )

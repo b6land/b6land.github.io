@@ -10,6 +10,7 @@ categories:  [C#]
 ### 直接使用 MailKit
 
 1\. 透過 NuGet 安裝 NLog 和 NLog.Mail。
+
 2\. 在 nlog.config 內的 extensions 標籤內加入 assembly：
 
 ```xml
@@ -23,9 +24,17 @@ categories:  [C#]
 3\. 在 nlog.config 內的 targets 標籤內加入 Mail target，以下為範例：
 
 ```xml
-<target xsi:type="Mail" name="MailTarget 名稱" addNewLines="true" subject="郵件測試"
-smtpServer="SMTP 伺服器位置" smtpPort="SMTP Port 號碼" smtpUsername="使用者名稱" smtpPassword="使用者密碼" 
-smtpAuthentication="認證方式" from="寄件者位址" to="收件者位址"/>
+<target xsi:type="Mail" 
+    name="MailTarget 名稱" 
+    addNewLines="true" 
+    subject="郵件測試"
+    smtpServer="SMTP 伺服器位置" 
+    smtpPort="SMTP Port 號碼" 
+    smtpUsername="使用者名稱" 
+    smtpPassword="使用者密碼" 
+    smtpAuthentication="認證方式" 
+    from="寄件者位址" 
+    to="收件者位址"/>
 ```
 
 4\. 在 rules  標籤內加入規則：
@@ -37,7 +46,9 @@ smtpAuthentication="認證方式" from="寄件者位址" to="收件者位址"/>
 ```
 
 5\. 可以自行撰寫一個 Error 的 Log 程式並啟動，檢查是否有發出錯誤訊息的郵件。
-6\. 若沒有如預期發出郵件，可以查看 nlog-internal.txt 內是否有錯誤訊息。
+
+6\. 若沒有如預期發出郵件，可以查看 `nlog-internal.txt` 內是否有錯誤訊息 (NLog問題偵錯技巧-黑暗執行緒)。
+<nlog internalLogFile="c:\temp\nlog-internal.log" internalLogLevel="Info" throwExceptions="true" />
 
 ### 使用背景工作整合 Log 並寄出
 
