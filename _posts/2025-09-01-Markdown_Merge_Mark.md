@@ -48,3 +48,37 @@ Markdown 是很方便的標記語言，也能夠建立基本的表格。在部�
 效果如下：
 
 <mark>被強調的文字</mark>
+
+### 摺疊內容
+
+<br>
+
+可以加入 HTML 的 `<details>`  和 `<summary>`  標籤，來摺疊內容。
+
+<br>
+
+```xml
+<details>
+<summary> 標題 </summary>
+文字
+
+```js
+alert("Hello, World!");
+```
+</details>
+
+
+效果如下：
+
+<details>
+<summary> 標題 </summary>
+文字
+
+```js
+alert("Hello, World!");
+```
+</details>
+
+<br>
+
+參考資料：[How to add a collapsible section in markdown. · GitHub](https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab)

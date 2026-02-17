@@ -88,9 +88,9 @@ NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高�
   layout="${time}-[${level}]-[${activity:property=TraceId:truncate=6}]-${replace-newlines:${message}} ${exception:format=tostring}" />
 ```
 
-### File Target 與歸檔功能
+### File Target
 
-如果將 Log 寫在檔案內，需要讓 Log 可以自動歸檔，然後在一段時間後自動刪除，可以藉由設定 Archive 相關的參數達到這個目標。
+如果要將 Log 寫在檔案內，可以設定 File Target 達到這個目標。
 
 請參考以下的 File Target：
 
@@ -98,26 +98,64 @@ NLog 的 Log 等級可以分成以下幾種，順序越大表示嚴重性越高�
 <target name="file" 
 xsi:type="File" 
 keepFileOpen="true"
-layout="${DefaultLayout}"
-fileName="${LogRoot}/${machinename}-${shortdate}.txt"
-encoding="UTF-8"
-archiveFileName="${LogRoot}/${machinename}-${shortdate}.Archive.txt"
-maxArchiveDays="3"  
-archiveEvery="Day"/> 
+layout="${time}-[${level}]-[${activity:property=TraceId:truncate=6}]-${replace-newlines:${message}} ${exception:format=tostring}"
+fileName="Path/${machinename}-${shortdate}.txt"
+encoding="UTF-8"/> 
 ```
+
+常用的參數說明如下：
 
 | 參數  | 說明  |
 | --- | --- |
-| archiveFileName<br> | 歸檔的檔名，推薦檔案放在同一個目錄下<br> |
-| maxArchiveDays<br> | 歸檔最多保留 N 天，超過會刪除<br> |
-| archiveEvery<br> | 每天 (或其它條件) 歸檔<br> |
+| keepFileOpen | 保持檔案開啟 |
+| fileName | 檔案存放路徑與名稱，可以套用 Layout 內的標籤 |
+| encoding | 要使用的編碼 |
+
+如果要定期刪除 Log，避免佔用過多磁碟空間的話，要啟用歸檔的相關設定。歸檔功能可以幫你依照條件刪除過久的 Log，但建議被歸檔的 Log 路徑不啟用動態的 Layout 標籤，避免歸檔失敗。
+
+範例如下：
+
+```xml
+<target name="file" xsi:type="File" keepFileOpen="true"
+	layout="${time}-[${level}]-[${activity:property=TraceId:truncate=6}]-${replace-newlines:${message}} ${exception:format=tostring}"
+	fileName="Path/CurrentLog.txt"
+	archiveFileName="Path/ArchiveLog.{#}.txt"
+	archiveEvery="Hour"
+	maxArchiveFiles="24"
+	encoding="UTF-8" />
+```
+
+常用的參數說明如下：
+
+
+| 參數  | 說明  |
+| --- | --- |
+| archiveFileName | 要歸檔的檔案路徑與名稱 |
+| archiveEvery | 多久要進行歸檔 |
+| maxArchiveFiles | 最多保留的歸檔 Log 檔，超過時由最舊的開始刪除 |
+
+archiveEvery 可以填入以下的單位：
+
+| 單位  | 說明  |
+| --- | --- |
+| Day | 每天歸檔 |
+| Hour | 每小時歸檔 |
+| Minute | 每分鐘歸檔 |
+| Month | 每個月歸檔 |
+| Year | 每年歸檔 |
+
 
 請參考：
 
 - [File target · NLog/NLog Wiki · GitHub](https://github.com/nlog/NLog/wiki/File-target#archival-options )
-- [c# - NLog - delete logs older than X days - Stack Overflow](https://stackoverflow.com/questions/32068788/nlog-delete-logs-older-than-x-days)
+- [c# - NLog - delete logs older than X days - Stack Overflow](https://stackoverflow.com/questions/32068788/nlog-delete-logs-older-than-x-days )
 - [NET C# 使用NLog 紀錄封存處理切割、最多天數、壓縮 · vulcanlee/Blogs2023 · GitHub](https://github.com/vulcanlee/Blogs2023/blob/main/CSharp/Log-Archive-maxFiles-Numbering-Days-Format-Compression.md)
+- [NLog配置文件详解-CSDN博客](https://blog.csdn.net/Schaffer_W/article/details/134546161)
 
 ### Memory Target
 
 Memory Target 適用於應用程式內取得寫入的訊息紀錄，因為存取 File Target 時，可能會遇到 NLog 正在占用的情形，可參考：[NLog get log message in c# - Stack Overflow](https://stackoverflow.com/questions/52864862/nlog-get-log-message-in-c-sharp)。
+
+### 綜合參考資料
+
+基礎介紹與安裝：[.NET Core - 使用 NLog 紀錄日誌資訊 - Tim Chen's Blog](https://timchen0409.github.io/2020/12/11/net-core-nlog/)
