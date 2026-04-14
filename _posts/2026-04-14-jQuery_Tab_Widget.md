@@ -47,7 +47,7 @@ $( "#tabs" ).tabs();
 
 ```
 
-以上程式碼改寫自官方說明 _(最新版)_: [Tabs Widget | jQuery UI API Documentation](https://api.jqueryui.com/tabs/#option-active)，也可以在裡面看用法。
+以上程式碼改寫自官方說明 _(最新版)_: [Tabs Widget - jQuery UI API Documentation](https://api.jqueryui.com/tabs/#option-active)，也可以在裡面看用法。
 
 其它的參考資料如下：
 
@@ -71,4 +71,4 @@ $('selector').tabs({ selected: index });
 
 參考資料：[Set default tab in jQuery UI Tabs](https://stackoverflow.com/questions/4565128/set-default-tab-in-jquery-ui-tabs)
 
-官方說明 (1.8 版): [Tabs Widget | jQuery UI 1.8 Documentation](https://api.jqueryui.com/1.8/tabs/)
+官方說明 (1.8 版): [Tabs Widget - jQuery UI 1.8 Documentation](https://api.jqueryui.com/1.8/tabs/)
