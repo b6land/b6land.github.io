@@ -234,11 +234,53 @@ info: Microsoft.Hosting.Lifetime[14]
 ]
 ```
 
+## 將工具程式 (Utility) 放在獨立的共用層 (Common)
+
+在分層式 (或是三層式的 Controller、Service、Repository) 架構內，如果需要增加工具程式 (Utility)，可以建立一個獨立的共用層 (常用的名字為 Common / Shared / Utility)。
+
+
+適合存放的工具程式通常包含：純邏輯、沒有外部 I/O、重複使用等屬性，例如字串處理、資料驗證、產生 Token 的程式。將這樣的工具程式拆出來，放在獨立的共用層，除了方便各分層存取以外，也能更輕鬆的撰寫單元測試。
+
+如果放在原本的 Controller, Service 或 Repository 層，則會有不適當的依賴關係 (比如 Utility 放在 Service 層，若 Repository 層也需要存取，就會變成 Repository 反向存取 Service，是不適當的參考)。
+
+### 示意圖
+
+```plaintext
+                    ┌───────────────────────────┐
+                    │       Presentation         │
+                    │        (Controller)        │
+                    └───────────────▲───────────┘
+                                    │ calls
+                                    │
+                            ┌───────┴────────┐
+                            │    Service      │
+                            │ (Business Logic)│
+                            └───────▲────────┘
+                                    │ calls
+                                    │
+                          ┌─────────┴──────────┐
+                          │     Repository      │
+                          │   (Data Access)     │
+                          └─────────▲──────────┘
+                                    │
+                           ( talks to database )
+
+
+
+        ┌──────────────────────────────────────────────────┐
+        │                     Common / Shared               │
+        │     (Utilities, Helpers, Extensions, Constants)   │
+        └──────────────────────────────────────────────────┘
+
+   ※ Common 層不依賴 Controller/Service/Repository，
+     但所有層都可以 **引用 Common**。
+```
+
 ## 參考資料
 
 - [軟體架構：分層架構模式 ( Layered Architecture ) - 程式愛好者 - Medium](https://medium.com/程式愛好者/軟體架構-分層架構模式-layered-architecture-a959da09d1c6)
 - [軟體架構-關於分層 - 老E隨手寫 - 點部落](https://dotblogs.com.tw/bda605/2021/01/19/103355)
 - 另一種分層的方式: [[Day 16] 剖析分層架構 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10291824)
 - 三層的分層模式介紹: [菜雞新訓記 (5): 使用 三層式架構 來切分服務的關注點和職責吧 - 伊果的沒人看筆記本](https://igouist.github.io/post/2021/10/newbie-5-3-layer-architecture/)
-- 部分程式碼由 [ChatGPT](https://chatgpt.com/) 產生
+- 部分程式碼和文字由 [ChatGPT](https://chatgpt.com/) 產生
 - 進一步閱讀：[1. Layered Architecture - Software Architecture Patterns [Book]](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html)

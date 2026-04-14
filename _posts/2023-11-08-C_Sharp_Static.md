@@ -76,3 +76,9 @@ Count: 2
 
 - [static 修飾詞 - C# reference - Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/keywords/static)
 - [c# - Benefit of using static methods in web application - Stack Overflow](https://stackoverflow.com/questions/7338275/benefit-of-using-static-methods-in-web-application)
+
+### 補充
+
+類似的狀況：如果在 .Net 的 Web 程式內，將類別註冊為 Scoped 生命週期，並在裡面宣告 static 物件，那麼該物件會持續存在。
+
+[c# - Using a static property inside a Scoped service - Stack Overflow](https://stackoverflow.com/questions/53786106/)

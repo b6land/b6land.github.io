@@ -1,0 +1,48 @@
+---
+layout: default
+title: 小工具
+permalink: /tools/tools.html
+---
+
+<div class="tool-grid">
+    <a class="tool-card" href="/tools/json">
+        <h3>JSON 格式化</h3>
+        <p>將 JSON 排版並高亮顯示</p>
+    </a>
+</div>
+
+<style>
+    .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .tool-card {
+        display: block;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+        background: #fff;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .tool-card h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .tool-card p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+</style>
