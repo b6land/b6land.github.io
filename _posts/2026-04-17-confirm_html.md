@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript `confirm()` 與 jQuery `.html()` 教學與範例
+title: JavaScript confirm() 與 jQuery .html() 教學與範例
 date: 2026-04-17 22:30:00 +0800
 categories: [jQuery, JavaScript]
 ---  
