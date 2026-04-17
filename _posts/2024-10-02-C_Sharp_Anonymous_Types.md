@@ -76,6 +76,24 @@ Console.WriteLine(body);
 }
 ```
 
+
+### 保留字的對應方式
+
+在 C# 建立匿名型別時，如果需要一個 JSON 欄位叫做 `bool`（或其他保留字），C# 允許用 `@` 逃脫保留字，匿名型別屬性名稱會是 `bool`（不是 `@bool`），序列化成 JSON 也會是 `"bool"`。
+
+
+
+```csharp
+var query = new
+{
+    @bool = new
+    {
+        must = new { /* ... */ }
+    }
+};
+
+```
+
 ### 參考資料
 
 - [c# - How to create JSON from strings without creating a custom class using JSON.Net library - Stack Overflow](https://stackoverflow.com/questions/44895545)  

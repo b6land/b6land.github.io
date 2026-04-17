@@ -59,6 +59,19 @@ VALUES (3, 'Candy')
 EXEC Usp_InsertPersonMemOpt @VarPerson_MemOptimized 
 ```
 
+
+
+4\. 用 DROP TYPE 卸除使用者定義資料表類型，如果有相依物件 (像 SP 或資料表) 的話，也要先 DROP 掉。
+
+```sql
+-- 參照的資料
+DROP PROCEDURE [dbo].[SP_xxx]
+GO
+
+DROP TYPE [dbo].[Person_MemOptimized]
+GO
+```
+
 ### 初次使用
 
 如果是第一次使用記憶體最佳化的相關功能，可能會遇到「資料庫的 MEMORY_OPTIMIZED_FILEGROUP 必須在線上」錯誤。此時需要執行以下指令，來建立資料庫的記憶體最佳化檔案群組和容器：
@@ -70,6 +83,30 @@ ALTER DATABASE AdventureWorks2019 ADD FILE (name='AdventureWorks2019_mod1', file
 ```
 
 以上的語法應該要將 AdventureWorks2019 字樣代換成實際使用的資料庫，以及想建立的檔案路徑。
+
+### 留意
+
+在兩個資料庫間建立相同結構的 User-Defined Table Type (UDT)， 沒辦法用來傳遞資料 (例如做為 SP 的參數傳遞)。
+
+例如下列情境：
+- DB\_A 有一個 UDT：`dbo.MyType`
+- DB\_B 也有一個 UDT：`dbo.MyType`（結構完全一樣）
+- 從 DB\_A 呼叫 DB\_B 的 SP，傳入該 UDT
+- 
+
+```sql
+EXEC DB_B.dbo.MyProc @MyParam = @MyTypeVar
+```
+
+會出現：
+
+```plaintext
+Operand type clash: MyType is incompatible with MyType
+```
+儘管結構相同，SQL Server 仍會視其為不同的型別。
+
+請參考：[sql server table type clash operand - Stack Overflow](https://stackoverflow.com/questions/12789560/sql-server-table-type-clash-operand)
+
 
 ### 參考資料
 

@@ -83,8 +83,6 @@ public class RefitAPI
 
 ### 小秘訣
 
-- 要判斷是否成功接收資料，可以用 `response.IsSuccessStatusCode` 。
-  - Refit 在反序列化資料物件時，可能會失敗，但不一定會中斷程式，此時可以用 try...catch... 可以檢查失敗的原因。
 - 使用 POST 發送字串資料時，如果希望傳送出去的內容被視為 JSON，可以加入 Content-Type 的 Header 屬性，範例如下：
 
 ```csharp
@@ -93,7 +91,19 @@ public class RefitAPI
 Task<Response> PostSomeStuff([Body] string body);
 ```
 
-- 如果 API 請求需要特定標頭或認證，可以參考 [GitHub - reactiveui/refit: Setting request headers](https://github.com/reactiveui/refit?tab=readme-ov-file#setting-request-headers) 一節設定。
+- 如果 API 請求需要特定標頭或認證，可以傳入參數：
+
+```csharp
+[Get("/users/{user}")]
+Task<User> GetUser(string user, [Header("Authorization")] string authorization);
+
+// 會加入 Header "Authorization: token OAUTH-TOKEN" 到請求
+var user = await GetUser("octocat", "token OAUTH-TOKEN");
+
+```
+
+- 參考 [GitHub - reactiveui/refit: Setting request headers](https://github.com/reactiveui/refit?tab=readme-ov-file#setting-request-headers) 一節設定。
+
 
 ### 動態 URL
 
@@ -114,13 +124,13 @@ Task<List<User>> GetUsersAsync(string sort, int page);
 
 ### 錯誤處理
 
-想要更仔細的處理回應錯誤的話，可以要求回傳 `ApiResponse`  物件，例如：
+想要更仔細的處理回應錯誤的話，可以要求回傳 `IApiResponse`  物件，例如：
 
 ```csharp
 public interface IMyApiClient
 {
     [Get("/users/{id}")]
-    Task<ApiResponse<User>> GetUserResponseAsync(int id);
+    Task<IApiResponse<User>> GetUserResponseAsync(int id);
 }
 ```
 
@@ -142,8 +152,34 @@ else
 }
 ```
 
+Refit 在反序列化資料物件時，可能會失敗，但不一定會中斷程式，此時可以用 `try...catch...` 檢查失敗的原因。
+
+### 自訂 HttpClient
+
+Refit 使用的是 HttpClient，也可以自訂 Refit 要用的 HttpClient 參數：
+
+```csharp
+        var httpClient = new HttpClient(new HttpClientHandler
+        {
+            // 自訂需要的 HttpClientHandler
+        })
+        {
+            BaseAddress = new Uri("https://api.example.com"),
+            Timeout = TimeSpan.FromSeconds(30)
+        };
+        // 如有需要可加入預設的 Header
+        httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_TOKEN_HERE");
+        // 建立 Refit API client
+        var apiClient = RestService.For<IMyApi>(httpClient);
+
+```
+
+由於使用 HttpClient，因此也需要留意連線的生命週期 ([What is proper lifetime of the Client created by RestService.For<>()? · Issue #656 · reactiveui/refit](https://github.com/reactiveui/refit/issues/656))。所以會需要先設定好 HttpClient 的連線關閉時間，或改用 HttpClientFactory。
+
+
 ### 參考資料
 
 - 官方網站：[GitHub - reactiveui/refit](https://github.com/reactiveui/refit )
 - 使用 Refit 存取 GET 屬性 API: [Getting Started with Refit in .NET](https://www.c-sharpcorner.com/article/getting-started-with-refit-in-net/)
 - 使用 Content-Type Header：[Content-Type header attribute on method doesn't apply correctly · Issue #136 · reactiveui/refit · GitHub](https://github.com/reactiveui/refit/issues/136)
+- [Refit C# (How It Works For Developers) - IronPDF](https://ironpdf.com/blog/net-help/refit-csharp/)。
