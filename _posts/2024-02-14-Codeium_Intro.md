@@ -9,12 +9,21 @@ Windsurf (以前稱為 Codeium) 是和 GitHub Copilot 類似的產品，透過�
 
 ### 目錄
 
+- [Windsurf 2026年變更](#windsurf-2026年變更)
 - [Codeium 特色](#codeium-特色)
 - [Codeium 重要功能](#codeium-重要功能)
 - [進階：設定 Context](#進階設定-context)
 - [VSCode 特定專案停用 Codeium](#vscode-特定專案停用-codeium)
 - [Codeium 下載與安裝 (以 VSCode 為例)](#codeium-下載與安裝-以-vscode-為例)
 - [參考資料](#參考資料)
+
+### Windsurf 2026年變更
+
+本段落寫於 2026 年 4 月。
+
+現在 Windsurf 的主力為自有的 Windsurf Editor，以及提供 JetBrains IDE 的 Plugin。
+
+截至目前為止，VSCode 的 Plugin 已經有約 10 個月沒有更新。如果仍需要在 VSCode 上使用 AI 助理，可以考慮用 Github Copilot 等產品。
 
 ### Codeium 特色
 
