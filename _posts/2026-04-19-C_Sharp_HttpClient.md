@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HttpClient 的使用方式與重要觀念
-date: 2026-04-19 23:30:00 +0800
+date: 2026-04-19 15:30:00 +0800
 categories: [C#]
 ---  
 
