@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 Windows 下排程執行 Python Script 發送錯誤信件 (使用 outlook)
-date: 2025-06-20 17:00:00 +0800
+date: 2026-06-20 17:00:00 +0800
 categories: [Python]
 --- 
 
