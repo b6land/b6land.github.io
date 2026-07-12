@@ -27,6 +27,11 @@ Google 本身並未禁止 AI 產生的內容，但仍然要遵守「內容為王
 
 因此，我個人想要繼續產出自己的內容，並增加更多獨特的想法和經驗，與生成式 AI 共存。
 
+### 鼓勵繼續寫作
+
+- [寫作吧，菜鳥工程師！（上） - 高見龍](https://kaochenlong.com/why-engineers-should-write-1)  
+- [寫作吧，菜鳥工程師！（下） - 高見龍](https://kaochenlong.com/why-engineers-should-write-2)
+
 ### 其他人的看法
 
 - [聊聊 AI 對創作者的衝擊 - Code and Me](https://blog.kyomind.tw/weekly-review-41/ )

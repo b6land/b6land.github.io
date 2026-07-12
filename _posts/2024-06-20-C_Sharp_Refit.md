@@ -176,6 +176,30 @@ Refit 使用的是 HttpClient，也可以自訂 Refit 要用的 HttpClient 參�
 
 由於使用 HttpClient，因此也需要留意連線的生命週期 ([What is proper lifetime of the Client created by RestService.For<>()? · Issue #656 · reactiveui/refit](https://github.com/reactiveui/refit/issues/656))。所以會需要先設定好 HttpClient 的連線關閉時間，或改用 HttpClientFactory。
 
+若使用 .NET (Core)，則 HttpClientFactory 可在設定 `ConfigurePrimaryHttpMessageHandler`  忽略 SSL，如下：
+
+```csharp
+// Source - https://stackoverflow.com/a/62899563
+// Posted by janw, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-06-01, License - CC BY-SA 4.0
+
+services.AddHttpClient(Options.DefaultName, c =>
+{
+    // ...
+}).ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        ClientCertificateOptions = ClientCertificateOption.Manual,
+        ServerCertificateCustomValidationCallback =
+            (httpRequestMessage, cert, certChain, policyErrors) => true
+    };
+});
+
+
+```
+
+[c# - Disable SSL certificate verification in default injected IHttpClientFactory - Stack Overflow](https://stackoverflow.com/questions/62860290/disable-ssl-certificate-verification-in-default-injected-ihttpclientfactory)
 
 ### 參考資料
 
